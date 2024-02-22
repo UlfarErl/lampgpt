@@ -1,2 +1,5 @@
 # emacs backups
 *~
+
+# the bocfel compilation directory
+bocfel-*/

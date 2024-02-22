@@ -1,10 +1,22 @@
 #!/usr/bin/env python3
 
+import argparse
 import fcntl
 import os
 import subprocess
 import sys
 import time
+
+transcript = None
+
+def write_to_transcript(output):
+    global transcript
+    modified_output = output.replace("mailbox", "snowman")
+    sys.stdout.write(modified_output)
+    sys.stdout.flush()
+    if transcript:
+        transcript.write(modified_output)
+        transcript.flush()
 
 def configure_non_blocking_reads(stream):
     fd = stream.fileno()
@@ -18,26 +30,33 @@ def non_blocking_read(stream):
         return ""
 
 def main(): 
-    if len(sys.argv) < 2:
-        print("Usage: python3 lampgpt.py path-to-zil-file")
-        sys.exit(1)
+    global transcript
+    parser = argparse.ArgumentParser(description='Script for an LLM-enhanced Infocom experience.')
+    
+    # Parse arguments
+    parser.add_argument('--config', '-c', type=str, default='./lampgpt.toml', help='Configuration file name (default lampgpt.toml)')
+    parser.add_argument('--transcript', '-t', type=str, help='Name of transcript output file')
+    parser.add_argument('--verbose', '-v', action='store_true', help='Increase output verbosity')
+    parser.add_argument('--delay', '-d', type=int, default=5, help='Delay (in milliseconds) to wait for ZIL interpreter output in each turn')
+    parser.add_argument('--bocfel', '-x', type=str, default='./bocfel-2.1.2/bocfel', help='Executable file name for bocfel ZIL runtime')
+    parser.add_argument('ZILFILE')
+    args = parser.parse_args()
 
-    # Use the first argument as the zip file
-    zilfile = sys.argv[1]
+    # Process arguments and config
+    if args.transcript:
+        transcript = open(args.transcript, 'w')
 
-    # Prepare the subprocess to launch the binary and manage its input/output
-    process = subprocess.Popen(['./bocfel', zilfile], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, bufsize=1)
+    # Launch the ZIL interpreter and manage its input/output
+    process = subprocess.Popen([args.bocfel, args.ZILFILE], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, bufsize=1)
     configure_non_blocking_reads(process.stdout)
 
     try:
         while True:
-            time.sleep(0.005)
+            time.sleep((1.0*args.delay)/1000.0)
 
             # Process the output from the subprocess
             output = non_blocking_read(process.stdout)
-            modified_output = output.replace("mailbox", "snowman")
-            sys.stdout.write(modified_output)
-            sys.stdout.flush()
+            write_to_transcript(output)
 
             # Read a single line from stdin
             line = sys.stdin.readline()
@@ -48,6 +67,9 @@ def main():
             # Write the modified input to the subprocess
             process.stdin.write(modified_line)
             process.stdin.flush()
+            write_to_transcript(modified_line)
+            if args.verbose:
+                print(f"# ORIGINAL INPUT: {line}")
 
     except KeyboardInterrupt:
         print("\nScript interrupted by user. Exiting.")
@@ -56,12 +78,11 @@ def main():
         process.stdin.close()
         process.terminate()
         process.wait()
-
-    # Check for errors
+    # Check for errors before exiting
     if process.returncode != 0 and process.returncode != -15:  # -15 is SIGTERM
-        # Read any errors from stderr
         errors = process.stderr.read()
-        print(f"Error running ZIL interpreter: {errors}", file=sys.stderr)
+        if errors != "":
+            print(f"\nError running ZIL interpreter: {errors}", file=sys.stderr)
 
 if __name__ == "__main__":
     main()
