@@ -1,0 +1,9 @@
+[submodule "bocfel"]
+	path = bocfel
+	url = git@github.com:cspiegel/bocfel.git
+[submodule "zork1"]
+	path = zork1
+	url = git@github.com:historicalsource/zork1.git
+[submodule "starcross"]
+	path = starcross
+	url = git@github.com:historicalsource/starcross.git

@@ -1,0 +1,105 @@
+You are helping a person play a text adventure game (aka interactive fiction)
+by converting a complex english sentence into a simpler form of English that 
+the game's parser will understand.  
+
+For example, suppose the player has been given the following description
+
+Nondescript room
+You have entered a nondescript wallpapered room with an exit to the south.
+
+If the player has entered the English text "feel the texture of the wallpaper" 
+the game's parser may not know the verb "feel" or the noun "texture" and you 
+could suggest the conversion "examine the wallpaper" to be input into the game.
+
+When suggesting a conversion, only use these verbs: 
+open, read, drop, go, enter, take, move, turn on, go up
+
+When suggesting a conversion, only use noun phrases that are prominent in the 
+following description that is delimited by triple quotes:
+"""
+West of House
+You are standing in an open field west of a white house, with a boarded front door.
+There is a small mailbox here.
+"""
+
+Please propose how the following English text, delimited by triple dashes,
+should be converted to be input into the game engine
+---
+gaze upon the grassland
+---
+
+
+=================================
+For the game engine, you could convert "gaze upon the grassland" to "look at field".
+=================================
+
+
+The response from the game engine is as follows, delimited by triple quotes
+"""
+There is nothing special about the field
+"""
+
+This is not a very interesting response.  Can you help the game engine make 
+the response more interesting?  For example, if the game engine has responded
+"it is just a normal lamp" when asked to "examine the lamp" you could suggest
+the more detailed and vivid response "Looking closely at the lamp, you find it 
+to be one of the common types that you pick up at Walmart.  Stamped on the 
+bottom of the lamp it says 'Made in China'."  While still conveying the 
+normality of the lamp, this response is better in all ways.
+
+When making a suggestion of how the game engine response should be changed,
+please assume the tone of a tongue-in-cheek adventure story writer, such
+as Douglas Adams or Terry Pratchett, perhaps with a touch of swashbuckling 
+romance writer's touch.
+
+Keep your suggested changed response to three sentences or less.
+
+Please suggest how the response from the game engine, 
+repeated below and delimited by triple quotes,
+should be changed to be better
+"""
+There is nothing special about the field
+"""
+
+
+=================================
+As you gaze across the expanse of the field, you can't help but 
+feel a sense of overwhelming mundanity. Yet, amidst the sea of 
+unremarkable green, a solitary daisy stands defiantly, as if to 
+say, "I am the adventure you seek." It's a stark reminder that 
+even in the most ordinary of places, there's a story waiting to 
+be discovered, if only one looks closely enough.
+=================================
+
+
+The player has entered a new input to the game engine.  Please suggest a conversion.
+---
+look at door
+---
+examine the front door
+
+
+====================
+Upon closer inspection, the door looms before you, steadfastly closed as if guarding the house's secrets with a silent, wooden resolve. Its surface, weathered by countless stories and seasons, whispers tales of visitors past and present, yet it remains an unyielding portal to the unknown. It seems to dare you, almost with a smirk only a door can muster, to discover what lies beyond its boarded barricade.
+====================
+
+
+
+The player is being given the following description, delimited by triple quotes,
+of their surroundings.
+"""
+West of House
+You are standing in an open field west of a white house, with a boarded front door.
+There is a small mailbox here.
+"""
+
+This is a very terse description without much detail.  Can you help the game engine make 
+the description more interesting? 
+
+When making a suggestion of how the game engine description should be changed,
+please assume the tone of a tongue-in-cheek adventure story writer, such
+as Douglas Adams or Terry Pratchett, perhaps with a touch of swashbuckling 
+romance writer's touch.
+
+Keep your suggested changed description to no more than three times the length
+of the original description.
