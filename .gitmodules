@@ -7,3 +7,111 @@
 [submodule "starcross"]
 	path = starcross
 	url = git@github.com:historicalsource/starcross.git
+[submodule "arthur"]
+	path = arthur
+	url = git@github.com:historicalsource/arthur.git
+[submodule "zorkzero"]
+	path = zorkzero
+	url = git@github.com:historicalsource/zorkzero.git
+[submodule "shogun"]
+	path = shogun
+	url = git@github.com:historicalsource/shogun.git
+[submodule "sherlock"]
+	path = sherlock
+	url = git@github.com:historicalsource/sherlock.git
+[submodule "zork2"]
+	path = zork2
+	url = git@github.com:historicalsource/zork2.git
+[submodule "zork3"]
+	path = zork3
+	url = git@github.com:historicalsource/zork3.git
+[submodule "witness"]
+	path = witness
+	url = git@github.com:historicalsource/witness.git
+[submodule "wishbringer"]
+	path = wishbringer
+	url = git@github.com:historicalsource/wishbringer.git
+[submodule "trinity"]
+	path = trinity
+	url = git@github.com:historicalsource/trinity.git
+[submodule "suspended"]
+	path = suspended
+	url = git@github.com:historicalsource/suspended.git
+[submodule "suspect"]
+	path = suspect
+	url = git@github.com:historicalsource/suspect.git
+[submodule "spellbreaker"]
+	path = spellbreaker
+	url = git@github.com:historicalsource/spellbreaker.git
+[submodule "sorcerer"]
+	path = sorcerer
+	url = git@github.com:historicalsource/sorcerer.git
+[submodule "seastalker"]
+	path = seastalker
+	url = git@github.com:historicalsource/seastalker.git
+[submodule "restaurant"]
+	path = restaurant
+	url = git@github.com:historicalsource/restaurant.git
+[submodule "plunderedhearts"]
+	path = plunderedhearts
+	url = git@github.com:historicalsource/plunderedhearts.git
+[submodule "planetfall"]
+	path = planetfall
+	url = git@github.com:historicalsource/planetfall.git
+[submodule "nordandbert"]
+	path = nordandbert
+	url = git@github.com:historicalsource/nordandbert.git
+[submodule "moonmist"]
+	path = moonmist
+	url = git@github.com:historicalsource/moonmist.git
+[submodule "lurkinghorror"]
+	path = lurkinghorror
+	url = git@github.com:historicalsource/lurkinghorror.git
+[submodule "leathergoddesses"]
+	path = leathergoddesses
+	url = git@github.com:historicalsource/leathergoddesses.git
+[submodule "journey"]
+	path = journey
+	url = git@github.com:historicalsource/journey.git
+[submodule "infidel"]
+	path = infidel
+	url = git@github.com:historicalsource/infidel.git
+[submodule "hollywoodhijinx"]
+	path = hollywoodhijinx
+	url = git@github.com:historicalsource/hollywoodhijinx.git
+[submodule "hitchhikersguide"]
+	path = hitchhikersguide
+	url = git@github.com:historicalsource/hitchhikersguide.git
+[submodule "enchanter"]
+	path = enchanter
+	url = git@github.com:historicalsource/enchanter.git
+[submodule "deadline"]
+	path = deadline
+	url = git@github.com:historicalsource/deadline.git
+[submodule "cutthroats"]
+	path = cutthroats
+	url = git@github.com:historicalsource/cutthroats.git
+[submodule "bureaucracy"]
+	path = bureaucracy
+	url = git@github.com:historicalsource/bureaucracy.git
+[submodule "borderzone"]
+	path = borderzone
+	url = git@github.com:historicalsource/borderzone.git
+[submodule "beyondzork"]
+	path = beyondzork
+	url = git@github.com:historicalsource/beyondzork.git
+[submodule "ballyhoo"]
+	path = ballyhoo
+	url = git@github.com:historicalsource/ballyhoo.git
+[submodule "amfv"]
+	path = amfv
+	url = git@github.com:historicalsource/amfv.git
+[submodule "abyss"]
+	path = abyss
+	url = git@github.com:historicalsource/abyss.git
+[submodule "stationfall"]
+	path = stationfall
+	url = git@github.com:historicalsource/stationfall.git
+[submodule "checkpoint"]
+	path = checkpoint
+	url = git@github.com:historicalsource/checkpoint.git
