@@ -1,0 +1,319 @@
+ZORK I: The Great Underground Empire - A Tale of Whimsy and Peril   Infocom
+interactive fiction - a fantasy story spun with the threads of the arcane
+Copyright (c) 1981, 1982, 1983, 1984, 1985, 1986 Infocom, Inc. All rights
+reserved.   ZORK is a registered trademark of Infocom, Inc., purveyors of fine
+adventures.   Release 119 / Serial number 880429    West of House   Here you
+find yourself, a bold adventurer, in an open field west of a white house, its
+front door boarded as if to say, "Keep out! Or enter if you dare." The air is
+filled with the scent of mystery and the unknown.   Beside you, a small mailbox
+stands sentinel, guarding its contents against the prying eyes of the world.
+
+>get all
+small mailbox: Ah, an ambitious soul you are, aiming to claim all before you as
+your own! Alas, this steadfast sentinel of correspondence is securely anchored,
+defying even the mightiest of efforts to uproot it from its hallowed spot.
+
+>examine all
+white house: Behold, a magnificent colonial abode, its walls bathed in the
+purest of whites, standing as a testament to the opulence of its erstwhile
+inhabitants. One can't help but wonder if its corridors echo with the whispers
+of untold wealth and secrets.  board: These boards, steadfast in their duty, are
+clamped down with the tenacity of a dragon guarding its hoard. A testament to
+the carpenter's craft, they defy any attempt to pry them loose without invoking
+the wrath of splinters.  forest: At first glance, the forest seems like any
+other - a collection of trees, underbrush, and the occasional squirrel. But who
+knows what mysteries lurk under its canopy? To the untrained eye, nothing
+special; to the adventurer, a verdant realm of possibility.
+
+>scan the horizon
+Ah, "scan" is a term that eludes my vast lexicon. If you're seeking to gaze upon
+the distant lands, might I suggest you "look around" or specify what you wish to
+examine? The horizon, while vast and intriguing, may hold secrets only revealed
+through more precise inquiries.
+
+>look at the horizon
+The word "horizon" seems to be a bit beyond my understanding, but if you're
+looking to survey your surroundings, you might try "look around" or specify a
+direction to explore. The world of Zork is vast and filled with wonders both
+near and far, and sometimes the secrets it holds are best discovered by focusing
+on the immediate rather than the distant.
+
+>se
+South of House   Here you stand, at the southern facade of the white house,
+where doors seem to fear to tread and windows dare not peek into the world
+unguarded. Alas, every pane is boarded, as if the house itself is bracing
+against the whispers of secrets it refuses to share. No entry beckons here, no
+sliver of light to guide your way.
+
+>rap against the walls of the house
+Ah, the word "against" seems to have tripped me up, but if you're looking to
+interact with the house's walls, perhaps you might try "knock on house" or "tap
+wall." The walls of this house, steeped in mystery and silence, may yet hold
+secrets or simply stand mute, guardians of their own solitude.
+
+>knock on house
+Ah, to knock upon the walls of the white house, you do! A bold move, indeed. The
+house, with its air of mystery and boarded windows, seems to pause, as if
+contemplating the audacity of such an action. Yet, no sound returns save for the
+echo of your own rap against the solid facade. It appears the house, or whatever
+secrets it harbors, opts to remain silent for now.
+
+>e
+Behind House   Here you find yourself at the rear of the white house, where
+secrets and shadows mingle. A path, like a whisper, beckons you into the embrace
+of the forest to the east. Tucked away in a forgotten corner of the house, a
+small window winks at you, slightly ajar - a silent invitation or a sly
+challenge? The choice, as always, is yours to make.
+
+>open the window
+Summoning all your might, and perhaps a bit of cunning you didn't know you had,
+you manage to coax the window open just enough. It's as if the house itself
+sighs, relenting to your determination, granting passage into its hidden depths.
+The gap, now wide enough to admit an intrepid explorer, whispers of secrets and
+stories waiting within.
+
+>enter the house
+Kitchen   Venturing through the window with the grace of a cat (or perhaps a
+slightly less graceful creature), you find yourself in the kitchen of the white
+house. The air is thick with the ghosts of meals past, a table set as if the
+occupants vanished mid-preparation. To the west, a passage whispers of
+mysteries, while a dark staircase invites you upwards with a silent promise of
+secrets. A chimney, dark as a moonless night, leads down, and the small window
+through which you entered gazes eastward, a silent witness to your intrusion.
+Upon the table, a bottle stands sentinel, its contents a simple, life-giving
+water. Beside it, an elongated brown sack exudes the tantalizing aroma of hot
+peppers, hinting at culinary adventures untold.
+
+>smell the air
+Inhaling deeply, you're greeted by the scent of adventure, mingled with the
+faintest hint of mystery and the unmistakable aroma of meals past. It's as if
+the air itself is charged with tales untold, whispering secrets of the house's
+history with every breath you take.
+
+>touch the ceiling
+Reaching upwards in an attempt to graze the ceiling with your fingertips, you
+find the concept of "ceiling" to be somewhat elusive in this context. Perhaps
+the essence of what you seek lies not in the touch, but in the exploration of
+the space around you. Might I suggest examining the room or its contents for a
+more tactile experience? The mysteries of this place are often hidden in plain
+sight, awaiting the keen eye of an intrepid explorer.
+
+>bite your nails
+In a moment of introspection, you contemplate the age-old habit of nail-biting,
+perhaps as a means to soothe your nerves amidst the mysteries that surround you.
+However, you quickly realize that such actions, though comforting, do little to
+aid in your quest. Your adventure calls for actions of a grander scale, ones
+that involve exploring the world around you rather than the ends of your
+fingers.
+
+>get all
+glass bottle: With a flourish worthy of a seasoned adventurer, you deftly scoop
+up the glass bottle. Ah, the stories it could tell if only it could speak.
+brown sack: The brown sack, redolent with the spicy aroma of adventures yet to
+come, now finds itself in your possession. What mysteries might it conceal
+within its depths?
+
+>examine all
+kitchen window: Peering through the open kitchen window, you're met with the
+tantalizing mystery of the unknown. What lies beyond is a riddle wrapped in an
+enigma, obscured by the veil of adventure.  chimney: The chimney, a vertical
+passage shrouded in shadow, beckons you downward. It appears climbable,
+promising either peril or discovery to those brave enough to traverse its
+depths.  stairs: At first glance, the stairs might seem mundane, a simple
+architectural feature. But in a house such as this, who can say what ordinary
+steps might lead to? Perhaps they're just stairs... or perhaps they're a silent
+invitation to ascend into the unknown.
+
+>d
+Ah, the descent! While traditionally reserved for the likes of Santa Claus, your
+adventurous spirit seems to beckon you towards a chimney-bound journey. Yet, the
+chimney, with its dark and sooty embrace, whispers tales of caution. Are you
+prepared to tread where only festive legends dare, or does your destiny lie
+along a less soot-strewn path?
+
+>d
+Ah, to descend like Santa Claus, a bold ambition indeed! Yet, the chimney, with
+its shadowy depths and sooty secrets, seems to chuckle at the notion. It's not
+every day that one embarks on such a yuletide journey without a sleigh or
+reindeer in tow. Perhaps there's another path that calls to your adventurous
+heart, one less traveled by mythical gift-givers.
+
+>u
+Ah, you've ascended into the realm of shadows, where light dares not tread. It's
+pitch black, a darkness so profound it seems to swallow sound itself. Beware,
+for this is the domain of the grue, creatures that lurk in the gloom with an
+appetite for adventurers. A word to the wise: without light, one's fate may
+quickly become a snack for these unseen menaces.
+
+>d
+Descending from the shadows, you find yourself back in the kitchen, where the
+air is thick with the scent of mysteries yet to be cooked up. The familiar
+surroundings beckon you to explore further, perhaps to uncover what secrets lie
+hidden in the nooks and crannies of this culinary domain.
+
+>rifle through the cupboards
+Ah, the term "rifle" seems to have eluded my vast vocabulary. If you're looking
+to explore the contents of the cupboards with keen interest, perhaps you might
+try "search cupboards" or "examine cupboards." The mysteries of the kitchen
+await your keen eye, and who knows what secrets or treasures you might uncover
+within its confines?
+
+>w
+Living Room   Stepping westward, you find yourself enveloped by the cozy yet
+mysterious ambiance of the living room. To the east, a doorway whispers of past
+passages, while to the west, a wooden door adorned with strange gothic lettering
+stands defiantly nailed shut, as if guarding secrets too profound or perilous
+for the world beyond. The room's heart is dominated by a large oriental rug,
+lying like a silent guardian over the floor's secrets.   Perched above the
+trophy case, an elvish sword of great antiquity glimmers with a light that seems
+almost... otherworldly, its edges telling tales of battles long forgotten.
+Resting atop the trophy case, a battery-powered brass lantern waits, its glow
+promising illumination and perhaps, a bit of hope, in the darker corners of this
+adventure.
+
+>examine all
+stairs: At first glance, these stairs might seem as ordinary as any other set
+you've encountered on your travels. But in a world where the mundane can often
+mask the magical, who's to say what mysteries ascend with each step? Perhaps
+they're just a means to an end, or perhaps they're a silent guardian to realms
+untold.
+
+>examine the door
+Upon closer inspection, the door before you is a masterpiece of contradiction,
+its surface adorned with engravings that seem to dance and twist in the light.
+The script, ancient and enigmatic, finally yields its secret upon your
+persistent gaze: "This space intentionally left blank." A puzzling statement,
+indeed! It's as if the door itself is winking at you, a silent jest from ages
+past, challenging you to uncover the truth behind its wooden facade.
+
+>get all
+sword: With a flourish that would make any swashbuckler proud, you claim the
+elvish sword of great antiquity. Its blade sings a silent song of battles long
+past.  brass lantern: The brass lantern, a beacon of hope in the darkest of
+times, now finds itself in your possession. Its glow promises to pierce the veil
+of shadows that may lie ahead.  carpet: You attempt to lift the large oriental
+rug, only to find it as immovable as the mountains themselves. It seems this
+piece of decor harbors secrets too weighty to simply be carried away.  trophy
+case: The trophy case, a silent guardian of victories and vanquished foes,
+remains steadfastly anchored to the wall. It appears that some treasures are
+meant to be admired, not acquired.
+
+>examine the carpet
+Upon closer inspection, the carpet underfoot, while seemingly ordinary at a
+glance, whispers tales of distant lands and ancient craftsmanship. Its fibers,
+woven with care and precision, hint at stories untold, perhaps concealing more
+than meets the eye. Though it may not reveal its secrets easily, the very weight
+that anchors it suggests it guards its mysteries well.
+
+>move carpet
+Summoning all your strength and perhaps a bit of cunning, you manage to heave
+the rug aside, as if unveiling a secret kept for ages. Beneath its once
+steadfast guard lies a trap door, cloaked in dust and mystery. It's as if the
+room itself exhales a long-held breath, revealing a path downward that whispers
+of untold adventures and hidden depths. What lies beneath, only the bravest of
+souls dare to discover.
+
+>open the trap door
+With a creak that seems to protest the intrusion, the trap door yields under
+your persistent efforts, revealing a staircase that spirals into the unknown.
+Each step, worn and rickety, beckons you into a darkness that swallows light
+whole. It's as if the shadows themselves are alive, whispering tales of
+forgotten realms and adventures yet to be had. What secrets lie at the bottom,
+shrouded in the velvety embrace of the dark, is a mystery only the daring or the
+foolish would seek to unravel.
+
+>e
+Stepping eastward with the grace of a seasoned explorer, you find yourself back
+in the kitchen, where the air is thick with the aroma of mysteries yet to be
+uncovered. The familiar surroundings seem to whisper of secrets hidden in plain
+sight, urging you to look closer, to delve deeper into the heart of this
+culinary domain. What tales might the pots and pans tell if they could speak?
+Only time, and perhaps a bit of daring, will reveal the truths concealed within
+these walls.
+
+>u
+Ascending with the boldness of an adventurer whose heart beats in tune with the
+unknown, you find yourself enveloped by an all-consuming darkness. It's as if
+you've stepped into a realm where light itself fears to tread. Beware, for
+whispers in the shadows hint at the presence of a grue, a creature that thrives
+in the pitch black, eagerly awaiting those who dare to wander without a light.
+Your courage is commendable, but even the bravest souls must tread lightly here,
+lest they become a midnight snack for unseen jaws.
+
+>turn on the lamp
+With a flick and a whisper, the brass lantern springs to life, banishing the
+shadows with its warm, golden glow.  Attic   You've ascended to the attic, a
+realm of forgotten memories and dust-covered secrets. The only path retreats
+down the stairway from whence you came. In the corner, a large coil of rope lies
+coiled like a sleeping serpent, promising utility or perhaps adventure. On a
+table, a nasty-looking knife glints ominously under the lantern's light, its
+edge whispering tales of danger and daring. What stories do these relics hold,
+and what mysteries await in the shadows now dispelled by your light?
+
+>get all
+With the deftness of a seasoned adventurer, you gather your newfound treasures.
+rope: Swiftly, you claim the coil of rope, its length whispering promises of
+ascents into the unknown and descents into the depths of mystery.  nasty knife:
+The knife, with its blade that tells tales of peril and survival, now finds a
+new home among your possessions. Its edge, as menacing as ever, seems to gleam
+with a newfound purpose under your command.   Together, they are but tools in
+the grand tapestry of adventure that awaits, each with a story yet to be woven
+into your journey.
+
+>d
+Descending from the attic's shadowy secrets, you find yourself once again in the
+kitchen, where the air is thick with the aroma of mysteries yet to be uncovered.
+The familiar surroundings seem to welcome you back, a silent witness to the
+treasures now in your possession. What tales might the pots and pans tell if
+they could speak of your adventures above? Only the echoes of your footsteps
+know the truth of the journey you've undertaken.
+
+>w
+Stepping westward with the confidence of an explorer who has seen the mysteries
+that lie in the dark and returned to tell the tale, you find yourself back in
+the living room. The room greets you like an old friend, its familiar corners
+and shadows now seeming almost welcoming in the light of your recent adventures.
+The trophy case, the oriental rug, and even the mysterious door with gothic
+lettering all seem to hold their breath, awaiting your next move in this grand
+game of discovery and danger.
+
+>d
+As you descend, the trap door above you slams shut with a finality that echoes
+through the shadows, followed by the unmistakable sound of it being barred from
+the other side. You find yourself in the cellar, a place where the air is thick
+with the scent of forgotten things and the damp embrace of the earth.  Cellar
+Here, in the gloom, you stand in a dark and damp cellar, its air heavy with the
+whispers of secrets long buried. A narrow passageway stretches north, promising
+mystery, while a crawlway to the south beckons with the allure of hidden paths.
+To the west, the bottom of a steep metal ramp rises like a challenge, its
+surface too slick to climb.  In this realm of shadows, your sword begins to glow
+with a faint blue light, a silent guardian against the unseen. What tales does
+this glow hint at, and what creatures lurk in the darkness that would cause such
+a reaction? The adventure deepens, and the cellar awaits your exploration.
+
+>smell the air
+Inhaling deeply, you're greeted not just by a blast of air, but by the rich
+tapestry of scents that only a place steeped in mystery could exude. The damp
+earthiness of the cellar mingles with the faint, almost forgotten smell of old
+adventures and secrets buried deep beneath the surface. It's as if the very air
+is laden with tales of yore, whispering to you of hidden dangers and treasures
+waiting in the shadows.
+
+>dance a little jig
+In the dim light of the cellar, amidst the whispers of ancient secrets and the
+faint blue glow of your sword, you feel a sudden urge to lighten the mood.
+Though the word "dance" might not be in my vast vocabulary, the spirit of
+adventure certainly understands the whimsy of a jig. For a brief moment, the
+shadows seem to dance with you, caught up in your display of defiance against
+the darkness. Yet, as the last step echoes in the damp air, the solemn silence
+of the cellar returns, reminding you of the mysteries that await.
+
+>hello sailor
+As you call out "hello sailor" into the enveloping darkness, the words seem to
+hang in the air for a moment, as if waiting for an unseen audience to applaud.
+Alas, the only response is the echo of your own voice, bouncing off the ancient
+walls, a reminder that here, in the depths of adventure, you are the sailor
+navigating uncharted waters. The cellar, with its secrets and shadows, offers no
+reply, save for the silent promise of mysteries yet to be uncovered.
+
+>

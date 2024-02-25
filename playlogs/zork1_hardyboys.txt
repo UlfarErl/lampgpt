@@ -1,0 +1,196 @@
+ZORK I: The Great Underground Empire
+Infocom interactive fiction - a fantasy story
+Copyright (c) 1981, 1982, 1983, 1984, 1985, 1986 Infocom, Inc. All rights reserved.
+ZORK is a registered trademark of Infocom, Inc.
+Release 119 / Serial number 880429
+
+West of House
+In the midst of a sprawling field, kissed by the sun's golden rays, you find 
+yourself standing west of an enigmatic white house. Its front door, a mystery 
+in itself, is securely boarded up, as if to keep prying eyes at bay. Nearby, 
+a quaint mailbox stands sentinel, hinting at secrets waiting to be uncovered.
+
+>examine the mailbox
+The small mailbox, painted a fading shade of red, stands closed. Its lid
+appears untouched by time, hinting at the possibility of hidden messages or
+secrets lying within, just waiting to be discovered.
+
+>examine the field
+The expansive field stretches out around you, a sea of green that whispers
+secrets of adventure with every rustle of its grassy waves. While the details
+of the field itself might seem mundane at first glance, it's the promise of
+what lies beyond that stirs the spirit of exploration within you. Perhaps it's
+not the field itself that holds the key, but where it can lead you. Consider
+exploring the surroundings or examining specific landmarks you encounter.
+
+>chew your nails
+As you absentmindedly bring your fingers to your mouth, a sense of adventure
+stirs within you, reminding you that there are mysteries to solve and
+treasures to find in the Great Underground Empire. Perhaps it's best to focus
+on the quest at hand, rather than the state of your nails. 
+
+>go southeast
+South of House As you venture southeast, the mysterious white house looms
+larger, presenting its southern facade to you. No welcoming door invites you
+in, and the windows, sealed with boards, keep their secrets hidden from prying
+eyes. The air is thick with the scent of mystery, suggesting that the house
+guards its tales jealously. What stories could lie within, and how might one
+uncover them?
+
+>e
+Behind House Stepping cautiously to the east, you find yourself at the back of
+the white house. The area is quiet, save for the gentle rustling of leaves as
+a path snakes its way into the dense forest beyond. Tucked away in a secluded
+corner of the house, a small window catches your eye, slightly ajar as if left
+that way in haste or secrecy. It whispers of untold stories and hidden rooms,
+inviting the brave to discover what lies beyond its pane.
+
+>open the window
+Summoning all your determination, you grip the edges of the window with both
+hands. With a concerted effort that speaks to your resolve, you manage to pry
+it open just wide enough. The window now stands as an unspoken invitation to
+the mysteries that lie within the house, beckoning you to step into a world of
+hidden secrets and silent tales waiting to be told.
+
+>rap the side of the house
+With a sense of curiosity, you tap rhythmically against the house, half-
+expecting a secret passage to reveal itself or an echo of hidden chambers to
+answer back. However, the solid walls of the white house merely return a dull
+thud, keeping their secrets well-guarded. It seems the house is not ready to
+divulge its mysteries so easily. Perhaps there are other ways to uncover the
+secrets it holds.
+
+>enter the house
+Kitchen Stepping through the window with a sense of anticipation, you find
+yourself in the kitchen of the mysterious white house. The room tells a story
+of recent use; a table stands at its center, bearing the marks of food
+preparation. Shadows dance at the edges of your vision, cast by the dim light
+filtering through the open window. To the west, a narrow passage beckons,
+while a dark, foreboding staircase invites you to explore the mysteries that
+lie above. The whisper of adventure calls from the dark chimney that leads
+downward. On the table, a glass bottle catches the light, its contents a
+clear, refreshing water. Beside it, an elongated brown sack exudes the
+tantalizing aroma of hot peppers, promising a taste of the exotic. What
+secrets do these ordinary objects hold, and what stories could they tell of
+the house's inhabitants?
+
+>get all
+With a swift motion, you gather the treasures before you. The glass bottle,
+cool to the touch and filled with water that promises refreshment, is now
+securely in your grasp. Next, you claim the brown sack, its exterior rough
+against your fingers, the scent of hot peppers wafting up to tease your
+senses. Both items, each with their own story and potential, are now yours to
+explore and utilize in the adventure that lies ahead.
+
+>u
+Ascending the creaking staircase, you find yourself enveloped in an oppressive
+darkness, the kind that seems to swallow sound and hope alike. A chill runs
+down your spine as you realize you're not alone; the legendary grue, a
+creature that thrives in the pitch black, lurks nearby, its presence almost
+palpable. You remember the tales, whispered of creatures that feast on the
+unwary in the absence of light. It's a race against time to find a source of
+illumination before you become the next victim of the grue's insatiable
+hunger.
+
+>d
+With a sense of urgency, you retrace your steps down the creaking staircase,
+escaping the suffocating darkness above. Your feet find familiar ground in the
+kitchen of the white house, the dim light from the window offering a
+comforting contrast to the shadows you've just fled. The room, with its tales
+of recent meals and the adventures that await just beyond its walls, welcomes
+you back like an old friend. 
+
+>d
+With a spark of daring, you glance towards the chimney, contemplating an
+adventure that even Santa might envy. However, the narrow, soot-covered
+passage seems to whisper warnings of its own, suggesting that some routes are
+best left to the legends. Perhaps there are other paths to explore, ones that
+don't require a red suit and a team of reindeer.
+
+>w
+Living Room Stepping westward, you enter the heart of the house: the living
+room. It's a space that whispers tales of the past, with a doorway leading
+back east, and a mysterious wooden door to the west, its surface etched with
+strange gothic lettering and firmly nailed shut, as if to keep something in...
+or out. The room's centerpiece, a large oriental rug, lies beneath your feet,
+adding a touch of the exotic to the mystery. A trophy case against one wall
+catches your eye, its contents a testament to adventures of yore. Suspended
+above it, an elvish sword of great antiquity gleams in the dim light, its
+blade promising both beauty and danger. Resting atop the trophy case, a
+battery-powered brass lantern waits, its potential to light the way through
+darker mysteries readily apparent.
+
+>get all
+With a sense of purpose, you swiftly gather the treasures before you. The
+elvish sword, its blade shimmering with an ancient light, feels balanced and
+true in your grasp—a relic of a bygone era now entrusted to you. Next, the
+brass lantern, its weight reassuring in your hand, promises to be a beacon in
+the darkest of places. You eye the large oriental rug and the trophy case,
+contemplating their potential. Alas, the rug proves too cumbersome to lift, a
+silent guardian of the floor's secrets, while the trophy case, anchored firmly
+to the wall, stands as a testament to adventures past, its contents just out
+of reach.
+
+>move rug
+Summoning all your strength, you grasp the edges of the oriental rug and heave
+it aside, muscles straining with the effort. As the rug slides across the
+wooden floor, a cloud of dust rises into the air, sparkling in the dim light
+like tiny stars. Beneath where the rug once lay, you uncover the hidden
+entrance to a world below: a trap door, closed and covered in dust, as if it
+hasn't been opened for ages. What secrets and adventures await beneath this
+threshold, hidden from the eyes of those who walk above?
+
+>open door
+In the room, two doors stand as guardians of their own mysteries. The wooden
+door, its surface etched with gothic lettering, seems to whisper tales of the
+unknown, while the trap door, now revealed beneath the rug, silently beckons
+you to explore the secrets that lie beneath. 
+
+>examine the wooden door
+As you lean in closer, the gothic lettering on the wooden door comes into
+focus, each character intricately carved as if by the hand of an ancient
+craftsman. The engravings, mysterious and alluring, seem to hold a message
+from the past. After a moment of study, you decipher the words: "This space
+intentionally left blank." A puzzling phrase, indeed. It leaves you wondering
+about the door's creators and the irony of their message, etched so
+permanently into this gateway of secrets. What could they have meant by such a
+curious statement, and what mysteries does the door itself conceal?
+
+>open the trap door
+With a determined push, you coax the trap door open, its hinges groaning in
+protest as if guarding the secrets below for ages. Before you, a rickety
+staircase winds down into an enveloping darkness, each step a whisper of the
+countless adventures and mysteries that have traversed its path. The air grows
+cooler as the promise of the unknown beckons you forward. 
+
+>e
+Turning eastward, you find yourself back in the kitchen of the white house.
+The familiar sights of the recently used table and the small window, now a
+comforting beacon of light, greet you. The room, with its lingering scents of
+meals past and the promise of the adventures that lie beyond its walls, serves
+as a crossroads on your journey. 
+
+>turn on the lamp
+With a flick of the switch, the brass lantern comes to life, casting a warm,
+golden glow that pierces the surrounding darkness. Its light, steady and
+reassuring, promises to be a faithful companion on your journey through the
+shadowy corners of the Great Underground Empire.
+
+>u
+Ascending the creaky staircase with the brass lantern casting shadows on the
+walls, you emerge into the attic, a place of forgotten memories and hidden
+treasures. The air is thick with dust, and the only path retreats back down
+the stairs from whence you came. In the corner, a large coil of rope promises
+utility and adventure, while on a weathered table lies a knife, its blade
+gleaming menacingly in the lantern's light. 
+
+>get all
+With a sense of purpose, you quickly gather the items scattered around the
+attic. The rope, sturdy and reliable, feels like a promise of safety and
+adventure in your hands. Next, you cautiously pick up the knife, its blade
+catching the light with a sinister gleam. Though its appearance is daunting,
+you sense it may prove invaluable in the challenges that lie ahead. Both
+items, now in your possession, are ready to assist you as you delve deeper
+into the mysteries of the Great Underground Empire.
+
+>

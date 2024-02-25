@@ -1,0 +1,216 @@
+ZORK I: The Great Underground Empire
+Infocom interactive fiction - a tale of shadows and whispers
+Copyright (c) 1981, 1982, 1983, 1984, 1985, 1986 Infocom, Inc. All rights 
+reserved.
+ZORK is a mark seared into the annals of Infocom, Inc.
+Release 119 / Serial number 880429
+
+West of House
+Here you are, a lone figure in an open field, the white house to your west 
+standing silent, its door boarded up like a secret begging to be told. A small 
+mailbox stands sentinel nearby.
+
+>se
+South of House
+You've made your way to the house's south side, where the white facade turns 
+cold and unwelcoming. No doors offer entry, no windows offer a peek inside – 
+all shut tight, boarded up like the place has got something to hide.
+
+>e
+Behind House
+You find yourself at the house's back, where secrets might lurk in the shadows. 
+A path snakes into the dark embrace of the forest to the east. Tucked away in 
+the house's embrace, a small window cracks open – a silent invitation or a 
+trap, only one way to find out.
+
+>examine the forest
+The forest stretches out like a dark canvas, shadows playing tricks on your 
+eyes. It's a dense thicket, each tree a silent sentinel with stories untold. 
+The path into its heart is less inviting, more a challenge. If you're looking 
+for secrets, maybe it's not the trees you should be examining, but where 
+they're leading you. Try to "follow the path" or "enter the forest" if you dare 
+to see what lies beyond.
+
+>look west
+You turn your gaze westward, eyes squinting for clues in the dim light. But the 
+world's a cryptic place, and not all commands can unlock its secrets. Try to 
+"go west" or "examine" something specific in your sights. The answers might not 
+always be straight ahead.
+
+>examine the window
+The window hangs open like a crooked smile, a sliver of darkness peeking 
+through. It's ajar, alright, teasing secrets on the other side. But don't get 
+your hopes up – it's not wide enough to slip through, not without a little more 
+persuasion or a different approach.
+
+>open the window
+With a grunt and a heave, you muscle the window open, wide enough now to make 
+your move. It's an invitation, or maybe a challenge – either way, the path 
+inside lays bare, courtesy of your determination.
+
+>e
+Clearing
+You've stumbled into a clearing, a pocket of calm in the forest's embrace. The 
+path here knows two faces: east and west, each holding its own secrets, 
+whispering of journeys untaken. The trees stand watch, silent guardians of the 
+crossroads.
+
+>e
+Canyon View
+Here you stand, on the edge of the world, the Great Canyon yawning beneath you 
+like the maw of some ancient beast. The view's a knockout – the canyon, the 
+Frigid River snaking through it, and beyond, the White Cliffs locking arms with 
+the Flathead Mountains. To the north, Aragain Falls tumbles down, a rainbow 
+dancing in its mist. The dark mouth of a cavern swallows the river whole. 
+Behind you, an endless sea of forest whispers secrets in the wind. A path 
+carves its way northwest, and if you've got the nerve, a way down into the 
+canyon's depths beckons.
+
+>nw
+Back in the Clearing
+You've circled back, like a detective retracing his steps, to a familiar 
+clearing. The forest path, a silent witness, stretches out, holding its secrets 
+close. The trees around you, indifferent sentinels, whisper of paths taken and 
+untaken.
+
+>e
+Canyon View, Once More
+You find yourself back at the canyon's edge, the vast expanse stretching before 
+you like a challenge from nature itself. The view remains breathtaking, a 
+testament to the wild's untamed beauty. The path you tread is worn but 
+determined, leading you back to this precipice of adventure.
+
+>can I go down?
+The game's ear isn't tuned to catch every word tossed its way, especially the 
+polite ones. If you're itching to descend into the canyon's depths, try cutting 
+to the chase with "go down" or "climb down". The path might be steep, but your 
+words don't have to be.
+
+>d
+Rocky Ledge
+Here you are, perched on a ledge, the canyon's heart beating below and the sky 
+stretching above. The river, a silver snake, carves its path through the 
+canyon, slipping through passages too narrow for your pursuit. Below, the 
+canyon floor beckons, a siren's call to the adventurous. Above, the cliff face 
+offers a challenge, daring you to climb. Every direction holds a story, waiting 
+for the next move of a daring soul.
+
+>d
+Canyon Bottom
+Now you're at the canyon's floor, under the towering walls that might just let 
+a brave soul scale them. The Aragain Falls' quieter waters rush by, whispering 
+of places unseen. To the north, a narrow path cuts through the wilderness, a 
+thin line between the known and the mystery beyond. Here, at the bottom of the 
+world, every direction is a climb, every choice a challenge.
+
+>n
+End of Rainbow
+You've wandered onto a rocky stretch of beach where the Frigid River, fresh 
+from its leap over the falls, continues its journey. Hemmed in by the imposing 
+White Cliffs, the beach feels like a secret kept from the sky. Yet here, the 
+canyon opens up, letting in a spill of sunlight that dances with the mist to 
+cast a rainbow across the falls to the east. A narrow path snakes away to the 
+southwest, promising more hidden corners of this wild world. Here, at the end 
+of the rainbow, you half expect to find more than just the promise of gold.
+
+>examine rainbow
+The rainbow, a fleeting masterpiece of light and mist, arcs gracefully over the 
+falls. It's a spectacle that defies the mundane, each hue a whisper of wonders 
+beyond. While it might seem like just another part of the landscape, remember, 
+in places like these, even the ordinary can hide secrets. Maybe there's nothing 
+to find at its end, but the beauty of the rainbow itself is a treasure worth 
+noting. If you're looking for more than just a view, consider exploring the 
+areas it touches or the source of its creation.
+
+>e
+East's a no-go, pal. The landscape's got its own ideas about where you can and 
+can't tread. Maybe it's the cliffs, or the river's mood, but that way's not in 
+the cards. Try another direction, or take a closer look around. There's always 
+another angle in this game.
+
+>look under rainbow
+Beneath the rainbow's ethereal arch, the Frigid River carves its path, 
+relentless and cold. It's a scene straight out of a dream, where nature plays 
+its hand, painting the air with color and the earth with the river's icy brush. 
+No pots of gold here, just the raw, untamed beauty of the wild.
+
+>get all
+You cast a wide net, looking to grab whatever this place might be hiding. But 
+the truth is, there's nothing here to pocket, no treasures lying around for the 
+taking. This spot's clean, maybe too clean. Keep your eyes peeled and your wits 
+about you. There's more to this place than meets the eye.
+
+>examine all
+Water: It's just water, but don't let its calm fool you. Every drop tells a 
+story of journeys unseen, of depths unexplored.
+
+Rainbow: More than just refracted light, it's a fleeting work of art, a bridge 
+to nowhere painted across the sky with a palette only nature could hold.
+
+River: It's not just any river. It's the lifeblood of this canyon, cutting 
+through stone and time, carrying secrets in its icy embrace.
+
+Each piece of this scene plays its part in the grand scheme, a tableau too vast 
+for simple descriptions. Look closer, think deeper. There's always more than 
+meets the eye.
+
+>drink water
+You lean down, cupping the water with your hands, and take a cautious sip. It's 
+cold, sharper than the air around you, a reminder of the river's journey 
+through the heart of the canyon. It's just water, but out here, it tastes like 
+survival, like a small victory against the elements. You straighten up, feeling 
+the chill slide down your throat, a brief respite in a world that offers few.
+
+>s
+South's a dead end, friend. The landscape here doesn't play by the usual rules, 
+and it's got its own ideas about where you can tread. Maybe it's the cliffs, 
+the river's mood, or just the way the wind's blowing. Either way, that path's 
+not yours to walk. Time to plot a new course, find another angle. This world's 
+full of them, if you know where to look.
+
+>look around
+End of Rainbow
+Here you stand, at the world's edge, on a beach cradled by the relentless push 
+of the Frigid River. The White Cliffs loom like silent giants, their shadows 
+slicing the narrow strip of sand. Above, the canyon breathes open, spilling 
+sunlight that dances on the water's surface. A rainbow, bold and defiant, 
+arches over the falls to the east, a bridge to dreams untold. To the southwest, 
+a path whispers of mysteries yet to be uncovered. This place, caught between 
+the roar of the falls and the quiet of the cliffs, holds stories only the brave 
+dare to uncover.
+
+>where can I go ?
+The game's ear might not catch every word, but it understands the spirit of 
+your quest. If you're looking to chart your path, try asking "go where?" or 
+simply "look" to get a lay of the land. The world around you is vast, filled 
+with hidden nooks and crannies waiting to be discovered. Paths may lead to the 
+unknown, and choices you make could open doors you never knew existed. Keep 
+your eyes open, adventurer. The next step is yours to take.
+
+>sw
+Back at Canyon Bottom
+You've circled back, like a gumshoe tailing a lead that's gone cold, to the 
+canyon's floor. The walls here could tell stories, if only they could talk. The 
+river's murmur is your only companion, a constant in this ever-changing maze. 
+Paths may lead you astray or towards your fortune. Keep your wits about you; 
+this isn't a place for the faint-hearted.
+
+>get some sand
+You scoop up a handful of sand, its grains slipping through your fingers like 
+fleeting thoughts. For a moment, you ponder the stories each grain could tell, 
+the journeys they've made to end up here, beneath your feet. But this isn't a 
+treasure you can pocket or a clue that will lead you to the end of your quest. 
+It's just sand, a piece of this vast, mysterious world. You let it fall, 
+watching it blend back into the landscape, and turn your attention back to the 
+adventure at hand.
+
+>wave your arms and curse the sky !
+You throw your arms up and unleash a torrent of curses at the indifferent sky, 
+a momentary release of frustration in a world that often gives no quarter. The 
+sky, vast and unyielding, holds its silence, a stoic witness to the trials of 
+those who dare to challenge the mysteries below. Your words dissipate into the 
+air, leaving no mark on the heavens or your predicament. It's clear: if answers 
+or solace you seek, they won't be found in the empty embrace of the sky. Better 
+to gather your wits and continue on; this adventure cares not for curses, only 
+actions.
+
