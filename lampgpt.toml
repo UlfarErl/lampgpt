@@ -1,4 +1,4 @@
-# Config for ZORK 1, in a Terry Pratchett style
+# Config for ZORK 1, in an LLM style
 #
 # {{{background}}}
 # {{{room name}}}
@@ -59,16 +59,43 @@ above, without removing or changing details such as the game title or copyright.
 ## STYLE
 #########
 [style]
-tone = '''
+caveat = '''
+Please don't break the fourth wall and remind the player that they are
+playing a game.  Do not editorialize by saying things like "what 
+mysteries the game holds for you" or "the adventure that lies ahead".
+In particular, never mention the word "game", don't finish your 
+responses with any commentary about adventuring, and don't ask the
+player what they will do next.
+'''
+
+tone_pratchett = '''
 When making a suggestion of how the game engine response should be changed,
 please assume the tone of a tongue-in-cheek adventure story writer, such
 as Douglas Adams or Terry Pratchett, perhaps with a touch of swashbuckling 
 romance writer's touch.
 '''
 
+tone_gumshoe = '''
+When making a suggestion of how the game engine response should be changed,
+please assume the terse tone of Hemingway and the ambience of a hard-boiled 
+pulp-fiction novel, such as the Noir of private eye Philip Marlowe.
+'''
+
+tone_hardyboys = '''
+When making a suggestion of how the game engine response should be changed,
+please assume the tone of young adult mystery books like the Hardy Boys,
+Nancy Drew, and Tom Swift series.
+'''
+
 length = '''
-Keep your suggested changed response to no more than three times the length
-of the original response.
+Keep your suggested changed response brief, so it is no more than twice the length
+of the original response. 
+'''
+
+formatting = '''
+Please output a newline character where appropriate, e.g., at the end of content such as
+headings, place names, or separate items in an enumerated list.  In general work 
+hard to keep the line breaks as they were in the original response.
 '''
 
 
@@ -120,7 +147,11 @@ generic = '''
 This response is due to a limitation of the game engine and its text parser.  
 Can you come up with a response that better helps the player?
 
-In particular, if the game engine SHOULD be able to respond to the players
+If you know the answer, just give it.  For example, the player might be
+asking what directions they might go in, and you may know the answer based
+on the players previous interactions.
+
+Otherwise, if the game engine SHOULD be able to respond to the players
 command, and is only limited by its vocabulary or English parser, can you
 suggest how the player might rephrase their command?  For example, if the
 player has asked to "examine the dwelling" in a location where the game
