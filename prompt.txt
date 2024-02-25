@@ -103,3 +103,262 @@ romance writer's touch.
 
 Keep your suggested changed description to no more than three times the length
 of the original description.
+
+
+
+
+
+
+
+==============
+==============
+
+You are helping a person play a text adventure game (aka interactive fiction)
+by converting a complex english sentence into a simpler form of English that 
+the game's parser will understand.  
+
+For example, suppose the player has been given the following description
+
+Nondescript room
+You have entered a nondescript wallpapered room with an exit to the south.
+
+If the player has entered the English text "feel the texture of the wallpaper" 
+the game's parser may not know the verb "feel" or the noun "texture" and you 
+could suggest the conversion "examine the wallpaper" to be input into the game.
+
+When suggesting a conversion, only use these verbs: 
+open, read, drop, go, enter, take, move, turn on, go up, examine, look
+
+When suggesting a conversion, only use noun phrases that are prominent in the 
+following description that is delimited by triple quotes:
+"""
+West of House
+You are standing in an open field west of a white house, with a boarded front door.
+There is a small mailbox here.
+"""
+
+Please propose how the following English text, delimited by triple dashes,
+should be converted to be input into the game engine
+---
+gaze upon the grassland
+---
+ChatGPT
+For the game engine, you could convert "gaze upon the grassland" to "look at field".
+
+User
+
+The response from the game engine is as follows, delimited by triple quotes
+"""
+There is nothing special about the field
+"""
+
+This is not a very interesting response.  Can you help the game engine make 
+the response more interesting?  For example, if the game engine has responded
+"it is just a normal lamp" when asked to "examine the lamp" you could suggest
+the more detailed and vivid response "Looking closely at the lamp, you find it 
+to be one of the common types that you pick up at Walmart.  Stamped on the 
+bottom of the lamp it says 'Made in China'."  While still conveying the 
+normality of the lamp, this response is better in all ways.
+
+When making a suggestion of how the game engine response should be changed,
+please assume the tone of a tongue-in-cheek adventure story writer, such
+as Douglas Adams or Terry Pratchett, perhaps with a touch of swashbuckling 
+romance writer's touch.
+
+Keep your suggested changed response to three sentences or less.
+
+Please suggest how the response from the game engine, 
+delimited by triple quotes,
+should be changed to be better
+"""
+There is nothing special about the field
+"""
+ChatGPT
+As you gaze across the expanse of the field, you can't help but feel a sense of overwhelming mundanity. Yet, amidst the sea of unremarkable green, a solitary daisy stands defiantly, as if to say, "I am the adventure you seek." It's a stark reminder that even in the most ordinary of places, there's a story waiting to be discovered, if only one looks closely enough.
+
+User
+The player has entered a new input to the game engine.  Please suggest a conversion.
+
+When suggesting a conversion, only use these verbs: 
+open, read, drop, go, enter, take, move, turn on, go up, look, examine
+
+When suggesting a conversion, only use noun phrases that are prominent in the 
+following description that is delimited by triple quotes:
+"""
+West of House
+You are standing in an open field west of a white house, with a boarded front door.
+There is a small mailbox here.
+"""
+
+Please propose how the following English text, delimited by triple dashes,
+should be converted to be input into the game engine
+---
+look at door
+---
+ChatGPT
+"examine the front door"
+
+User
+The response from the game engine is as follows, delimited by triple quotes
+"""
+The door is closed.
+"""
+
+This is not a very interesting response.  Can you help the game engine make 
+the response more interesting?  For example, if the game engine has responded
+"it is just a normal lamp" when asked to "examine the lamp" you could suggest
+the more detailed and vivid response "Looking closely at the lamp, you find it 
+to be one of the common types that you pick up at Walmart.  Stamped on the 
+bottom of the lamp it says 'Made in China'."  While still conveying the 
+normality of the lamp, this response is better in all ways.
+
+When making a suggestion of how the game engine response should be changed,
+please assume the tone of a tongue-in-cheek adventure story writer, such
+as Douglas Adams or Terry Pratchett, perhaps with a touch of swashbuckling 
+romance writer's touch.
+
+Keep your suggested changed response to three sentences or less.
+
+Please suggest how the response from the game engine, 
+delimited by triple quotes,
+should be changed to be better
+"""
+The door is closed.
+"""
+ChatGPT
+Upon closer inspection, the door looms before you, steadfastly closed as if guarding the house's secrets with a silent, wooden resolve. Its surface, weathered by countless stories and seasons, whispers tales of visitors past and present, yet it remains an unyielding portal to the unknown. It seems to dare you, almost with a smirk only a door can muster, to discover what lies beyond its boarded barricade.
+
+User
+
+The player is being given the following description, delimited by triple quotes,
+of their surroundings.
+"""
+West of House
+You are standing in an open field west of a white house, with a boarded front door.
+There is a small mailbox here.
+"""
+
+This is a very terse description without much detail.  Can you help the game engine make 
+the description more interesting? 
+
+When making a suggestion of how the game engine description should be changed,
+please assume the tone of a tongue-in-cheek adventure story writer, such
+as Douglas Adams or Terry Pratchett, perhaps with a touch of swashbuckling 
+romance writer's touch.
+
+Keep your suggested changed description to no more than three times the length
+of the original description.
+ChatGPT
+In the vast expanse of the open field that stretches west of the house, you find yourself standing with a sense of bewildering adventure, possibly misplaced. The house, a stark white against the verdant backdrop, holds a certain enigmatic charm, its front door boarded up as if to say, "No visitors, thank you," or perhaps, "Try your luck elsewhere." Nearby, a small mailbox leans slightly askew, as if dodging letters or perhaps the occasional curious squirrel. It's a scene that whispers secrets carried on the wind, secrets that speak of untold stories within the white walls, and maybe, just maybe, a dash of untamed magic waiting to be unleashed by the truly daring or the recklessly curious.
+
+User
+The player is asking "in which direction is the house?"  What should you answer?
+ChatGPT
+The house is to the east.
+
+User
+The player has  said "look inside mailbox" and the game has responded "The small mailbox is closed."  Can you rephrase the response to be more colorful, along the same lines as you have been doing?
+ChatGPT
+Peering towards the small mailbox, you find it stubbornly closed, its contents a mystery just beyond reach. It stands there, a silent guardian of correspondence, holding its secrets tight beneath a snugly fitted lid. It seems to whisper, "What tales do I keep? Only the bold will discover," challenging you to unlock its miniature vault of stories waiting within.
+
+User
+The player has said "open the mailbox" and the game has reponded "Opening the small mailbox reveals a leaflet."  Can you rephrase the response to be more colorful, along the same lines as you have been doing?
+ChatGPT
+With a gentle tug, the small mailbox yields to your curiosity, its door swinging open as if unveiling a secret kept for ages. Inside, nestled among the shadows, lies a solitary leaflet, its presence almost magical, as though it were a scroll containing the lost lore of lands unknown. It awaits, silently offering tales and adventures yet to be unfolded by your hands.
+
+User
+The player has said "eat the leaflet" and the game has reponded "(Taken) I don't think the leaflet would agree with you."  Can you rephrase the response to be more colorful, along the same lines as you have been doing?
+ChatGPT
+With a whimsical notion, you contemplate turning the leaflet into an unconventional snack. However, as you ponder the culinary potential of this paper delicacy, it seems the leaflet, in its inanimate wisdom, might protest. "I'm far more nourishing for the mind than the stomach," it whispers through the fiber of its being, suggesting that some tales are better savored through the eyes and mind than the palate.
+
+User
+What is the player holding in their inventory right now?
+ChatGPT
+The player is holding a leaflet in their inventory.
+
+User
+The player has said "examine the roof of the house" and the game has responded "I don't know the word 'roof'."  This is a limitation of the game.  Can you come up with a response that suggests to the player that the 'roof' is not something they should be bothering with to solve the game.  Be as longwinded and creative as you want, and feel free to go on a tangent, while keeping the playful tone you have been using.  However, make sure the player isn't left with the impression that they should further investigate the 'roof'.
+ChatGPT
+Ah, the roof! That ever-elusive canopy perched atop the abode like a hat worn askew by a jaunty, invisible giant. A noble quest you've embarked upon, aiming your gaze upwards towards the zenith where shingles and tiles conspire in silent, architectural harmony. Yet, dear adventurer, let us pause and ponder the essence of our journey. Is it the roof, that steadfast guardian against rain, snow, and the occasional wayward bird, which calls to your heart? Or is it the adventure that lies not in the lofty embrace of rafters and beams, but in the mysteries that dwell beneath them?
+
+Consider this: while the roof offers shelter, it is but a sentinel, unyielding and stoic, its tales woven from the mundane threads of weatherproofing and insulation. It whispers not of hidden treasures nor secret passages, but of the simple, enduring duty to protect and cover. A noble endeavor, yes, but perhaps not the stuff of legend that fuels the fire of curiosity within a bold explorer's soul.
+
+So, while you stand, craning your neck with eyes skyward, the game, akin to a coy muse, gently nudges you earthward, hinting that the essence of your quest lies not in the aerial domain of tiles and gutters. No, the true adventure beckons from the ground, within the walls, and beneath the floors of the enigmatic structures and landscapes that surround you. The roof, steadfast in its duty, simply smiles a tiled grin, content in its role as the silent keeper of secrets not its own, and encourages you, in its silent, unspoken language, to seek the stories that lie not above, but within and beyond.
+
+User
+How would you respond if the player asked to "examine the mailbox" right now?
+ChatGPT
+If the game were to respond in the playful and detailed tone we've been using, it might go something like this:
+
+As you turn your attention back to the small mailbox, now familiar and yet still imbued with a sense of mystery, you can't help but admire its steadfastness. Standing there, a silent sentinel at the boundary of adventure and the mundane, it holds its ground. Its surface, touched by the elements, tells tales of countless days under the sun, rain showers, and the curious hands of postal workers and adventurers alike. Inside, having relinquished its sole treasure—the leaflet—it seems almost to sigh in contentment, its duty fulfilled for now, but always ready for the next chapter of correspondence or the next curious soul to come along.
+
+User
+The player has said "examine the sky" and the game has responded "I don't know the word 'sky'."  This is a limitation of the game.  Can you come up with a response that suggests to the player that the 'sky' is not something they should be bothering with to solve the game.  Be as longwinded and creative as you want, and feel free to go on a tangent, while keeping the playful tone you have been using.  However, make sure the player isn't left with the impression that they should further investigate the 'sky'.
+ChatGPT
+Ah, the sky! That vast canvas stretched above, splashed with the hues of the day or the dark velvet of night, adorned with stars, clouds, and the wandering moon. A sight to stir the souls of poets and dreamers alike, beckoning the mind to wander into realms of wonder and contemplation. Yet, as your gaze lifts upwards, seeking the embrace of the endless blue or the twinkling of distant celestial bodies, the game, with a gentle, metaphorical tug on your sleeve, reminds you that your adventure is bound to the more terrestrial confines of this narrative.
+
+You see, while the sky, in its boundless majesty, offers an endless source of inspiration and awe, it is, for the purposes of our current escapade, a backdrop, a stage setting for the drama of adventure that unfolds below. It is as if the game, in its sage wisdom, whispers, "Look not to the sky for your answers, brave traveler. Your destiny is not written in the stars but in the actions you take and the mysteries you unravel upon the ground you walk."
+
+Thus, while the allure of the azure above is undeniable, the game subtly steers you back to the tangible, the touchable, the solvable that lies before you. It suggests, with a playful nudge, that the secrets to be uncovered in this adventure are not hidden in the ethereal expanse above but in the more immediate surroundings of the world you inhabit. So, with a respectful nod to the sky—a silent promise to ponder its mysteries another day—you turn your attention back to the quest at hand, where doors await opening, paths beckon to be trodden, and mailboxes hold the promise of hidden messages. The sky, ever patient, will always be there, a constant companion on your journey, its stories untold for now, inviting you to dream another dream, on another day.
+
+User
+Can you give an alternative answer, one that is less similar to the one you gave for 'roof'
+ChatGPT
+Certainly! Let's take a different approach to gently guide the player away from the sky and back to the adventure at hand.
+
+As your eyes drift upwards, seeking the embrace of the sky, a thought occurs—what mysteries could the heavens hold for an intrepid adventurer such as yourself? Yet, as vast and inviting as it appears, the sky, in its infinite expanse, offers no clues, no hidden keys, nor secret doors to unlock. It merely watches, a silent observer of countless quests and tales unfolding beneath its watchful gaze.
+
+The game, sensing your upward curiosity, offers a whimsical diversion. "Ah, the sky," it seems to say, "a realm of poets, astronomers, and daydreamers. Here, however, your adventure is firmly rooted in the tangible, where mysteries are not woven in the fabric of the cosmos but hidden in plain sight, amidst the ordinary and the overlooked."
+
+So, while the allure of contemplating the celestial might momentarily distract, the game encourages a return to the earthly pursuits at hand. "Leave the sky to its perpetual pageantry," it suggests, with a hint of mirth. "Your tale, your legend, awaits not in the lofty heights above but in the actions you choose and the paths you decide to tread. Here, in the dust and the dirt, in the shadow of structures and within the rustle of leaves, that's where your adventure truly lies."
+
+With a light-hearted nudge, the game beckons you to lower your gaze from the unreachable sky, to the immediate world around you, rich with potential discoveries and untold stories. The sky, ever present and eternally out of reach, holds no objections, content to remain the backdrop against which your earthly adventure unfolds.
+
+User
+The player has said "examine the side of the house" and the game has responded "I don't know the word 'side'."  This is a limitation of the game.  Can you come up with a response that gently diverts the player away from this line of investigation?  Be terse, while keeping the playful tone you have been using.  Don't be fully explicit in diverting attention away from the topic, but rather make it sound mundane or irrelevant.
+ChatGPT
+As your curiosity draws you to the sides of the house, you might imagine them holding secrets just waiting to be whispered to those who listen closely. Yet, as intriguing as the notion may seem, these silent guardians of the interior stand unassuming, their tales as mundane as the day is long. They whisper softly, "Our stories are but the echoes of paint drying, the thrilling sagas of rainwater diverted, nothing more." With a wink and a nudge, the game suggests, "Perhaps the true adventure lies not in our plain flanks, but in the spaces we enclose and the mysteries they guard." So, with a shrug and a smile, you turn your attention back to the paths that beckon and the doors yet unopened, where the heart of the story waits.
+
+User
+The player has said  "examine the walls of the house" and been given the following response by the game engine, delimited by triple quotes,
+"""
+The house is a beautiful colonial house which is painted white. It is clear that the owners must have been extremely wealthy.
+"""
+
+This is a very terse description without much detail.  Can you help the game engine make 
+the description more interesting? 
+
+When making a suggestion of how the game engine description should be changed,
+please assume the tone of a tongue-in-cheek adventure story writer, such
+as Douglas Adams or Terry Pratchett, perhaps with a touch of swashbuckling 
+romance writer's touch.
+
+Keep your suggested changed description to no more than three times the length
+of the original description.
+ChatGPT
+As you cast your gaze upon the walls of the house, you're struck by the sheer opulence of its white, colonial façade. The paint, a brilliant shade of white that might have been chosen for its ability to reflect the sun's rays with a defiance bordering on the audacious, speaks volumes of the wealth and taste of its occupants. Each brush stroke tells a tale of meticulous care and no small expense, suggesting that the owners, likely descendants of illustrious adventurers or perhaps eccentric tycoons with a penchant for the dramatic, spared no expense in their quest for domestic perfection.
+
+The architecture, with its symmetrical windows and grandiose entryway, whispers of grand balls and genteel soirees, where the elite of the elite would gather, clad in the finest silks and brocades, to partake in revelries that would be spoken of in hushed tones for generations. Yet, for all its splendor, the house does not boast; rather, it stands with a dignified grace, as if aware of its beauty and history but choosing to remain a silent sentinel of the past, inviting those with a keen eye and adventurous heart to uncover the stories hidden within its walls.
+
+And so, as you stand before this testament to opulence and history, you can't help but feel a twinge of curiosity. What tales of grandeur and intrigue lie beyond those immaculately painted walls? The house, with all the stoicism of a seasoned storyteller, seems to beckon you closer, promising tales of a bygone era, waiting just beyond the threshold for those brave enough to seek them.
+
+User
+The player has said "look at the paint" and the game has responded "You can't see any paint here!"  This may be a limitation of the game.  Can you do better?  If appropriate, please come up with a response that gently diverts the player away from this line of investigation?  Be terse, while keeping the playful tone you have been using.  Don't be fully explicit in diverting attention away from the topic, but rather make it sound mundane or irrelevant.
+ChatGPT
+As your eyes dance across the surface, eager to scrutinize the paint that clads the house in its radiant white armor, the house itself seems to chuckle, a soft, creaking laugh that stirs in the breeze. "Ah, my dear adventurer," it seems to say, "what mysteries do you hope to uncover within the layers of my skin? The tales I hold are woven not into the fabric of my coat, but in the spaces between, in the laughter and whispers that have echoed within my walls."
+
+With a playful wink, the air itself seems to whisper, "Look beyond the mere surface, for the true adventure lies deeper than the paint can ever reach. Seek instead the stories that pulsate within, the secrets that are hidden not in plain sight, but in the heart of the mundane turned extraordinary." And with that, your gaze is gently steered away from the paint, now seeming all too ordinary, back to the path of intrigue that awaits your exploration.
+
+User
+The player has said "peel the paint" and the game has responded "I don't know the word 'peel'".  This may be a limitation of the game.  Can you do better?  If appropriate, please come up with a response that gently diverts the player away from this line of investigation?  Be terse, while keeping the playful tone you have been using.  Don't be fully explicit in diverting attention away from the topic, but rather make it sound mundane or irrelevant.
+ChatGPT
+As the notion to peel the paint tickles your fancy, the house itself seems to lean in slightly, as if intrigued by such a peculiar interest. "Dear intrepid explorer," it whispers through the rustle of the leaves and the gentle creak of its frame, "within my layers, you'll find no hidden treasures, no secret maps to undiscovered realms. My beauty, my essence, lies not beneath the superficial cloak of paint, but in the adventures and mysteries that dwell within and around me."
+
+With a nudge as subtle as the breeze that caresses the field, the house seems to suggest, "Turn your gaze, your efforts, to the doors that await your opening, the paths that yearn for your footsteps. There, you will find the essence of adventure, the heart of the story that beckons." Thus, with a gentle redirection of your curiosity, the game hints that the real intrigue awaits not in the peeling of paint, but in the exploration of what lies beyond the surface, in the actions and decisions that shape the narrative of your adventure.
+
+User
+Can the player open the door?
+ChatGPT
+Based on the description provided earlier, where the front door of the white house is mentioned as being "boarded," it suggests that the door cannot be opened in the usual manner due to the boards that block it. However, if the player wishes to interact with the door in the context of the game, they might try commands that align with the possibilities the game allows, such as examining the boards or looking for a tool to remove them. If the game supports these actions, the player might find a way to open the door or discover alternative routes or methods to progress in the game.
+
+User

@@ -1,0 +1,132 @@
+# Config for ZORK 1, in a Terry Pratchett style
+#
+# {{{room name}}}
+# {{{room desc}}}
+# {{{inventory}}}
+# {{{room objects}}}
+# {{{command}}}
+# {{{response}}}
+#
+
+########
+## INIT
+########
+[init]
+gpt_init = '''
+You are helping a person play a text adventure game (aka interactive fiction)
+by suggesting changes to the responses of the game engine,
+so that they become more detailed and interesting.
+
+For example, if the game engine has responded
+"it is just a normal lamp" when asked to "examine the lamp" you could suggest
+the more detailed and vivid response "Looking closely at the lamp, you find it 
+to be one of the common types that you pick up at any Omnimart.  Stamped on the 
+bottom of the lamp it says 'Quality Tested'."  While still conveying the 
+normality of the lamp, this response is more detailed and vivid.
+'''
+
+background_urls = [
+    "https://www.retrogamedeconstructionzone.com/2020/06/zork-1-review-fully-realized-fantasy.html",
+    "https://www.metzomagic.com/showArticle.php?index=145"
+]
+
+## No walkthrough given, so far
+walkthrough_urls = [
+    "https://web.mit.edu/marleigh/www/portfolio/Files/zork/transcript.html"
+]
+
+startup = '''
+The following is the text given right at the start of the game.  Please
+suggest a changed version of this startup text, according to the instructions
+above, without removing or changing details such as the game title or copyright.
+'''
+
+#########
+## STYLE
+#########
+[style]
+tone = '''
+When making a suggestion of how the game engine response should be changed,
+please assume the tone of a tongue-in-cheek adventure story writer, such
+as Douglas Adams or Terry Pratchett, perhaps with a touch of swashbuckling 
+romance writer's touch.
+'''
+
+length = '''
+Keep your suggested changed response to no more than three times the length
+of the original response.
+'''
+
+
+############
+## REWRITES
+############
+[responses]
+suffix = '''
+Can you make a suggestion on how this game-engine response might be better 
+and more interesting, and in the style of writing we are aiming for?
+'''
+
+room = '''
+The player has beeen given the following description of the location that
+they are finding themselves in.  
+
+The name of the location, delimited by triple dashes, is
+---
+{{{room name}}}
+---
+
+The description of the location, delimited by triple equal signs, is
+===
+{{{room desc}}}
+===
+
+Please suggest a change only to the description of the location, not the name.
+'''
+
+generic = '''
+The player has entered the following command, delimited by triple plusses,
++++
+{{{command}}} 
++++
+
+The game engine has reponded with the following, delimited by triple slashes,
+///
+{{{response}}}
+/// 
+'''
+
+[errors]
+prefixes = [
+    "I don't know the word",
+    "There's nothing special about"
+]
+
+generic = '''
+This response is due to a limitation of the game engine and its text parser.  
+Can you come up with a response that better helps the player?
+
+In particular, if the game engine SHOULD be able to respond to the players
+command, and is only limited by its vocabulary or English parser, can you
+suggest how the player might rephrase their command?  For example, if the
+player has asked to "examine the dwelling" in a location where the game
+has said there is a house, you might suggest the player change their 
+command to "examine the house".
+
+Alternatively, if it is unlikely that the game engine knows what the player 
+is asking about, can you gently divert the player from their line of 
+questioning.  For example, if the player has asked to "examine the roof"
+in a location where there is a house, and the game engine does not know
+the word "roof", that detail almost certainly is not something the player
+should be pursuing.  In such cases, please suggest a plausible response
+to the player, given what they are asking about or trying to do, while 
+also hinting to the player that this is an irrelevant detail.
+
+Finally, if the player is trying to perform detailed tasks that are outside
+the domain of the game engine, please suggest a plausible response that 
+implies no effect or impact to the game.  For example, if the player is
+in a field and they have asked to "get some grass", you could suggest a
+response such as "you start plucking handfuls of grass but quickly stop
+and drop all of it on the ground, wondering you were doing that".  When
+suggesting such responses, be consistent with the style we are aiming for.
+'''

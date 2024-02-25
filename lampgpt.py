@@ -6,16 +6,20 @@ import os
 import subprocess
 import sys
 import time
+import toml
 
+########
+## UTIL
+########
 transcript = None
+config = None
 
 def write_to_transcript(output):
     global transcript
-    modified_output = output.replace("mailbox", "snowman")
-    sys.stdout.write(modified_output)
+    sys.stdout.write(output)
     sys.stdout.flush()
     if transcript:
-        transcript.write(modified_output)
+        transcript.write(output)
         transcript.flush()
 
 def configure_non_blocking_reads(stream):
@@ -29,47 +33,108 @@ def non_blocking_read(stream):
     except:
         return ""
 
+#############
+## GPT STUFF
+#############
+def tell_gpt(prompt):
+    write_to_transcript(prompt)
+    if not prompt[-1] == '>':
+        write_to_transcript('\n')
+    return
+
+#################
+## REWRITE LOGIC
+#################
+def init_rewrites(game_init_text):
+    global config
+    tell_gpt(config['init']['gpt_init'])
+    tell_gpt(config['style']['tone'])
+    tell_gpt(config['style']['length'])
+    tell_gpt(config['init']['startup'])
+    tell_gpt(game_init_text)
+    return
+
+def rewrite_response(command, response):
+    global config
+    # clean up input/output
+    input = False
+    if response[-1] == '>': # remove input prompt, if there
+        response = response[:-1] 
+        input = True
+    command = command.rstrip()
+    response = response.rstrip()
+
+    # detect errors
+    error = False
+    for prefix in config['errors']['prefixes']:
+        if response.startswith(prefix):
+            error = True
+    
+    # rewrite
+    template = config['responses']['generic']
+    prompt = template.replace('{{{command}}}',command).replace('{{{response}}}',response)
+    tell_gpt(prompt)
+    if error:
+        tell_gpt(config['errors']['generic'])
+    else:
+        tell_gpt(config['responses']['suffix'])
+    if input == True:
+        write_to_transcript('>')
+    return
+
+########
+## MAIN
+########
 def main(): 
-    global transcript
+    global transcript, config
     parser = argparse.ArgumentParser(description='Script for an LLM-enhanced Infocom experience.')
     
     # Parse arguments
     parser.add_argument('--config', '-c', type=str, default='./lampgpt.toml', help='Configuration file name (default lampgpt.toml)')
     parser.add_argument('--transcript', '-t', type=str, help='Name of transcript output file')
-    parser.add_argument('--verbose', '-v', action='store_true', help='Increase output verbosity')
+    parser.add_argument('--verbose', '-v', action='store_true', help='Output original ZIL interpreter input/output')
     parser.add_argument('--delay', '-d', type=int, default=5, help='Delay (in milliseconds) to wait for ZIL interpreter output in each turn')
-    parser.add_argument('--bocfel', '-x', type=str, default='./bocfel-2.1.2/bocfel', help='Executable file name for bocfel ZIL runtime')
+    parser.add_argument('--bocfel', '-x', type=str, default='./bocfel-2.1.2/bocfel', help='File name of bocfel ZIL interpreter')
+    parser.add_argument('--bocfelargs', '-z', type=str, default='', help='Optional arguments for bocfel ZIL interpreter')
     parser.add_argument('ZILFILE')
     args = parser.parse_args()
 
     # Process arguments and config
     if args.transcript:
         transcript = open(args.transcript, 'w')
+    try:
+        with open(args.config, 'r') as config_file:
+            config = toml.load(config_file)
+    except:
+        print('Invalid or missing ToML configuration file (default is ./lampgpt.toml)')
+        return
 
     # Launch the ZIL interpreter and manage its input/output
-    process = subprocess.Popen([args.bocfel, args.ZILFILE], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, bufsize=1)
+    bocfel_launch = [args.bocfel] + args.bocfelargs.split() + [args.ZILFILE]
+    process = subprocess.Popen(bocfel_launch, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, bufsize=1)
     configure_non_blocking_reads(process.stdout)
 
     try:
+        time.sleep((10*args.delay)/1000.0)
+        output = non_blocking_read(process.stdout)
+        init_rewrites(output)
+
         while True:
-            time.sleep((1.0*args.delay)/1000.0)
-
-            # Process the output from the subprocess
-            output = non_blocking_read(process.stdout)
-            write_to_transcript(output)
-
-            # Read a single line from stdin
-            line = sys.stdin.readline()
-            if not line:  # If EOF, break the loop
+            command = sys.stdin.readline()
+            if not command:  # If EOF, break the loop
                 break
-            modified_line = line.replace("house", "horse")
 
-            # Write the modified input to the subprocess
-            process.stdin.write(modified_line)
+            # Get a command and the original ZIL interpreter response
+            process.stdin.write(command)
             process.stdin.flush()
-            write_to_transcript(modified_line)
             if args.verbose:
-                print(f"# ORIGINAL INPUT: {line}")
+                write_to_transcript(f"# ORIGINAL COMMAND: {command}")
+            time.sleep((1.0*args.delay)/1000.0)
+            response = non_blocking_read(process.stdout)
+            if args.verbose:
+                write_to_transcript(f"# ORIGINAL RESPONSE: {response}")
+
+            rewrite_response(command, response)
 
     except KeyboardInterrupt:
         print("\nScript interrupted by user. Exiting.")
