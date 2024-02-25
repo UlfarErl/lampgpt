@@ -1,5 +1,6 @@
 # Config for ZORK 1, in a Terry Pratchett style
 #
+# {{{background}}}
 # {{{room name}}}
 # {{{room desc}}}
 # {{{inventory}}}
@@ -25,14 +26,27 @@ bottom of the lamp it says 'Quality Tested'."  While still conveying the
 normality of the lamp, this response is more detailed and vivid.
 '''
 
+background_init = '''
+Here is some background information about the game being played, delimited by triple percent signs:
+%%%
+{{{background}}}
+%%%
+'''
+
 background_urls = [
-    "https://www.retrogamedeconstructionzone.com/2020/06/zork-1-review-fully-realized-fantasy.html",
-    "https://www.metzomagic.com/showArticle.php?index=145"
+    ["https://www.retrogamedeconstructionzone.com/2020/06/zork-1-review-fully-realized-fantasy.html",
+    "Zork 1 Review: A Fully Realized Fantasy Among(.*)the true stuff of fantasy."
+    ],
+    ["https://www.metzomagic.com/showArticle.php?index=145",
+    "Review Zork 1: The Great(.*)just to see how it all began."
+    ]
 ]
 
 ## No walkthrough given, so far
 walkthrough_urls = [
-    "https://web.mit.edu/marleigh/www/portfolio/Files/zork/transcript.html"
+    ["https://web.mit.edu/marleigh/www/portfolio/Files/zork/transcript.html",
+    "(.*)"
+    ]
 ]
 
 startup = '''
