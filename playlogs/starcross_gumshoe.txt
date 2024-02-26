@@ -1,0 +1,96 @@
+STARCROSS: INTERLOGIC Science Fiction Copyright (c) 1982 by Infocom, Inc. All
+rights reserved. STARCROSS and INTERLOGIC are trademarks of Infocom, Inc.
+Release 18 / Serial number 830114  You're out cold in the bunk of your beat-up
+black hole hunter, the "Starcross," floating in the void off Ceres. Just as you
+hit the sweet spot of sleep, a shrill alarm slices through the silence! It's the
+mass detector! You snap to attention. Your luck's been dirt so far, and your
+pockets are as empty as the space around you. This could be the big score you've
+been sweating for.  Living Quarters (You're sprawled in the bunk.) This cramped
+hole is what you call home, with nothing but a bunk and a bureau to its name.
+The only way out is starboard. A tape library's stashed here. (outside the bunk)
+
+>leave bunk
+You haul yourself out of the bunk, not a moment too soon. The alarm bell from
+the mass detector cuts through the silence like a knife. Trouble's calling, and
+it's time to answer.
+
+>stand up
+You rise, feet hitting the cold deck with a thud that echoes in the cramped
+quarters. The alarm bell from the mass detector is a relentless siren, a
+harbinger of either fortune or doom.
+
+>search bunk
+Rummaging through the bunk turns up the same old nothing - just the ghosts of
+dreams past. Meanwhile, the alarm bell from the mass detector cuts through the
+silence, relentless, like a siren call to the unknown.
+
+>go starboard
+Bridge You step into the nerve center of the Starcross, where decisions weigh
+heavy and the unknown looms large. Exits whisper of escape: "Port," "Starboard,"
+and the foreboding "Out" behind a sealed bulkhead.  The ship's computer hums, a
+faithful companion in the cold void, handling the mundane tasks of keeping you
+alive. A control couch, your throne among the stars, faces a panel littered with
+controls and a viewport that stares into the abyss. The ship's ID clings to the
+wall, a reminder of distant bureaucracies.  Off to the side, the mass detector,
+your key to fortune, is alive with urgency. Red and blue buttons beg for
+attention beside a screen that might just spell your future. A faded instruction
+sheet for the computer flutters on the wall, a testament to simpler times.  The
+alarm bell from the mass detector cuts through the silence, a clarion call to
+action.
+
+>press red button
+With a steady press of the red button, the alarm's shrill cry cuts off mid-howl,
+plunging the bridge back into a tense silence.
+
+>read id
+The ship's registration, a relic from a time when you had to answer to someone
+else's call, clings to the wall. It reads: "Starcross, Mining Vessel, Ceres
+Outpost #7." A reminder of where you've been and just how far you've ventured
+into the void.
+
+>sit in couch
+You ease into the control couch, the command seat of your solitary kingdom among
+the stars. The seat belt dangles at your side, a silent reminder of the dangers
+that lurk in the void.
+
+>wear seat belt
+With a decisive pull, you secure the seat belt around you. Click - it's the
+sound of readiness, a pact between you and the void that you're not going down
+without a fight.
+
+>examine panel
+The control panel before you is a relic of necessity, built for the lone miner
+against the cosmos. It's a jungle of switches and dials, most lying dormant,
+waiting for a crisis. The Starcross prefers the sound of your voice to commands,
+but these controls stand ready for when words fail and action speaks.
+
+>read screen
+The screen's glow cuts through the dim, spelling out "mass UM28" in stark
+letters. It's a cold, cryptic message from the void, a whisper of something out
+there, waiting in the dark.
+
+>press blue button
+With a deliberate press of the blue button, the mass detector springs to life,
+its screen flickering with new data. It's like the machine itself is holding its
+breath, waiting to reveal secrets hidden in the cosmic dark.
+
+>examine screen
+Leaning closer, you see the screen spell out "mass UM28" in cold, digital
+script. It's a beacon in the void, a signpost pointing to something out there in
+the dark. Could be nothing. Could be the jackpot. Either way, it's a lead in
+this vast, silent sea of stars.
+
+>examine output
+The output lays bare the bones of the cosmos right in front of you, detailing
+major mass concentrations like secrets whispered in the dark. Each one tagged
+with a code, a set of coordinates in R, Theta, and Phi, like the universe
+plotting points on a map only you can read. It's a roadmap to the unknown, each
+destination a roll of the dice in this cosmic game of chance.
+
+>read coordinates of mass um28
+You lean in, scrutinizing the screen for the secrets of UM28. The display
+obliges, revealing its coordinates: R=3.14, Theta=45°, Phi=90°. It's a set of
+numbers, cold and impersonal, but to you, they're a siren's song, pulling you
+towards the unknown.
+
+>

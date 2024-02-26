@@ -1,0 +1,33 @@
+# Config for Starcross, in an LLM style
+#
+#
+
+########
+## GAME
+########
+[game]
+path = "./infocom/starcross/COMPILED/starcross.z3"
+
+# setup text copied from wikipedia
+setup = '''
+The player's ship, the Starcross, is fitted with a mass detector to look for "quantum black holes", which are such powerful sources of energy that one could provide a wealth of riches. When the mass detector finally discovers an anomaly, however, it is not a black hole but something else entirely: a massive craft of unknown origin and composition.
+
+The player must dock with the mysterious ship and gain entry to its interior. Once inside, the player discovers a wide variety of alien plant and animal species and an array of unfamiliar technology. 
+'''
+
+# text files giving descriptions 
+background_files = [
+    ["./infocom/starcross/manual.rno",
+    "INTRODUCTION(.*)the one-sixth gravity of Luna."
+    ],
+    ["./infocom/starcross/starcross.txt",
+    "THE SHIP FROM THE STARS(.*)a circular Earth orbit..."
+    ],
+]
+
+background_urls = [
+]
+
+## Not making use of the walkthrough, so far
+walkthrough_urls = [
+]

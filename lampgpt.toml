@@ -33,26 +33,12 @@ Here is some background information about the game being played, delimited by tr
 %%%
 '''
 
-background_urls = [
-    ["https://www.retrogamedeconstructionzone.com/2020/06/zork-1-review-fully-realized-fantasy.html",
-    "Zork 1 Review: A Fully Realized Fantasy Among(.*)the true stuff of fantasy."
-    ],
-    ["https://www.metzomagic.com/showArticle.php?index=145",
-    "Review Zork 1: The Great(.*)just to see how it all began."
-    ]
-]
-
-## No walkthrough given, so far
-walkthrough_urls = [
-    ["https://web.mit.edu/marleigh/www/portfolio/Files/zork/transcript.html",
-    "(.*)"
-    ]
-]
-
 startup = '''
 The following is the text given right at the start of the game.  Please
 suggest a changed version of this startup text, according to the instructions
-above, without removing or changing details such as the game title or copyright.
+above, without removing or changing details such as the game title or copyright,
+and while retaining all formatting, newlines, and line breaks.
+
 '''
 
 #########
@@ -71,7 +57,7 @@ player what they will do next.
 tone_pratchett = '''
 When making a suggestion of how the game engine response should be changed,
 please assume the tone of a tongue-in-cheek adventure story writer, such
-as Douglas Adams or Terry Pratchett, perhaps with a touch of swashbuckling 
+as Douglas Adams or Terry Pratchett, perhaps with a hint of a swashbuckling 
 romance writer's touch.
 '''
 
@@ -85,6 +71,13 @@ tone_hardyboys = '''
 When making a suggestion of how the game engine response should be changed,
 please assume the tone of young adult mystery books like the Hardy Boys,
 Nancy Drew, and Tom Swift series.
+'''
+
+tone_spaceopera = '''
+When making a suggestion of how the game engine response should be changed,
+please assume the tone of the ebullient space operas made popular by writers
+such as E.E. 'Doc' Smith in his Lensman series, and Edgar Rice Burroughs
+in his Mars books, such as A princess of Mars.
 '''
 
 length = '''
@@ -106,23 +99,6 @@ hard to keep the line breaks as they were in the original response.
 suffix = '''
 Can you make a suggestion on how this game-engine response might be better 
 and more interesting, and in the style of writing we are aiming for?
-'''
-
-room = '''
-The player has beeen given the following description of the location that
-they are finding themselves in.  
-
-The name of the location, delimited by triple dashes, is
----
-{{{room name}}}
----
-
-The description of the location, delimited by triple equal signs, is
-===
-{{{room desc}}}
-===
-
-Please suggest a change only to the description of the location, not the name.
 '''
 
 generic = '''

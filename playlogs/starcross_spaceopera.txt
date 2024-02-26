@@ -1,0 +1,339 @@
+STARCROSS: INTERLOGIC Science Fiction Copyright (c) 1982 by Infocom, Inc. All
+rights reserved. STARCROSS and INTERLOGIC are trademarks of Infocom, Inc.
+Release 18 / Serial number 830114  Enveloped in the comforting embrace of
+slumber within your bunk aboard the intrepid deep-space vessel "Starcross,"
+dedicated to the daring pursuit of black holes from the asteroid base of Ceres,
+you are suddenly roused. An alarm bell shatters the silence! The mass detector
+has sprung to life! With a start, you're wide awake. The journey thus far has
+yielded little but the promise of bills for repairs you can scarcely afford.
+This, however, could be the golden opportunity you've been yearning for, the
+chance to turn your fortunes around.  Living Quarters (You are nestled within
+the bunk.) Here lies your humble abode aboard the Starcross, a modest chamber
+furnished with nothing more than a bunk for rest and a bureau for your
+belongings. The sole path of egress lies to starboard. Adjacent to your resting
+place, the tape library stands as a beacon of knowledge and entertainment.
+(outside the bunk)
+
+>examine all
+Ah, the universe is vast and filled with countless wonders, yet my capabilities
+to focus are limited to one marvel at a time. Please, direct my gaze to a
+singular object of your curiosity.
+
+>leave bunk
+With a swift motion, you extricate yourself from the confines of the bunk, ready
+to face the mysteries that beckon. Meanwhile, the alarm bell of the mass
+detector cuts through the silence with urgent clamor, signaling the start of an
+unforeseen adventure.
+
+>examine bureau
+Upon closer inspection, the bureau stands as a silent guardian of your personal
+effects, its surface worn from the countless voyages through the cosmos. Though
+it may seem unremarkable at first glance, it holds the remnants of your
+terrestrial life, a testament to the explorer's spirit that drives you.
+Meanwhile, the persistent ringing of the mass detector's alarm bell slices
+through the air, a siren call to the unknown that awaits beyond the stars.
+
+>examine tape library
+The tape library, a treasure trove of knowledge and entertainment, stands just
+outside your bunk, its contents a collection of humanity's greatest achievements
+and tales of distant worlds. It beckons with the promise of countless hours lost
+in exploration, not of space, but of the mind's vast expanse. As you ponder the
+adventures contained within, the alarm bell of the mass detector continues its
+strident ringing, a reminder of the immediate mystery that calls for your
+attention.
+
+>go starboards
+With the spirit of adventure coursing through your veins, you realize you must
+first rise from your bunk to meet the challenges that await. As you contemplate
+your next move, the alarm bell of the mass detector continues its urgent clamor,
+a clarion call to the unknown that beckons you to action.
+
+>e
+Before you can venture forth into the unknown, you must first rise from your
+slumber's embrace. As you prepare to stand, the alarm bell of the mass detector
+rings with a fervor that cannot be ignored, heralding an adventure that awaits
+just beyond the confines of your current rest.
+
+>rise
+Ah, it seems the cosmos has momentarily clouded my understanding of your intent.
+If you wish to leave the comfort of your bunk and stand ready to face the
+adventures that lie ahead, you might try expressing your desire to "stand up" or
+simply "stand". These commands should set you on the right path.
+
+>stand up
+With a determined effort, you rise from your bunk, standing tall and ready to
+face the boundless mysteries of the cosmos. As you do, the alarm bell of the
+mass detector cuts through the silence with its urgent call to adventure, a
+reminder that destiny waits for no one.
+
+>go starboard
+Bridge You've now entered the nerve center of the Starcross, a room pulsating
+with the lifeblood of technology and the promise of the unknown. Exits beckon
+from "Port," "Starboard," and "Out," the latter guarded by a formidable
+bulkhead, sealed shut as if holding back the mysteries of the cosmos itself.
+Here, the ship's computer hums quietly, a faithful companion managing the vital
+tasks of navigation and sustaining the fragile bubble of life in the vast
+emptiness of space. A control couch, your throne among the stars, faces a panel
+aglow with readings and a viewport offering a panoramic view of the infinite.
+The ship's identity, its registration, is proudly displayed, a testament to
+human endeavor in the void.  To one side, the mass detector, your key to
+unlocking the treasures of the universe, awaits your command. It is adorned with
+a red button, a blue button, and a small screen which now displays a message of
+urgent intrigue.  A slightly faded instruction sheet for the computer, a relic
+of human ingenuity, is taped to the wall near this electronic oracle.  Amidst
+this symphony of technology, the alarm bell of the mass detector rings with a
+strident urgency, a clarion call to the adventure that lies just beyond the
+reach of the known.
+
+>read instructions
+(Taken)  Behold, the manual for your trusty Frobozzco FB-69105 Computer, a
+marvel of the modern age, designed to navigate the celestial sea with the grace
+of a cosmic ballet. This voice-activated sentinel of the stars demands respect
+and attention, responding only when addressed with the reverence due its
+station. Begin all commands with the invocation "computer," as in the sacred
+chant "Computer, Set course for Mars." When plotting your course through the
+heavens, speak in the hallowed terms of R, theta, and phi, as if weaving a spell
+with "Computer, R is 100. Theta is 200. Phi is 300." Adhere to these sacred
+texts, and the Frobozzco Computer shall be your faithful guide across the
+boundless night.  All the while, the alarm bell of the mass detector tolls with
+relentless urgency, a siren song calling you to the heart of the unknown.
+
+>read screen
+The screen, a window into the cosmos, cryptically declares: "mass UM91." This
+enigmatic message, a beacon in the dark expanse, hints at a discovery that could
+rewrite the stars. As you ponder the significance of these coordinates, the
+alarm bell of the mass detector continues its relentless clamor, a clarion call
+urging you towards the heart of this cosmic mystery.
+
+>examine all
+Ah, the universe is vast and filled with countless wonders, yet my capabilities
+to focus are limited to one marvel at a time. Please, direct my gaze to a
+singular object of your curiosity.
+
+>examine the blue button
+Upon closer inspection, the blue button, bathed in the soft glow of the control
+panel's lights, seems unremarkable at first glance. Yet, its simplicity belies
+its potential to alter the course of your journey through the stars. As you
+ponder its purpose, the alarm bell of the mass detector continues its relentless
+symphony, a harbinger of the unknown. From the depths of the ship's circuitry,
+an expressionless yet unmistakably irked voice emanates from the computer,
+pleading, "Please turn that alarm off! We'll both have headaches if you don't."
+The plea adds a touch of urgency to the mystery that unfolds before you.
+
+>push blue button
+With a decisive press, you engage the blue button, and the mass detector springs
+to life, its screen flickering with new data as if whispering secrets of the
+cosmos. Yet, amidst this revelation, the alarm bell continues its strident call,
+a relentless reminder of the urgency at hand. The ship itself seems to hold its
+breath, awaiting your next move in the grand tapestry of adventure that unfolds
+before you.
+
+>push red button
+With a bold thrust, you press the red button, and like the closing of a grand
+opera, the alarm's strident cry falls to silence. The sudden quiet feels like
+the calm of deep space, a serene pause in the midst of your cosmic journey. The
+ship, now hushed, seems to await your next command with bated anticipation,
+ready to continue its voyage through the star-studded tapestry of the universe.
+
+>examine red button
+The red button, now silent as the void of space itself, sits innocuously on the
+mass detector. Its recent press has stilled the clamorous alarm, casting a hush
+over the bridge. This simple mechanism, a sentinel of silence, holds the power
+to quell the cacophony of alerts, a reminder of the delicate balance between
+chaos and calm on your journey through the cosmos.
+
+>look around
+Bridge You find yourself in the heart of the Starcross, the bridge, where the
+fate of your journey is steered. Exits beckon from "Port," "Starboard," and
+"Out," the latter guarded by a closed heavy bulkhead, like the gate to the
+unknown. Here, the ship's computer, a silent companion, diligently oversees
+navigation and sustains the breath of life within this metal leviathan. Before
+you, a control couch invites command, facing a panel alive with the pulse of
+distant stars through the large viewport. The identity of this vessel, your
+vessel, is proudly declared nearby.  To one side, the mass detector, your beacon
+in the dark quest for black holes, awaits interaction. It is adorned with a red
+button, now silent, a blue button, and a small screen whispering secrets of the
+cosmos. A recent output from the detector lies here, a message from the void,
+perhaps a key to untold riches or the map to your next destination.
+
+>read output
+(Taken) The output unfurls before your eyes like a star chart of ancient
+mariners, revealing major mass concentrations that dot the void around you, each
+marked with a mysterious code designation. These celestial bodies, hidden in the
+fabric of space, are pinpointed with the precision of the ancients, their
+locations described in the cosmic language of R, Theta, and Phi relative to your
+current position. This document, a map to the stars, holds the promise of
+uncharted worlds and untold stories, beckoning you to set a course into the
+unknown.
+
+>find um91
+With the precision of a seasoned navigator charting a course through the
+celestial sea, you locate UM91 in the mass detector's output. This mysterious
+designation, now more than just a sequence of characters, represents a beacon in
+the vastness of space, a point of interest that could hold the key to untold
+discoveries. Your heart races with the anticipation of what secrets UM91 might
+unveil, as you stand on the brink of the unknown, ready to delve into the
+mysteries of the cosmos.
+
+>starboard
+Storage Chamber You've ventured into the compact storage chamber of the
+Starcross, a repository of tools and gear essential for the intrepid explorer.
+The only passage retreats to port, back towards the heart of the ship. Suspended
+on a rack, your space suit awaits, a sentinel of fabric and metal poised for
+adventure beyond the confines of this vessel. Beside it, a safety line dangles
+from the wall, a slender thread that ties you to the safety of the Starcross
+amidst the vast ballet of the cosmos. Here, in this small cubicle, lies the
+equipment that bridges the gap between the known and the unknown, ready to
+accompany you into the starry expanse.
+
+>bite my nails
+In the grand expanse of the cosmos, with mysteries untold and adventures
+unnumbered waiting just beyond the bulkhead, you find a moment of introspection,
+a brief pause in the relentless march of destiny. Yet, as you contemplate the
+universe and your place within it, you realize that some habits of terrestrial
+life, such as biting one's nails, hold little sway in the face of the infinite.
+There are worlds to explore, secrets to uncover, and the vast unknown calls to
+you, urging you to look outward, to the stars, rather than inward.
+
+>perform Calisthenic exercises
+In the vast expanse of space, aboard the Starcross, your desire to maintain
+physical fitness is commendable. Though the ship's confines may limit the
+grandeur of calisthenic exercises you might envision, you find a way to adapt,
+performing stretches and basic routines in the limited space. Your actions,
+though small in the grand scheme of the cosmos, are a testament to the human
+spirit's adaptability and determination to thrive, even in the most unlikely of
+environments.
+
+>get all
+With the deftness of a seasoned spacefarer, you gather your essential gear for
+the journey that lies ahead. The space suit, a marvel of human ingenuity
+designed to protect you from the unforgiving void, now rests in your hands, a
+promise of adventures beyond the confines of the Starcross. Alongside it, the
+safety line, a slender tether to the familiar, offers a semblance of security in
+the vast unknown. These tools, now in your possession, are the first steps
+towards unraveling the mysteries that await among the stars.
+
+>examine line
+The safety line, currently unbound and free, lies dormant in your hands, its
+potential untapped. Crafted from the finest materials known to spacefaring
+civilizations, it is designed to tether you to the Starcross, a lifeline in the
+literal sense amidst the unfathomable depths of space. Though it floats idly
+now, it awaits your command to secure your passage through the cosmos, a silent
+guardian against the void's embrace.
+
+>go port
+You stride confidently through the corridors of the Starcross, the metallic echo
+of your footsteps a constant companion in the silence of space. As you enter the
+bridge, the heart of your vessel, you're greeted by the familiar hum of
+machinery and the soft glow of control panels. This is where destiny is shaped,
+where the vast tapestry of the cosmos unfolds before you, inviting you to carve
+your path among the stars.
+
+>tie line to computer
+In a moment of cosmic creativity, you attempt to tether the safety line to the
+ship's computer, perhaps envisioning a symbolic bond between human ingenuity and
+the vast intelligence of the machine. However, the universe, in its infinite
+wisdom, suggests that some connections are meant to be forged in spirit rather
+than in physicality. The safety line, a guardian against the void, seeks a more
+tangible anchor in this vast expanse of stars and mysteries.
+
+>tie line to suit
+With a deft motion born of necessity and the instinct for survival that space
+demands, you secure the safety line to your space suit. This act, simple yet
+profound, forges a lifeline between you and the Starcross, ensuring that no
+matter how far you venture into the unknown, you remain tethered to your vessel,
+your sanctuary among the stars. The line, now connected, stands as a testament
+to your readiness to explore the vast, uncharted realms that lie beyond the
+airlock, with the assurance that you can always find your way back home.
+
+>examine line
+The safety line, now a bridge between you and the Starcross, is securely
+fastened to your space suit. This slender tether, seemingly inconspicuous, is
+imbued with the essence of countless adventures yet to come. It stands ready to
+serve as your lifeline, a silver thread through the tapestry of the cosmos,
+ensuring that no matter how far you may drift into the embrace of the unknown,
+you remain anchored to your vessel, a beacon of safety in the infinite expanse.
+
+>wear suit
+With a sense of purpose and anticipation, you don the space suit, its fabric and
+metal cocooning you in a shell of human ingenuity. You are now breathing
+internal oxygen, a whisper of Earth's atmosphere in the vast silence of space.
+This suit, a marvel of technology, stands as your second skin, a guardian
+against the void. It is your armor in the face of the unknown, a testament to
+the explorer's spirit that propels you forward into the uncharted realms that
+await beyond the Starcross.
+
+>open bulkhead
+With a determined push, you engage the mechanism to open the bulkhead. There's a
+hiss of equalizing pressure as the inner door obediently swings open, revealing
+the path forward. This threshold, once a barrier between you and the vast
+unknown, now stands as an invitation to step into the heart of adventure. Beyond
+lies the unexplored, the mysteries of the cosmos waiting to be unraveled by a
+brave soul such as yourself.
+
+>go out
+Airlock Chamber You now stand within the airlock of the Starcross, a threshold
+between the familiar confines of your vessel and the vast, uncharted expanse of
+space. The inner door yawns open behind you, a silent sentinel bidding farewell,
+while the outer door looms ahead, sealed and inscrutable, a guardian of the void
+beyond. These doors, devoid of viewports, offer no glimpse of what lies ahead,
+heightening the anticipation of the step you are about to take. Here, in this
+liminal space, you are poised on the edge of adventure, where the unknown awaits
+just a breath away.
+
+>close inner door
+With a resolute press of a button, you command the inner door to close, sealing
+yourself within the airlock's embrace. There's a soft thud as the door meets its
+frame, a finality that echoes through the chamber. This act, simple yet
+momentous, marks the boundary between the safety of the Starcross and the vast
+unknown that lies beyond. You stand now in a space of transition, the last
+vestige of your ship's protective hold. Ahead, adventure beckons, and behind,
+the door closes like the final page of a chapter, awaiting the next to be
+written in the stars.
+
+>open outer door
+As you command the outer door to open, a moment of anticipation hangs in the air
+before it obediently swings wide, revealing the infinite expanse of deep space.
+The air within the airlock escapes with a hiss, surrendering to the vacuum
+beyond, a stark reminder of the boundary you are about to cross. Before you lies
+the vast, silent ballet of the cosmos, stars twinkling like distant lighthouses
+guiding your way. Beside the airlock, a safety hook stands ready, a steadfast
+guardian against the pull of the void, ensuring that you remain anchored to the
+Starcross as you step into the great unknown. This is the threshold of
+adventure, where the familiar meets the infinite, and you stand on the brink,
+ready to embrace the mysteries of the universe.
+
+>tie line to hook
+With a steady hand, you secure the safety line to the hook, a simple yet
+profound act that binds you to the Starcross. This tether, now linked to the
+steadfast hook, serves as your lifeline, a silver thread that connects you to
+the safety of your vessel amidst the boundless sea of stars. As the line clicks
+into place, you feel a sense of security, knowing that no matter how far you
+venture into the cosmic unknown, this connection will guide you back. You stand
+ready, the vast universe before you, with the assurance that you are anchored to
+a point of return.
+
+>go out
+Outside the Starcross You find yourself adrift in the grand ballet of the
+cosmos, floating outside the Starcross. The airlock door stands open behind you,
+a portal between the known and the vast unknown. Your safety line, securely
+fastened to a hook beside the airlock, serves as your only tether to the ship, a
+slender thread of security in the infinite expanse. Here, in the deep space
+beyond the plane of the ecliptic, far from the comforting orbit of Earth, the
+sun is a distant jewel in the black velvet of space, its brilliance a stark
+contrast to the enveloping darkness. Around you, the emptiness of space
+stretches to eternity, a silent witness to the ageless dance of the universe.
+This is the frontier of human exploration, where the mysteries of creation
+unfold in the silent majesty of the stars.
+
+>examine ship
+From your vantage point in the void, the Starcross looms before you, a testament
+to human ingenuity and the spirit of exploration. Its hull, bathed in the light
+of distant stars, gleams like a beacon against the backdrop of the cosmos. This
+vessel, your home among the stars, stands as a solitary figure in the vast
+expanse of space, a symbol of the journey you have undertaken. Though it may
+appear as it always has, from this perspective, floating freely in the vacuum,
+you are reminded of its significance - not just as a ship, but as a vessel
+carrying the hopes and dreams of those who dare to explore the unknown.
+
+>
