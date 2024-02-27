@@ -111,13 +111,14 @@ def add_to_llm_prompt(prompt):
     return
 
 def get_llm_response(message_type):
-    global gpt_messages, gpt_message, gpt_model, gpt_temp
+    global state, gpt_messages, gpt_message, gpt_model, gpt_temp
     message = {'role': message_type, 'content': gpt_message}
     gpt_messages.append(message)
     gpt_message = ""
     json = gpt_client.chat.completions.create(model=gpt_model, 
                                               messages=gpt_messages, 
                                               temperature=gpt_temp)
+    write_to_debug_log(f"# DEBUG: Prompt token count is {json.usage.prompt_tokens}\n")
     response = json.choices[0].message.content
     message = {'role': 'assistant', 'content': response}
     gpt_messages.append(message)
