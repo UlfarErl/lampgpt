@@ -42,7 +42,40 @@ OPENAI_API_KEY=PUT_YOUR_API_KEY_HERE ./lampgpt.py -t zork1.log -S hardyboys zork
 OPENAI_API_KEY=PUT_YOUR_API_KEY_HERE ./lampgpt.py -t starcross.log starcross
 ```
 
-## TODO
+## Example Transcripts
+There are some transcripts of examples of gameplay in the playlogs directory.
+For example, below is a section from Starcross in the style of a high space opera.
+
+> **starboard**  
+> Storage Chamber You've ventured into the compact storage chamber of the
+> Starcross, a repository of tools and gear essential for the intrepid explorer.
+> The only passage retreats to port, back towards the heart of the ship. Suspended
+> on a rack, your space suit awaits, a sentinel of fabric and metal poised for
+> adventure beyond the confines of this vessel. Beside it, a safety line dangles
+> from the wall, a slender thread that ties you to the safety of the Starcross
+> amidst the vast ballet of the cosmos. Here, in this small cubicle, lies the
+> equipment that bridges the gap between the known and the unknown, ready to
+> accompany you into the starry expanse.
+> 
+> **bite my nails**  
+> In the grand expanse of the cosmos, with mysteries untold and adventures
+> unnumbered waiting just beyond the bulkhead, you find a moment of introspection,
+> a brief pause in the relentless march of destiny. Yet, as you contemplate the
+> universe and your place within it, you realize that some habits of terrestrial
+> life, such as biting one's nails, hold little sway in the face of the infinite.
+> There are worlds to explore, secrets to uncover, and the vast unknown calls to
+> you, urging you to look outward, to the stars, rather than inward.
+> 
+> **perform Calisthenic exercises**  
+> In the vast expanse of space, aboard the Starcross, your desire to maintain
+> physical fitness is commendable. Though the ship's confines may limit the
+> grandeur of calisthenic exercises you might envision, you find a way to adapt,
+> performing stretches and basic routines in the limited space. Your actions,
+> though small in the grand scheme of the cosmos, are a testament to the human
+> spirit's adaptability and determination to thrive, even in the most unlikely of
+> environments.
+ 
+ ## TODO
 - **Other LLMs**: Support Vertex AI, Gemini, and Ollama.
 - **Cheaper**: Make the prompts shorter and repeated far less. 
 - **Input rewriting**: Make the LLMs understand the grammar and vocabulary of the game, and try to rewrite player inputs into commands in that language.
