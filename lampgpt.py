@@ -102,7 +102,7 @@ gpt_messages = []
 gpt_message = ""
 gpt_model = None
 gpt_temp = None
-def add_to_gpt_prompt(prompt):
+def add_to_llm_prompt(prompt):
     global gpt_message
     write_to_debug_log(prompt)
     if not prompt[-1] == '>':
@@ -110,7 +110,7 @@ def add_to_gpt_prompt(prompt):
     gpt_message = gpt_message + prompt
     return
 
-def get_gpt_response(message_type):
+def get_llm_response(message_type):
     global gpt_messages, gpt_message, gpt_model, gpt_temp
     message = {'role': message_type, 'content': gpt_message}
     gpt_messages.append(message)
@@ -128,33 +128,33 @@ def get_gpt_response(message_type):
 #################
 def init_rewrites(game_init_text, style):
     global state
-    add_to_gpt_prompt(state.config['init']['gpt_init'])
+    add_to_llm_prompt(state.config['init']['gpt_init'])
 
     background_init = state.config['init']['background_init']
-    add_to_gpt_prompt(background_init.replace('{{{background}}}', state.game['game']['setup']))
+    add_to_llm_prompt(background_init.replace('{{{background}}}', state.game['game']['setup']))
     for pair in state.game['game']['background_urls']:
         url = pair[0]
         regexp = pair[1]
         background_text = get_url_text_and_cache(url, regexp).strip()
         if background_text != '':
-            add_to_gpt_prompt(background_init.replace('{{{background}}}', background_text))
+            add_to_llm_prompt(background_init.replace('{{{background}}}', background_text))
     for pair in state.game['game']['background_files']:
         filename = pair[0]
         regexp = pair[1]
         background_text = get_file_text(filename, regexp).strip()
         if background_text != '':
-            add_to_gpt_prompt(background_init.replace('{{{background}}}', background_text))
+            add_to_llm_prompt(background_init.replace('{{{background}}}', background_text))
 
-    add_to_gpt_prompt(state.config['style']['tone_'+style])
-    add_to_gpt_prompt(state.config['style']['length'])
-    add_to_gpt_prompt(state.config['init']['startup'])
-    add_to_gpt_prompt(state.config['style']['formatting'])
+    add_to_llm_prompt(state.config['style']['tone_'+style])
+    add_to_llm_prompt(state.config['style']['length'])
+    add_to_llm_prompt(state.config['init']['startup'])
+    add_to_llm_prompt(state.config['style']['formatting'])
 
     if game_init_text[-1] == '>': # remove input prompt, if there
         game_init_text = game_init_text[:-1] 
         game_init_text = game_init_text.rstrip()
-    add_to_gpt_prompt(game_init_text)
-    return get_gpt_response('system')
+    add_to_llm_prompt(game_init_text)
+    return get_llm_response('system')
 
 def rewrite_response(command, response, style):
     global state
@@ -175,16 +175,16 @@ def rewrite_response(command, response, style):
     # rewrite
     template = state.config['responses']['generic']
     prompt = template.replace('{{{command}}}',command).replace('{{{response}}}',response)
-    add_to_gpt_prompt(prompt)
+    add_to_llm_prompt(prompt)
     if error:
-        add_to_gpt_prompt(state.config['errors']['generic'])
+        add_to_llm_prompt(state.config['errors']['generic'])
     else:
-        add_to_gpt_prompt(state.config['style']['tone_'+style])
-        add_to_gpt_prompt(state.config['style']['length'])
-        add_to_gpt_prompt(state.config['style']['caveat'])
-        add_to_gpt_prompt(state.config['style']['formatting'])
-        add_to_gpt_prompt(state.config['responses']['suffix'])
-    gpt_response = get_gpt_response('user')
+        add_to_llm_prompt(state.config['style']['tone_'+style])
+        add_to_llm_prompt(state.config['style']['length'])
+        add_to_llm_prompt(state.config['style']['caveat'])
+        add_to_llm_prompt(state.config['style']['formatting'])
+        add_to_llm_prompt(state.config['responses']['suffix'])
+    gpt_response = get_llm_response('user')
     
     write_to_transcript(textwrap.fill(gpt_response, width=80))
     if input == True:
