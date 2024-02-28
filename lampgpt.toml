@@ -96,6 +96,8 @@ hard to keep the line breaks as they were in the original response.
 ## REWRITES
 ############
 [responses]
+command_prefix = "PLAYER COMMAND: "
+
 suffix = '''
 Can you make a suggestion on how this game-engine response might be better 
 and more interesting, and in the style of writing we are aiming for?

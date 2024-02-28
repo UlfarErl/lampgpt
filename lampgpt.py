@@ -14,6 +14,8 @@ import sys
 import textwrap
 import time
 import toml
+import vertexai
+from vertexai.generative_models import GenerativeModel, Part
 
 ###########
 ## GLOBALS
@@ -25,6 +27,11 @@ class GlobalState:
         self.transcript = None  # open fd for a transcript file
         self.config = None      # the lampgpt ToML config
         self.game = None        # the game ToML config
+        self.game_chatlog = []  # the log of game inputs and outputs
+        self.llm = None         # the config of the LLM to be used
+        self.llm_client = None  # the LLM client reference
+        self.llm_chatlog = []   # the log of LLM inputs and outputs
+        self.llm_prompt = ""    # the current LLM prompt being constructed
 state = GlobalState()
 
 ########
@@ -45,6 +52,14 @@ def write_to_transcript(output, log_only=False):
     if state.transcript:
         state.transcript.write(output)
         state.transcript.flush()
+
+def add_to_game_log(output, command=False):
+    global state
+    if state.debug_log != None and state.args.verbose:
+        write_to_transcript(f"# ORIGINAL START: {output}")
+    if command:
+        output = f"{state.config['responses']['command_prefix']} {output}"
+    state.game_chatlog.append(output)
 
 def configure_non_blocking_reads(stream):
     fd = stream.fileno()
@@ -97,31 +112,29 @@ def get_file_text(filename, regexp):
 #############
 ## GPT STUFF
 #############
-gpt_client = None
-gpt_messages = []
 gpt_message = ""
-gpt_model = None
-gpt_temp = None
 def add_to_llm_prompt(prompt):
-    global gpt_message
+    global state
     write_to_debug_log(prompt)
     if not prompt[-1] == '>':
-        gpt_message = gpt_message + '\n'
-    gpt_message = gpt_message + prompt
+        state.llm_prompt = state.llm_prompt + '\n'
+    state.llm_prompt = state.llm_prompt + prompt
     return
 
 def get_llm_response(message_type):
-    global state, gpt_messages, gpt_message, gpt_model, gpt_temp
-    message = {'role': message_type, 'content': gpt_message}
-    gpt_messages.append(message)
-    gpt_message = ""
-    json = gpt_client.chat.completions.create(model=gpt_model, 
-                                              messages=gpt_messages, 
-                                              temperature=gpt_temp)
-    write_to_debug_log(f"# DEBUG: Prompt token count is {json.usage.prompt_tokens}\n")
-    response = json.choices[0].message.content
-    message = {'role': 'assistant', 'content': response}
-    gpt_messages.append(message)
+    global state
+    message = {'role': message_type, 'content': state.llm_prompt}
+    state.llm_prompt = ""
+    state.llm_chatlog.append(message)
+
+    if state.llm['config']['api'] == 'openai':
+        json = state.llm_client.chat.completions.create(model=state.llm['config']['name'], 
+                                                        messages=state.llm_chatlog, 
+                                                        temperature=state.llm['config']['temp'])
+        write_to_debug_log(f"# DEBUG: Prompt token count is {json.usage.prompt_tokens}\n")
+        response = json.choices[0].message.content
+        message = {'role': 'assistant', 'content': response}
+    state.llm_chatlog.append(message)
     return response
 
 #################
@@ -196,7 +209,7 @@ def rewrite_response(command, response, style):
 ## MAIN
 ########
 def main(): 
-    global state, gpt_client, gpt_model, gpt_temp
+    global state
     parser = argparse.ArgumentParser(description='Script for an LLM-enhanced Infocom experience.')
     
     # Parse arguments
@@ -207,9 +220,9 @@ def main():
     parser.add_argument('--delay', '-s', type=int, default=5, help='Delay (in milliseconds) to wait for ZIL interpreter output in each turn')
     parser.add_argument('--bocfel', '-x', type=str, default='./bocfel-2.1.2/bocfel', help='File name of bocfel ZIL interpreter')
     parser.add_argument('--bocfelargs', '-z', type=str, default='', help='Optional arguments for bocfel ZIL interpreter')
-    parser.add_argument('--gpt_temp', '-T', type=int, default=5, help='Temperature of LLM model (integer percent; default 5%)')
-    parser.add_argument('--gpt_auth', '-A', type=str, default='****MISSING API KEY****', help='Authorization token for LLM')
-    parser.add_argument('--llm', '-L', type=str, default='gpt-4-turbo-preview', help='LLM to use (default gpt-4)')
+    parser.add_argument('--llm_temp', '-T', type=int, help='Temperature of LLM model (integer percent; default 5%)')
+    parser.add_argument('--llm_auth', '-A', type=str, help='Authorization token for LLM')
+    parser.add_argument('--llm', '-L', type=str, default='chatgpt4', help='LLM to use (default chatgpt4)')
     parser.add_argument('--style', '-S', type=str, default='spaceopera', help='Style: pratchett, gumshoe, ...')
     parser.add_argument('GAMENAME')
     args = parser.parse_args()
@@ -232,16 +245,28 @@ def main():
             game = toml.load(game_file)
             state.game = game
     except:
-        print(f'ERROR: Invalid or missing {args.GAMENAME} ToML file')
+        print(f'ERROR: Invalid or missing {args.GAMENAME} ToML game config file')
+        return
+    try:
+        with open(args.llm + '.toml', 'r') as llm_config:
+            llm = toml.load(llm_config)
+            state.llm = llm
+        if args.llm_temp != None:
+            state.llm['config']['temp'] = (1.0*args.llm_temp)/100.0
+        if args.llm_auth != None:
+            state.llm['config']['auth'] = args.llm_auth
+    except:
+        print(f'ERROR: Invalid or missing {args.llm} ToML LLM config file')
         return
     if config['style'].get('tone_'+args.style) == None:
         print(f'ERROR: Unknown LLM rewriting style "{args.style}"')
         return
 
-    # init our LLM
-    gpt_model = args.llm
-    gpt_temp = (1.0*args.gpt_temp)/100.0
-    gpt_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", args.gpt_auth))
+    # create the LLM client
+    if state.llm['config']['api'] == 'openai':
+        if state.llm['config'].get('auth') == None:
+            state.llm['config']['auth'] = os.environ.get("OPENAI_API_KEY", "***MISSING API KEY***")
+        state.llm_client = OpenAI(api_key=state.llm['config']['auth'])
 
     # Launch the ZIL interpreter and manage its input/output
     bocfel_launch = [args.bocfel] + args.bocfelargs.split() + [game['game']['path']]
@@ -251,9 +276,8 @@ def main():
     try:
         time.sleep((10*args.delay)/1000.0)
         output = non_blocking_read(process.stdout)
+        add_to_game_log(f"{output}\n", command=False)
         start = init_rewrites(output, args.style)
-        if state.debug_log != None and args.verbose:
-            write_to_transcript(f"# ORIGINAL START: {output}")
         write_to_transcript(textwrap.fill(start, width=80))
         write_to_transcript('\n\n>')
 
@@ -262,19 +286,17 @@ def main():
             command = sys.stdin.readline()
             if not command:  # If EOF, break the loop
                 break
+            add_to_game_log(f"{output}\n", command=True)
 
             # get the original ZIL interpreter response
             process.stdin.write(command)
             process.stdin.flush()
-            if state.debug_log != None and args.verbose:
-                write_to_transcript(f"# ORIGINAL COMMAND: {command}")
             time.sleep((1.0*args.delay)/1000.0)
             response = non_blocking_read(process.stdout)
-            if state.debug_log != None and args.verbose:
-                write_to_transcript(f"# ORIGINAL RESPONSE: {response}")
+            add_to_game_log(f"{output}\n", command=False)
 
-            # get the GPT version of the command and the GPT-modified response
-            modified_command = command
+            # get the LLM version of the command and the LLM-modified response
+            modified_command = command # TODO rewrite the command
             write_to_transcript(modified_command, log_only=True)
             rewrite_response(command, response, args.style)
 
