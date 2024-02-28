@@ -9,7 +9,9 @@ api = 'openai'
 name = "gpt-4-turbo-preview"
 
 # API KEY or other authentication token
-auth = "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"
+# NOTE: Can be set here for convenience, but should ideally be given
+#       on the command line or in the execution environment
+# auth = 
 
 # Non-zero temperature for a little bit of variability
 temp = 0.05
