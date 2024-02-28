@@ -13,8 +13,7 @@ spirit, style, and storyline of the game.
 In particular, LLMs should allow much richer input capabilities, with pretty much any text input
 being recognized and either (1) turned into an input that the parser accepts, or (2) have the
 LLM itself respond with something better than _'There's nothing special about...'_.
-**STATUS: Input rewriting is unimplemented, we get good 
-responses to invalid inputs such as _'Chew your nails'_.**
+**STATUS: Input rewriting is unimplemented, but invalid inputs such as _'Chew your nails'_ get good responses.**
 
 Also, the LLMs should be able to augment the details of the players surroundings, objects,
 and NPCs, in ways that make even description-barren games like **Starcross** have rich
@@ -76,7 +75,7 @@ For example, below is a section from Starcross in the style of a high space oper
 > environments.
  
  ## TODO
-- **Other LLMs**: Support Vertex AI, Gemini, and Ollama.
+- **Other LLMs**: Support local LLMs such as Ollama.
 - **Cheaper**: Make the prompts shorter and repeated far less. 
 - **Input rewriting**: Make the LLMs understand the grammar and vocabulary of the game, and try to rewrite player inputs into commands in that language.
 - **Stateless exploration**: Use the save/restore or undo meta-command features of `bocfel` to try various commands and provide them and their output to the LLMs as extra context.
