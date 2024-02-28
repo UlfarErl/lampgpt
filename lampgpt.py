@@ -2,6 +2,7 @@
 
 import argparse
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
 import fcntl
 import hashlib
 from openai import OpenAI
@@ -15,7 +16,7 @@ import textwrap
 import time
 import toml
 import vertexai
-from vertexai.generative_models import GenerativeModel, Part
+from vertexai.generative_models import GenerativeModel
 
 ###########
 ## GLOBALS
@@ -123,17 +124,27 @@ def add_to_llm_prompt(prompt):
 
 def get_llm_response(message_type):
     global state
-    message = {'role': message_type, 'content': state.llm_prompt}
-    state.llm_prompt = ""
-    state.llm_chatlog.append(message)
+    prompt = {'role': message_type, 'content': state.llm_prompt}
+    state.llm_chatlog.append(prompt)
 
+    # make a request with the prompt
     if state.llm['config']['api'] == 'openai':
-        json = state.llm_client.chat.completions.create(model=state.llm['config']['name'], 
+        resp = state.llm_client.chat.completions.create(model=state.llm['config']['name'], 
                                                         messages=state.llm_chatlog, 
                                                         temperature=state.llm['config']['temp'])
-        write_to_debug_log(f"# DEBUG: Prompt token count is {json.usage.prompt_tokens}\n")
-        response = json.choices[0].message.content
+        tokens = resp.usage.prompt_tokens
+        response = resp.choices[0].message.content
         message = {'role': 'assistant', 'content': response}
+    elif state.llm['config']['api'] == 'google':
+        response = state.llm_client.send_message(state.llm_prompt)
+        tokens = response.to_dict()['usage_metadata']['prompt_token_count']
+        response = response.text
+    write_to_debug_log(f"# DEBUG: Prompt token count is {tokens}\n")
+
+    # reset the prompt
+    state.llm_prompt = ""
+
+    message = {'role': 'assistant', 'content': response}
     state.llm_chatlog.append(message)
     return response
 
@@ -200,7 +211,7 @@ def rewrite_response(command, response, style):
         add_to_llm_prompt(state.config['responses']['suffix'])
     gpt_response = get_llm_response('user')
     
-    write_to_transcript(textwrap.fill(gpt_response, width=80))
+    write_to_transcript(textwrap.fill(gpt_response, width=80, replace_whitespace=True, break_long_words=False))
     if input == True:
         write_to_transcript('\n\n>')
     return gpt_response
@@ -228,6 +239,7 @@ def main():
     args = parser.parse_args()
 
     # Process arguments and config
+    load_dotenv()
     state.args = args
     if args.debug:
         state.debug_log = open('./debug.log', 'w')
@@ -267,6 +279,10 @@ def main():
         if state.llm['config'].get('auth') == None:
             state.llm['config']['auth'] = os.environ.get("OPENAI_API_KEY", "***MISSING API KEY***")
         state.llm_client = OpenAI(api_key=state.llm['config']['auth'])
+    elif state.llm['config']['api'] == 'google':
+        vertexai.init(project=state.llm['config']['project'], location=state.llm['config']['location'])
+        model = GenerativeModel(state.llm['config']['name'])
+        state.llm_client = model.start_chat(response_validation=False)
 
     # Launch the ZIL interpreter and manage its input/output
     bocfel_launch = [args.bocfel] + args.bocfelargs.split() + [game['game']['path']]
@@ -278,7 +294,7 @@ def main():
         output = non_blocking_read(process.stdout)
         add_to_game_log(f"{output}\n", command=False)
         start = init_rewrites(output, args.style)
-        write_to_transcript(textwrap.fill(start, width=80))
+        write_to_transcript(textwrap.fill(start, width=80, replace_whitespace=False, break_long_words=False, drop_whitespace=False))
         write_to_transcript('\n\n>')
 
         while True:

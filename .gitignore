@@ -1,3 +1,6 @@
+# the .env file (for AUTH tokens that aren't leaked to GitHub)
+.env
+
 # the urlcache
 .urlcache
 

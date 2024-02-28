@@ -36,9 +36,7 @@ Here is some background information about the game being played, delimited by tr
 startup = '''
 The following is the text given right at the start of the game.  Please
 suggest a changed version of this startup text, according to the instructions
-above, without removing or changing details such as the game title or copyright,
-and while retaining all formatting, newlines, and line breaks.
-
+above.
 '''
 
 #########
@@ -51,7 +49,8 @@ playing a game.  Do not editorialize by saying things like "what
 mysteries the game holds for you" or "the adventure that lies ahead".
 In particular, never mention the word "game", don't finish your 
 responses with any commentary about adventuring, and don't ask the
-player what they will do next.
+player what they will do next.  Do not add any explanation of why 
+you feel your new response is a good suggestion.
 '''
 
 tone_pratchett = '''
@@ -85,11 +84,12 @@ Keep your suggested changed response brief, so it is no more than twice the leng
 of the original response. 
 '''
 
-formatting = '''
+formatting_old = '''
 Please output a newline character where appropriate, e.g., at the end of content such as
 headings, place names, or separate items in an enumerated list.  In general work 
 hard to keep the line breaks as they were in the original response.
 '''
+formatting = "Format the suggested response nicely.  Do not retain any delimiters."
 
 
 ############
