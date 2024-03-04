@@ -336,4 +336,116 @@ appear as it always has, from this perspective, floating freely in the vacuum,
 you are reminded of its significance - not just as a ship, but as a vessel
 carrying the hopes and dreams of those who dare to explore the unknown.
 
->
+>RESTART
+
+
+Amidst the vast, uncharted reaches of the 
+cosmos, aboard the valiant deep-space black hole prospecting vessel "Starcross,"
+ operating from the rugged asteroid of Ceres, you find yourself ensconced in the
+ arms of Morpheus. Just as you are ensnared in the most pleasant of dreams, a 
+clarion call to adventure shatters the silence! The mass detector, harbinger of 
+fortune and peril, begins its insistent tolling! With the alacrity of a seasoned
+ spacer, you are roused from slumber. The journey thus far has been a gauntlet 
+of challenges with nary a reward, leaving your coffers barren and your vessel in
+ sore need of repair. This, however, could be the cosmic twist of fate you've 
+been yearning for.
+
+Living Quarters  
+(You are in the bunk.)  
+This modest nook 
+serves as your sanctuary in the stars, offering the bare essentials of a bunk 
+and a bureau, a stark reminder of the prospector's solitary life. The only 
+portal to the vastness of your ship lies to starboard.  
+Here, amidst the 
+quietude, rests a tape library. (outside the bunk)
+
+>roll out of bed
+With a swift motion more akin to the seasoned spacefarers of yore, you attempt
+to roll out of your bunk, eager to face the unknown challenges that beckon.
+Alas, my vocabulary is not as vast as the cosmos itself, and I find myself at a
+loss to comprehend 'roll'. Perhaps you might try to 'get out of bed' or 'exit
+the bunk' with the same adventurous spirit.
+
+>stand up
+With a swift motion, you rise, standing tall and ready for action. The alarm
+bell of the mass detector pierces the silence, its urgent clamor calling you to
+adventure.
+
+>get tape
+With a swift motion, you secure the tape library in your grasp, its weight a
+comforting reminder of the knowledge it contains.   The alarm bell on the mass
+detector continues its urgent clamor, piercing the silence of space with its
+insistent call.
+
+>starboard
+Bridge   Amidst the heart of the Starcross, this control room stands as a
+testament to the marvels of interstellar navigation. Exits beckon to the
+adventurer: "Port," "Starboard," and "Out," the latter guarded by a formidable
+bulkhead, sealed shut as if to challenge the daring.   Here, the ship's
+computer, a marvel of technology, tirelessly performs the mundane tasks of
+navigation and life support, its circuits humming with the song of the cosmos. A
+control couch, your throne among the stars, invites you before a panel of
+controls and a vast viewport, through which the infinite expanse of space
+stretches. The ship's identity, its registration, proudly proclaims your
+vessel's name nearby.   To one side, the mass detector, your key to unlocking
+the mysteries of black holes, awaits your command. It hosts a trio of enigmatic
+elements: a red button, a blue button, and a small screen, currently alive with
+an unknown display.   Taped to the wall, near the ever-vigilant computer, a
+slightly faded instruction sheet whispers secrets of operation, a silent guide
+in the vast silence of space.   The alarm bell of the mass detector, a clarion
+call to adventure, rings with urgency, a strident reminder of the unknown that
+lies ahead.
+
+>press blue button
+With a decisive press, you engage the blue button, and the mass detector springs
+to life with renewed vigor. A series of complex calculations and readings dance
+across the small screen, weaving a tale of cosmic significance. The alarm bell,
+still ringing with the urgency of a thousand suns, refuses to be silenced,
+heralding the presence of something vast and possibly profitable in the void
+beyond.
+
+>get sheet
+With deft fingers, you secure the slightly faded instruction sheet, a beacon of
+knowledge in the vastness of space.   The alarm bell on the mass detector
+continues its strident call to action, undiminished.
+
+>press red button
+With a decisive press, you silence the clamorous alarm of the mass detector. The
+ship falls into a serene quiet, save for the soft hum of its engines and the
+distant whisper of the cosmos beyond.
+
+>read screen
+The display pulsates with an enigmatic message, its characters glowing with an
+otherworldly light: "mass UM91, a celestial body of unknown properties and
+untold potential, lies within your grasp."
+
+>look around
+Bridge   You find yourself in the heart of the Starcross, a control room alive
+with the hum of advanced technology and the soft glow of instruments. Exits
+beckon from every direction: "Port," "Starboard," and "Out," the latter guarded
+by a formidable bulkhead, sealed shut as if to protect the secrets of the
+cosmos.   Here, the ship's computer stands vigilant, a tireless sentinel
+managing the labyrinthine tasks of navigation and life support. Before you, a
+control couch invites with its promise of adventure, arrayed before a control
+panel that offers dominion over the void, and a large viewport that frames the
+infinite tapestry of space. The proud registration of the Starcross is displayed
+nearby, a testament to your vessel's readiness to pierce the veil of the
+unknown.   To one side, the mass detector, your key to unlocking the mysteries
+of black holes, waits with anticipation. It features a red button, a blue
+button, and a small screen, currently whispering secrets of the universe with
+its cryptic display.   A slightly faded instruction sheet for the computer
+clings to the wall near this electronic oracle, perhaps holding the knowledge
+needed to navigate the challenges ahead.   The silence now, where once an alarm
+bell tolled a clarion call to discovery, hangs heavy in the air.   There is a
+mass detector output here, a beacon in the dark, waiting to be understood.
+
+>get output
+You deftly scoop up the printout from the mass detector, its secrets now in your
+grasp. The quest for the elusive UM91 draws nearer to a thrilling chapter.
+
+>examine output
+The output unfurls a cosmic map, alive with the pulsating hearts of major mass
+concentrations nearby, each tagged with a cryptic code designation. Accompanying
+these celestial titans are the precise coordinates - R, Theta, and Phi -
+charting their location in the vast dance of the cosmos relative to your own
+position, a lone voyager amidst the stars.

@@ -316,4 +316,149 @@ walls, a reminder that here, in the depths of adventure, you are the sailor
 navigating uncharted waters. The cellar, with its secrets and shadows, offers no
 reply, save for the silent promise of mysteries yet to be uncovered.
 
->
+>RESTART
+
+West of House  
+Here you 
+stand, in an open field west of a white house that whispers tales of forgotten 
+lore, its front door boarded up as if to say, "Keep out! Or enter, if you 
+dare..."  
+A small mailbox stands sentinel here, guarding the secrets within.
+
+>se
+South of House   In a daring maneuver, you've navigated to the south side of the
+white house, where the sun casts long, secretive shadows. Alas, no entry can be
+found here; the door is conspicuously absent, and the windows, as if to keep the
+world's prying eyes at bay, are all boarded up. The house seems to be holding
+its breath, waiting for something—or someone.
+
+>e
+Behind House   You find yourself at the rear of the white house, where the air
+carries a hint of mystery and untold stories. A path, looking as inviting as a
+siren's call, snakes into the dense forest to the east. Nestled in a cozy corner
+of the house, a small window winks at you, slightly ajar, as if it's teasing you
+with secrets just beyond its pane.
+
+>open the window
+Summoning the strength of a thousand ancestors and perhaps a small, unusually
+strong garden gnome, you manage to heave the window open just wide enough to
+permit your daring entrance.
+
+>enter the house
+Kitchen - A Culinary Adventure Awaits   You've gracefully entered the kitchen of
+the white house, where the air is thick with the aroma of culinary endeavors
+past. A table, scarred from battles with knives and hot pots, stands proudly in
+the center, still cluttered with the remnants of a recent feast. To the west, a
+mysterious passage beckons, promising secrets or perhaps just the pantry. A
+staircase spirals into the darkness above, whispering tales of attic treasures
+or attic monsters. Below, a dark chimney dares you to explore depths unknown,
+while to the east, the small window through which you've made your daring
+entrance remains ajar, a silent witness to your adventure.   Atop the table, a
+glass bottle catches the light, its contents a clear, refreshing mystery -
+water, the essence of life itself.   Beside it, an elongated brown sack, exuding
+the tantalizing scent of hot peppers, promises a spicy adventure of its own.
+Who knew the kitchen could hold such wonders?
+
+>bite your nails
+Ah, the nervous habits of adventurers! While your inclination to nibble on your
+nails is noted, such an action won't help you unravel the mysteries of this
+kitchen. Perhaps there's something more productive you could do?
+
+>get all
+With a flourish worthy of a seasoned adventurer, you deftly scoop up the
+treasures before you:  glass bottle: Ah, safely nestled in your inventory. A
+vessel of mystery and hydration.  brown sack: Taken. The scent of hot peppers
+now a tantalizing hint of adventures yet to unfold.
+
+>what am I holding ?
+In your hands, you find yourself clutching the treasures of the kitchen: a glass
+bottle, its contents sloshing gently with the promise of hydration, and an
+elongated brown sack, which seems to whisper tales of spicy adventures yet to
+come.
+
+>i
+In the clutches of your adventurous hands, you find:   A brown sack, which
+whispers tales of fiery meals past with its scent of hot peppers.   A glass
+bottle, a transparent companion holding a modest amount of water, ready to
+quench the thirst of any daring explorer.  The glass bottle contains:     A
+quantity of water, a treasure more precious in these parts than the shiniest of
+gold.
+
+>w
+Living Room   Ah, the grand living room, a place of mystery and dust! To the
+east, a doorway beckons like a siren's call, while to the west, a wooden door
+adorned with strange gothic lettering stands, its nails proclaiming "No Entry"
+in the universal language of carpentry. In the room's heart lies a large
+oriental rug, sprawled out like a lazy cat in the sun.   A trophy case, a
+testament to adventures past or perhaps just good taste, stands proudly. Atop
+it, a battery-powered brass lantern waits, its light a beacon of hope in the
+darkest of times.   And let's not overlook the pièce de résistance: an elvish
+sword of great antiquity hangs above the trophy case, its blade whispering tales
+of yore and daring deeds.
+
+>get all
+sword: With a flourish worthy of the finest elvish warrior, you have now claimed
+the sword. Taken.  brass lantern: Ah, the brass lantern, a beacon in the dark,
+now safely in your possession. Taken.  carpet: Alas, the rug, while exuding an
+aura of mystery and ancient power, proves too cumbersome for mere mortal
+strength. It firmly resists your attempt to carry it, as if anchored by the very
+gravity of the earth itself.  trophy case: The trophy case, a guardian of
+victories past, remains steadfastly attached to the wall. Its treasures are not
+for the taking, at least not without a more cunning plan.
+
+>examine case
+Upon closer inspection, the trophy case reveals itself to be a lonely guardian
+of memories, standing empty. Its glass panes, though smudged with the dust of
+ages, seem to yearn for the glory of trophies past. It's securely fastened to
+the wall, as if it's bracing itself for the day it will once again display
+treasures worthy of tales and toasts.
+
+>move rug
+Summoning every ounce of your strength and channeling the spirit of a thousand
+interior decorators, you heave the rug aside. Lo and behold, beneath its once
+majestic weave lies the dusty cover of a closed trap door, a portal to mysteries
+untold and adventures uncharted.
+
+>e
+Kitchen  Ah, back to the culinary heart of the white house you go, retracing
+your steps like a chef pondering the perfect spice. The kitchen, with its table
+still bearing the ghosts of meals past, welcomes you. The passage to the west
+whispers of mysteries, while the dark staircase invites you to ascend into
+shadow. The chimney, dark and foreboding, hints at a descent into the unknown,
+and through the small window to the east, the world outside beckons. Remember,
+the bottle and the sack are now your companions in adventure.
+
+>d
+Ah, it seems you've mistaken yourself for a jolly fellow in a red suit! Alas,
+without his magical prowess, descending chimneys is a feat best left to fairy
+tales and holiday stories.
+
+>u
+Ah, you've ascended into the gloomy embrace of darkness, where the unseen is
+king and the shadows whisper secrets of a forgotten age. It is so pitch black, a
+cat wouldn't find its own tail here. Beware, for this is the realm where the
+grue, that fickle beast of legend, lurks in the shadows, salivating at the
+thought of its next meal. Might I suggest a source of light, lest you become an
+unwitting snack?
+
+>turn on the lamp
+With a flick and a flourish, you've brought the brass lantern to life, banishing
+the shadows and revealing your surroundings.  Attic You find yourself in the
+attic, a place of forgotten treasures and memories. The only escape from this
+dusty realm is a stairway spiraling down into the darkness below. In the corner,
+a large coil of rope lies coiled like a sleeping serpent, promising utility or
+mischief. On a table, there sits a knife with a blade that tells tales of its
+past misdeeds, looking quite nasty indeed.
+
+>get all
+rope: With a heave and a ho, you've now got a coil of rope. Handy for those
+unexpected rappels into the unknown or perhaps a spot of impromptu tug-of-war.
+nasty knife: Taken. It's as if the knife itself sneers with a wicked gleam,
+eager for adventure or perhaps something slightly less savory. Handle with care,
+for it's seen more than its fair share of action.
+
+>unravel the rope
+Ah, the art of unraveling, a task for the nimble-fingered and the patient.
+However, in this case, the rope seems quite content in its coiled state and
+shows no interest in being unraveled. Perhaps there's another use for it in its
+current form?
