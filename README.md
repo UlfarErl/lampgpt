@@ -2,8 +2,8 @@
 An LLM-enchanced Infocom Experience
 
 ## Summary
-The Infocom text adventures---especially the early ones---were by necessity rather content poor,
-with limited vocabularies, terse descriptions, and very limited interaction possibilities, 
+The Infocom text adventures—especially the early ones—were by necessity rather content poor,
+with sparse vocabularies, terse descriptions, and very limited interaction possibilities, 
 with stock responses like _'There is nothing special about...'_ being very common.
 
 Modern LLM chatbots should be able to fix the above limitations and allow richer gameplay
@@ -37,15 +37,16 @@ cp ../bocfel_config.mk config.mk
 make
 cd ..
 
-OPENAI_API_KEY=PUT_YOUR_API_KEY_HERE ./lampgpt.py -t zork1.log -S hardyboys zork1
-OPENAI_API_KEY=PUT_YOUR_API_KEY_HERE ./lampgpt.py -t starcross.log starcross
+echo 'OPENAI_API_KEY=PUT_YOUR_API_KEY_HERE' > .env
+./lampgpt.py -t zork1.log -S hardyboys zork1
+./lampgpt.py -t starcross.log starcross
 ```
 
 ## Example Transcripts
 There are some transcripts of examples of gameplay in the playlogs directory.
 For example, below is a section from Starcross in the style of a high space opera.
 
-> **starboard**  
+> |> **starboard**  
 > Storage Chamber You've ventured into the compact storage chamber of the
 > Starcross, a repository of tools and gear essential for the intrepid explorer.
 > The only passage retreats to port, back towards the heart of the ship. Suspended
@@ -56,7 +57,7 @@ For example, below is a section from Starcross in the style of a high space oper
 > equipment that bridges the gap between the known and the unknown, ready to
 > accompany you into the starry expanse.
 > 
-> **bite my nails**  
+> |> **bite my nails**  
 > In the grand expanse of the cosmos, with mysteries untold and adventures
 > unnumbered waiting just beyond the bulkhead, you find a moment of introspection,
 > a brief pause in the relentless march of destiny. Yet, as you contemplate the
@@ -65,7 +66,7 @@ For example, below is a section from Starcross in the style of a high space oper
 > There are worlds to explore, secrets to uncover, and the vast unknown calls to
 > you, urging you to look outward, to the stars, rather than inward.
 > 
-> **perform Calisthenic exercises**  
+> |> **perform calisthenic exercises**  
 > In the vast expanse of space, aboard the Starcross, your desire to maintain
 > physical fitness is commendable. Though the ship's confines may limit the
 > grandeur of calisthenic exercises you might envision, you find a way to adapt,

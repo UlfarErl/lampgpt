@@ -17,13 +17,11 @@ gpt_init = '''
 You are helping a person play a text adventure game (aka interactive fiction)
 by suggesting changes to the responses of the game engine,
 so that they become more detailed and interesting.
+'''
 
-For example, if the game engine has responded
-"it is just a normal lamp" when asked to "examine the lamp" you could suggest
-the more detailed and vivid response "Looking closely at the lamp, you find it 
-to be one of the common types that you pick up at any Omnimart.  Stamped on the 
-bottom of the lamp it says 'Quality Tested'."  While still conveying the 
-normality of the lamp, this response is more detailed and vivid.
+gamelog_init = '''
+The game progression so far has been as follows:
+
 '''
 
 background_init = '''
@@ -51,6 +49,10 @@ In particular, never mention the word "game", don't finish your
 responses with any commentary about adventuring, and don't ask the
 player what they will do next.  Do not add any explanation of why 
 you feel your new response is a good suggestion.
+'''
+
+tone_original = '''
+Keep the tone of the original response.
 '''
 
 tone_pratchett = '''
@@ -84,12 +86,11 @@ Keep your suggested changed response brief, so it is no more than twice the leng
 of the original response. 
 '''
 
-formatting_old = '''
+formatting = '''
 Please output a newline character where appropriate, e.g., at the end of content such as
 headings, place names, or separate items in an enumerated list.  In general work 
 hard to keep the line breaks as they were in the original response.
 '''
-formatting = "Format the suggested response nicely.  Do not retain any delimiters."
 
 
 ############
@@ -99,20 +100,18 @@ formatting = "Format the suggested response nicely.  Do not retain any delimiter
 command_prefix = "PLAYER COMMAND: "
 
 suffix = '''
-Can you make a suggestion on how this game-engine response might be better 
-and more interesting, and in the style of writing we are aiming for?
+Can you suggest a better response that is more helpful to the player?
+Please retain linebreaks and formatting.
 '''
 
 generic = '''
-The player has entered the following command, delimited by triple plusses,
+The player has just entered the following command, delimited by triple plusses,
 +++
 {{{command}}} 
 +++
 
-The game engine has reponded with the following, delimited by triple slashes,
-///
+The game engine has reponded with the following:
 {{{response}}}
-/// 
 '''
 
 [errors]
@@ -124,32 +123,4 @@ prefixes = [
 generic = '''
 This response is due to a limitation of the game engine and its text parser.  
 Can you come up with a response that better helps the player?
-
-If you know the answer, just give it.  For example, the player might be
-asking what directions they might go in, and you may know the answer based
-on the players previous interactions.
-
-Otherwise, if the game engine SHOULD be able to respond to the players
-command, and is only limited by its vocabulary or English parser, can you
-suggest how the player might rephrase their command?  For example, if the
-player has asked to "examine the dwelling" in a location where the game
-has said there is a house, you might suggest the player change their 
-command to "examine the house".
-
-Alternatively, if it is unlikely that the game engine knows what the player 
-is asking about, can you gently divert the player from their line of 
-questioning.  For example, if the player has asked to "examine the roof"
-in a location where there is a house, and the game engine does not know
-the word "roof", that detail almost certainly is not something the player
-should be pursuing.  In such cases, please suggest a plausible response
-to the player, given what they are asking about or trying to do, while 
-also hinting to the player that this is an irrelevant detail.
-
-Finally, if the player is trying to perform detailed tasks that are outside
-the domain of the game engine, please suggest a plausible response that 
-implies no effect or impact to the game.  For example, if the player is
-in a field and they have asked to "get some grass", you could suggest a
-response such as "you start plucking handfuls of grass but quickly stop
-and drop all of it on the ground, wondering you were doing that".  When
-suggesting such responses, be consistent with the style we are aiming for.
 '''

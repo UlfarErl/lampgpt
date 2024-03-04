@@ -57,9 +57,12 @@ def write_to_transcript(output, log_only=False):
 def add_to_game_log(output, command=False):
     global state
     if state.debug_log != None and state.args.verbose:
-        write_to_transcript(f"# ORIGINAL START: {output}")
+        write_to_transcript(f"# ORIGINAL GAME: {output}")
     if command:
         output = f"{state.config['responses']['command_prefix']} {output}"
+    if output.rstrip()[-1] == '>': # remove input prompt, if there
+        output = output.rstrip()[:-1] 
+        output = output.rstrip() + '\n'
     state.game_chatlog.append(output)
 
 def configure_non_blocking_reads(stream):
@@ -124,28 +127,31 @@ def add_to_llm_prompt(prompt):
 
 def get_llm_response(message_type):
     global state
-    prompt = {'role': message_type, 'content': state.llm_prompt}
-    state.llm_chatlog.append(prompt)
 
     # make a request with the prompt
     if state.llm['config']['api'] == 'openai':
+        prompt = {'role': message_type, 'content': state.llm_prompt}
+        state.llm_chatlog.append(prompt)
         resp = state.llm_client.chat.completions.create(model=state.llm['config']['name'], 
-                                                        messages=state.llm_chatlog, 
+                                                        messages=[ prompt ], 
                                                         temperature=state.llm['config']['temp'])
         tokens = resp.usage.prompt_tokens
         response = resp.choices[0].message.content
         message = {'role': 'assistant', 'content': response}
+        message = {'role': 'assistant', 'content': response}
+        state.llm_chatlog.append(message)
     elif state.llm['config']['api'] == 'google':
         response = state.llm_client.send_message(state.llm_prompt)
         tokens = response.to_dict()['usage_metadata']['prompt_token_count']
         response = response.text
+    elif state.llm['config']['api'] == 'debug':
+        print(state.llm_prompt)
+        response = ""
+        tokens = 0
     write_to_debug_log(f"# DEBUG: Prompt token count is {tokens}\n")
 
     # reset the prompt
     state.llm_prompt = ""
-
-    message = {'role': 'assistant', 'content': response}
-    state.llm_chatlog.append(message)
     return response
 
 #################
@@ -155,25 +161,26 @@ def init_rewrites(game_init_text, style):
     global state
     add_to_llm_prompt(state.config['init']['gpt_init'])
 
-    background_init = state.config['init']['background_init']
-    add_to_llm_prompt(background_init.replace('{{{background}}}', state.game['game']['setup']))
-    for pair in state.game['game']['background_urls']:
-        url = pair[0]
-        regexp = pair[1]
-        background_text = get_url_text_and_cache(url, regexp).strip()
-        if background_text != '':
-            add_to_llm_prompt(background_init.replace('{{{background}}}', background_text))
-    for pair in state.game['game']['background_files']:
-        filename = pair[0]
-        regexp = pair[1]
-        background_text = get_file_text(filename, regexp).strip()
-        if background_text != '':
-            add_to_llm_prompt(background_init.replace('{{{background}}}', background_text))
+    if state.args.bginfo:
+        background_init = state.config['init']['background_init']
+        add_to_llm_prompt(background_init.replace('{{{background}}}', state.game['game']['setup']))
+        for pair in state.game['game']['background_urls']:
+            url = pair[0]
+            regexp = pair[1]
+            background_text = get_url_text_and_cache(url, regexp).strip()
+            if background_text != '':
+                add_to_llm_prompt(background_init.replace('{{{background}}}', background_text))
+        for pair in state.game['game']['background_files']:
+            filename = pair[0]
+            regexp = pair[1]
+            background_text = get_file_text(filename, regexp).strip()
+            if background_text != '':
+                add_to_llm_prompt(background_init.replace('{{{background}}}', background_text))
 
     add_to_llm_prompt(state.config['style']['tone_'+style])
     add_to_llm_prompt(state.config['style']['length'])
-    add_to_llm_prompt(state.config['init']['startup'])
     add_to_llm_prompt(state.config['style']['formatting'])
+    add_to_llm_prompt(state.config['init']['startup'])
 
     if game_init_text[-1] == '>': # remove input prompt, if there
         game_init_text = game_init_text[:-1] 
@@ -191,24 +198,29 @@ def rewrite_response(command, response, style):
     command = command.rstrip()
     response = response.rstrip()
 
-    # detect errors
+    # instructions
+    if state.args.repeat:
+        add_to_llm_prompt(state.config['init']['gpt_init'])
+        add_to_llm_prompt(state.config['style']['tone_'+style])
+        add_to_llm_prompt(state.config['style']['length'])
+        add_to_llm_prompt(state.config['style']['formatting'])
+        add_to_llm_prompt(state.config['style']['caveat'])
+        add_to_llm_prompt(state.config['init']['gamelog_init'])
+        add_to_llm_prompt('\n'.join(state.game_chatlog))
+    
+    # detect and try to fix errors
     error = False
     for prefix in state.config['errors']['prefixes']:
         if response.startswith(prefix):
             error = True
-    
+    if error:
+        add_to_llm_prompt(state.config['errors']['generic'])
+
     # rewrite
     template = state.config['responses']['generic']
     prompt = template.replace('{{{command}}}',command).replace('{{{response}}}',response)
     add_to_llm_prompt(prompt)
-    if error:
-        add_to_llm_prompt(state.config['errors']['generic'])
-    else:
-        add_to_llm_prompt(state.config['style']['tone_'+style])
-        add_to_llm_prompt(state.config['style']['length'])
-        add_to_llm_prompt(state.config['style']['caveat'])
-        add_to_llm_prompt(state.config['style']['formatting'])
-        add_to_llm_prompt(state.config['responses']['suffix'])
+    add_to_llm_prompt(state.config['responses']['suffix'])
     gpt_response = get_llm_response('user')
     
     write_to_transcript(textwrap.fill(gpt_response, width=80, replace_whitespace=True, break_long_words=False))
@@ -228,13 +240,15 @@ def main():
     parser.add_argument('--transcript', '-t', type=str, help='Name of transcript output file')
     parser.add_argument('--verbose', '-v', action='store_true', help='Output original ZIL interpreter input/output')
     parser.add_argument('--debug', '-d', action='store_true', help='Output all LLM inputs and outputs')
-    parser.add_argument('--delay', '-s', type=int, default=5, help='Delay (in milliseconds) to wait for ZIL interpreter output in each turn')
+    parser.add_argument('--delay', '-s', type=int, default=5, help='Wait (in milliseconds) for interpreter output in each turn')
     parser.add_argument('--bocfel', '-x', type=str, default='./bocfel-2.1.2/bocfel', help='File name of bocfel ZIL interpreter')
     parser.add_argument('--bocfelargs', '-z', type=str, default='', help='Optional arguments for bocfel ZIL interpreter')
-    parser.add_argument('--llm_temp', '-T', type=int, help='Temperature of LLM model (integer percent; default 5%)')
+    parser.add_argument('--llm_temp', '-T', type=int, help='Temperature of LLM model (integer percent; default 5%%)')
     parser.add_argument('--llm_auth', '-A', type=str, help='Authorization token for LLM')
-    parser.add_argument('--llm', '-L', type=str, default='chatgpt4', help='LLM to use (default chatgpt4)')
-    parser.add_argument('--style', '-S', type=str, default='spaceopera', help='Style: pratchett, gumshoe, ...')
+    parser.add_argument('--llm', '-L', type=str, default='chatgpt4', help='LLM to use (debug, gemini, chatgpt4)')
+    parser.add_argument('--style', '-S', type=str, default='original', help='Style: pratchett, gumshoe, ...')
+    parser.add_argument('--bginfo', '-B', action='store_true', help='Add extra background info to the LLM prompts')
+    parser.add_argument('--repeat', '-R', action='store_true', help='Repeat instructions at each prompt')
     parser.add_argument('GAMENAME')
     args = parser.parse_args()
 
@@ -260,13 +274,18 @@ def main():
         print(f'ERROR: Invalid or missing {args.GAMENAME} ToML game config file')
         return
     try:
-        with open(args.llm + '.toml', 'r') as llm_config:
-            llm = toml.load(llm_config)
-            state.llm = llm
-        if args.llm_temp != None:
-            state.llm['config']['temp'] = (1.0*args.llm_temp)/100.0
-        if args.llm_auth != None:
-            state.llm['config']['auth'] = args.llm_auth
+        if args.llm == 'debug':
+            state.llm = {}
+            state.llm['config'] = {}
+            state.llm['config']['api'] = 'debug'
+        else:
+            with open(args.llm + '.toml', 'r') as llm_config:
+                llm = toml.load(llm_config)
+                state.llm = llm
+            if args.llm_temp != None:
+                state.llm['config']['temp'] = (1.0*args.llm_temp)/100.0
+            if args.llm_auth != None:
+                state.llm['config']['auth'] = args.llm_auth
     except:
         print(f'ERROR: Invalid or missing {args.llm} ToML LLM config file')
         return
@@ -276,13 +295,17 @@ def main():
 
     # create the LLM client
     if state.llm['config']['api'] == 'openai':
+        state.args.repeat = True
         if state.llm['config'].get('auth') == None:
             state.llm['config']['auth'] = os.environ.get("OPENAI_API_KEY", "***MISSING API KEY***")
         state.llm_client = OpenAI(api_key=state.llm['config']['auth'])
     elif state.llm['config']['api'] == 'google':
+        state.args.repeat = False
         vertexai.init(project=state.llm['config']['project'], location=state.llm['config']['location'])
         model = GenerativeModel(state.llm['config']['name'])
         state.llm_client = model.start_chat(response_validation=False)
+    else:
+        state.llm['config']['api'] = 'debug' # redundant; included for clarity
 
     # Launch the ZIL interpreter and manage its input/output
     bocfel_launch = [args.bocfel] + args.bocfelargs.split() + [game['game']['path']]
@@ -302,19 +325,20 @@ def main():
             command = sys.stdin.readline()
             if not command:  # If EOF, break the loop
                 break
-            add_to_game_log(f"{output}\n", command=True)
 
             # get the original ZIL interpreter response
             process.stdin.write(command)
             process.stdin.flush()
             time.sleep((1.0*args.delay)/1000.0)
             response = non_blocking_read(process.stdout)
-            add_to_game_log(f"{output}\n", command=False)
 
             # get the LLM version of the command and the LLM-modified response
             modified_command = command # TODO rewrite the command
             write_to_transcript(modified_command, log_only=True)
             rewrite_response(command, response, args.style)
+
+            add_to_game_log(command, command=True)
+            add_to_game_log(response, command=False)
 
     except KeyboardInterrupt:
         print("\nScript interrupted by user. Exiting.")
