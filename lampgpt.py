@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from anthropic import Anthropic
 import argparse
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
@@ -128,18 +129,24 @@ def add_to_llm_prompt(prompt):
 def get_llm_response(message_type):
     global state
 
+    prompt = {'role': message_type, 'content': state.llm_prompt}
+    state.llm_chatlog.append(prompt)
+
     # make a request with the prompt
     if state.llm['config']['api'] == 'openai':
-        prompt = {'role': message_type, 'content': state.llm_prompt}
-        state.llm_chatlog.append(prompt)
         resp = state.llm_client.chat.completions.create(model=state.llm['config']['name'], 
                                                         messages=[ prompt ], 
                                                         temperature=state.llm['config']['temp'])
         tokens = resp.usage.prompt_tokens
         response = resp.choices[0].message.content
-        message = {'role': 'assistant', 'content': response}
-        message = {'role': 'assistant', 'content': response}
-        state.llm_chatlog.append(message)
+    elif state.llm['config']['api'] == 'anthropic':
+        prompt['role'] = 'user'
+        resp = state.llm_client.messages.create(model=state.llm['config']['name'], 
+                                                max_tokens=state.llm['config']['max_tokens'],
+                                                messages=[ prompt ], 
+                                                temperature=state.llm['config']['temp'])
+        tokens = resp.usage.input_tokens
+        response = resp.content[0].text
     elif state.llm['config']['api'] == 'google':
         response = state.llm_client.send_message(state.llm_prompt)
         tokens = response.to_dict()['usage_metadata']['prompt_token_count']
@@ -149,6 +156,10 @@ def get_llm_response(message_type):
         response = ""
         tokens = 0
     write_to_debug_log(f"# DEBUG: Prompt token count is {tokens}\n")
+
+
+    message = {'role': 'assistant', 'content': response}
+    state.llm_chatlog.append(message)
 
     # reset the prompt
     state.llm_prompt = ""
@@ -245,7 +256,7 @@ def main():
     parser.add_argument('--bocfelargs', '-z', type=str, default='', help='Optional arguments for bocfel ZIL interpreter')
     parser.add_argument('--llm_temp', '-T', type=int, help='Temperature of LLM model (integer percent; default 5%%)')
     parser.add_argument('--llm_auth', '-A', type=str, help='Authorization token for LLM')
-    parser.add_argument('--llm', '-L', type=str, default='chatgpt4', help='LLM to use (debug, gemini, chatgpt4)')
+    parser.add_argument('--llm', '-L', type=str, default='chatgpt4', help='LLM to use (debug, gemini, chatgpt4, claude)')
     parser.add_argument('--style', '-S', type=str, default='original', help='Style: pratchett, gumshoe, ...')
     parser.add_argument('--bginfo', '-B', action='store_true', help='Add extra background info to the LLM prompts')
     parser.add_argument('--repeat', '-R', action='store_true', help='Repeat instructions at each prompt')
@@ -296,9 +307,14 @@ def main():
     # create the LLM client
     if state.llm['config']['api'] == 'openai':
         state.args.repeat = True
-        if state.llm['config'].get('auth') == None:
+        if state.llm['config'].get('auth') == None: # allow command line to override env var
             state.llm['config']['auth'] = os.environ.get("OPENAI_API_KEY", "***MISSING API KEY***")
         state.llm_client = OpenAI(api_key=state.llm['config']['auth'])
+    elif state.llm['config']['api'] == 'anthropic':
+        state.args.repeat = True
+        if state.llm['config'].get('auth') == None: # allow command line to override env var
+            state.llm['config']['auth'] = os.environ.get("ANTHROPIC_API_KEY", "***MISSING API KEY***")
+        state.llm_client = Anthropic(api_key=state.llm['config']['auth'])
     elif state.llm['config']['api'] == 'google':
         state.args.repeat = False
         vertexai.init(project=state.llm['config']['project'], location=state.llm['config']['location'])

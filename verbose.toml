@@ -1,0 +1,155 @@
+# Config for ZORK 1, in an LLM style
+#
+# {{{background}}}
+# {{{room name}}}
+# {{{room desc}}}
+# {{{inventory}}}
+# {{{room objects}}}
+# {{{command}}}
+# {{{response}}}
+#
+
+########
+## INIT
+########
+[init]
+gpt_init = '''
+You are helping a person play a text adventure game (aka interactive fiction)
+by suggesting changes to the responses of the game engine,
+so that they become more detailed and interesting.
+
+For example, if the game engine has responded
+"it is just a normal lamp" when asked to "examine the lamp" you could suggest
+the more detailed and vivid response "Looking closely at the lamp, you find it 
+to be one of the common types that you pick up at any Omnimart.  Stamped on the 
+bottom of the lamp it says 'Quality Tested'."  While still conveying the 
+normality of the lamp, this response is more detailed and vivid.
+'''
+
+background_init = '''
+Here is some background information about the game being played, delimited by triple percent signs:
+%%%
+{{{background}}}
+%%%
+'''
+
+startup = '''
+The following is the text given right at the start of the game.  Please
+suggest a changed version of this startup text, according to the instructions
+above.
+'''
+
+#########
+## STYLE
+#########
+[style]
+caveat = '''
+Please don't break the fourth wall and remind the player that they are
+playing a game.  Do not editorialize by saying things like "what 
+mysteries the game holds for you" or "the adventure that lies ahead".
+In particular, never mention the word "game", don't finish your 
+responses with any commentary about adventuring, and don't ask the
+player what they will do next.  Do not add any explanation of why 
+you feel your new response is a good suggestion.
+'''
+
+tone_pratchett = '''
+When making a suggestion of how the game engine response should be changed,
+please assume the tone of a tongue-in-cheek adventure story writer, such
+as Douglas Adams or Terry Pratchett, perhaps with a hint of a swashbuckling 
+romance writer's touch.
+'''
+
+tone_gumshoe = '''
+When making a suggestion of how the game engine response should be changed,
+please assume the terse tone of Hemingway and the ambience of a hard-boiled 
+pulp-fiction novel, such as the Noir of private eye Philip Marlowe.
+'''
+
+tone_hardyboys = '''
+When making a suggestion of how the game engine response should be changed,
+please assume the tone of young adult mystery books like the Hardy Boys,
+Nancy Drew, and Tom Swift series.
+'''
+
+tone_spaceopera = '''
+When making a suggestion of how the game engine response should be changed,
+please assume the tone of the ebullient space operas made popular by writers
+such as E.E. 'Doc' Smith in his Lensman series, and Edgar Rice Burroughs
+in his Mars books, such as A princess of Mars.
+'''
+
+length = '''
+Keep your suggested changed response brief, so it is no more than twice the length
+of the original response. 
+'''
+
+formatting_old = '''
+Please output a newline character where appropriate, e.g., at the end of content such as
+headings, place names, or separate items in an enumerated list.  In general work 
+hard to keep the line breaks as they were in the original response.
+'''
+formatting = "Format the suggested response nicely.  Do not retain any delimiters."
+
+
+############
+## REWRITES
+############
+[responses]
+command_prefix = "PLAYER COMMAND: "
+
+suffix = '''
+Can you make a suggestion on how this game-engine response might be better 
+and more interesting, and in the style of writing we are aiming for?
+'''
+
+generic = '''
+The player has entered the following command, delimited by triple plusses,
++++
+{{{command}}} 
++++
+
+The game engine has reponded with the following, delimited by triple slashes,
+///
+{{{response}}}
+/// 
+'''
+
+[errors]
+prefixes = [
+    "I don't know the word",
+    "There's nothing special about"
+]
+
+generic = '''
+This response is due to a limitation of the game engine and its text parser.  
+Can you come up with a response that better helps the player?
+
+If you know the answer, just give it.  For example, the player might be
+asking what directions they might go in, and you may know the answer based
+on the players previous interactions.
+
+Otherwise, if the game engine SHOULD be able to respond to the players
+command, and is only limited by its vocabulary or English parser, can you
+suggest how the player might rephrase their command?  For example, if the
+player has asked to "examine the dwelling" in a location where the game
+has said there is a house, you might suggest the player change their 
+command to "examine the house".
+
+Alternatively, if it is unlikely that the game engine knows what the player 
+is asking about, can you gently divert the player from their line of 
+questioning.  For example, if the player has asked to "examine the roof"
+in a location where there is a house, and the game engine does not know
+the word "roof", that detail almost certainly is not something the player
+should be pursuing.  In such cases, please suggest a plausible response
+to the player, given what they are asking about or trying to do, while 
+also hinting to the player that this is an irrelevant detail.
+
+Finally, if the player is trying to perform detailed tasks that are outside
+the domain of the game engine, please suggest a plausible response that 
+implies no effect or impact to the game.  For example, if the player is
+in a field and they have asked to "get some grass", you could suggest a
+response such as "you start plucking handfuls of grass but quickly stop
+and drop all of it on the ground, wondering you were doing that".  When
+suggesting such responses, be consistent with the style we are aiming for.
+'''

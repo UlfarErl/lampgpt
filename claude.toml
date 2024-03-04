@@ -1,0 +1,20 @@
+# Config for OpenAI's ChatGPT
+#
+
+[config]
+# API type ('openai', 'google', ...)
+api = 'anthropic'
+
+# Name of the model to use ('gemini', ...)
+name = "claude-3-opus-20240229"
+
+# API KEY or other authentication token
+# NOTE: Can be set here for convenience, but should ideally be given
+#       on the command line or in the execution environment
+# auth = 
+
+# Non-zero temperature for a little bit of variability
+temp = 0.05
+
+# Max tokens to save cost
+max_tokens = 2048

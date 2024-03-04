@@ -462,3 +462,73 @@ Ah, the art of unraveling, a task for the nimble-fingered and the patient.
 However, in this case, the rope seems quite content in its coiled state and
 shows no interest in being unraveled. Perhaps there's another use for it in its
 current form?
+
+> RESTART (now with Claude)
+
+West of House
+You find yourself 
+standing in an open field west of a peculiar white house, complete with a rather
+ uninviting boarded front door. 
+A small, unassuming mailbox sits nearby, 
+beckoning you to uncover its secrets.
+
+>se
+South of House You find yourself standing before the south side of a curiously
+pristine white house. The windows, like the eyes of a sleeping giant, are all
+tightly boarded up, offering no glimpse of the mysteries that may lie within.
+The wall before you stands resolute, unbroken by even a single door. It seems
+this house guards its secrets jealously.
+
+>e
+Behind House You find yourself in the unkempt backyard of the white house. A
+narrow, overgrown path winds its way into the dark, foreboding forest to the
+east, its twists and turns quickly disappearing from view.  In one corner of the
+house, you spot a small window that has been left slightly ajar, as if inviting
+you to take a closer look. The weathered frame creaks softly in the breeze, and
+you can't help but wonder what secrets might lie within.
+
+>open window
+With a mighty heave and a grunt of exertion, you manage to pry open the window
+just enough to squeeze through.  The rusted hinges shriek in protest, as if the
+house itself is alarmed by your bold intrusion. A gust of stale, musty air wafts
+out to greet you, carrying with it the scent of long-forgotten secrets and
+untold mysteries.
+
+>enter the house
+Kitchen You find yourself in the cozy kitchen of the white house, where the
+lingering aroma of a recently prepared meal still hangs in the air. A sturdy
+wooden table stands at the center of the room, its surface bearing the telltale
+signs of culinary endeavors. To the west, a passage beckons, leading to unknown
+destinations within the house. A dark and mysterious staircase winds its way
+upward, its steps creaking with the weight of untold secrets.  In the opposite
+direction, a small window stands open, allowing a gentle breeze to waft through
+the room. Curiously, a dark chimney descends from the ceiling, hinting at hidden
+depths below. Upon the table rests an intriguing bottle, its contents shimmering
+in the light. The glass bottle contains:   A quantity of crystal-clear water, as
+if drawn from a mountain spring Beside the bottle, an elongated brown sack lies
+waiting, its aroma hinting at the fiery heat of hot peppers within.
+
+>d
+The chimney is far too narrow for you to fit down. Besides, it's dark and sooty
+and quite likely leads straight to the fiery maw of some slumbering beast.  Best
+to explore other avenues, unless of course you have a penchant for being roasted
+alive or fancy yourself a modern-day Santa Claus, in which case, by all means,
+shimmy away! But do mind the soot on your trousers.
+
+>w
+Living Room You find yourself in a cozy living room, complete with all the
+trappings of domesticity. To the east lies a doorway, beckoning you onwards. To
+the west, a wooden door stands firmly shut, its strange gothic lettering hinting
+at mysteries beyond. A trophy case stands proudly, displaying the achievements
+of the home's former occupants. In the center of the room, an oriental rug adds
+a touch of exotic flair. Above the trophy case, an elvish sword of great
+antiquity hangs, its blade gleaming with the promise of adventure. A battery-
+powered brass lantern rests atop the trophy case, ready to light your way
+through the shadows.
+
+>move rug
+With a heave and a ho, you wrestle the weighty rug to one side of the room,
+sending up a cloud of dust that sets you sneezing. As the dust settles, you spy
+the ancient wooden cover of a trap door, its surface grey with the grime of ages
+untold.
+
