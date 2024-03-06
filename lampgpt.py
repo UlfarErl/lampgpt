@@ -278,11 +278,14 @@ def main():
         print('ERROR: Invalid or missing ToML configuration file (default is ./lampgpt.toml)')
         return
     try:
-        with open(args.GAMENAME + '.toml', 'r') as game_file:
+        gamepath = args.GAMENAME + '.toml'
+        if not os.path.isfile(gamepath):
+            gamepath = './infocom/' + gamepath
+        with open(gamepath, 'r') as game_file:
             game = toml.load(game_file)
             state.game = game
     except:
-        print(f'ERROR: Invalid or missing {args.GAMENAME} ToML game config file')
+        print(f'ERROR: Invalid or missing {gamepath} ToML game config file')
         return
     try:
         if args.llm == 'debug':
