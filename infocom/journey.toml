@@ -1,0 +1,31 @@
+# Config for JOURNEY, in LLM style
+#
+#
+
+[game]
+path = "./infocom/journey/COMPILED/journey.z3"
+
+setup = '''
+journey is a text-based adventure game from Infocom.
+'''
+
+background_files = [
+]
+
+background_urls = [
+]
+
+walkthrough_urls = [
+]
+
+[syntax]
+verbs = [
+] # verbs
+
+nouns = [
+    [ "arc" ],
+] # nouns
+
+rooms = [
+] # rooms
+

@@ -12,7 +12,7 @@ def process_pattern(filenames, type, pattern, output_dict, process_func):
             with open(filename, 'r') as file:
                 text = file.read()
             matches = re.findall(pattern, text)
-            if debug == None and len(matches) > 0:
+            if debug and len(matches) > 0:
                 print(f"{filename}\tCNT({type}) = {len(matches)}")
             for match in matches:
                 process_func(output_dict, match)
@@ -110,22 +110,55 @@ def find_syntax_rooms(filenames):
     obj_room_pattern = re.compile(r'^<OBJECT ([^<>]+?)\s[^<>]+?\(LOC ROOMS\)[^<>]+?\(DESC "([^<>"]+?)"\)[^<>]*?>', flags=re.DOTALL|re.MULTILINE)
     process_pattern(filenames, "obj_room", obj_room_pattern, room_objs, process_obj_room)
 
-    if debug == None:
+    if debug:
         print(f"Found {len(room_objs)} rooms as {room_objs}")
     rooms = set(room_objs.values())
-    if debug == None:
-        print(f"Room names are {rooms}")
     return rooms
 
 
-# Command-line argument handling
+# Command-line: syntax.py gamename gamefiles*.zil
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        # Exclude the first argument, which is the script name
-        filenames = sys.argv[1:]
+        # Exclude script name and the first argument, which is the game name
+        gamename = sys.argv[1]
+        filenames = sys.argv[2:]
         verbs = find_syntax_verbs(filenames)
         objs = find_syntax_object(filenames)
         rooms = find_syntax_rooms(filenames)
+
+        print(f"# Config for {gamename.upper()}, in LLM style")
+        print(f"#")
+        print(f"#\n")
+        print(f"[game]")
+        print(f'path = "./infocom/{gamename}/COMPILED/{gamename}.z3"\n')
+        print(f"setup = '''\n{gamename} is a text-based adventure game from Infocom.\n'''\n")
+        print(f"background_files = [\n]\n")
+        print(f"background_urls = [\n]\n")
+        print(f"walkthrough_urls = [\n]\n")
+
+        print("[syntax]")
+        print("verbs = [")
+        dedup = set([])
+        for vstrs in [[f'"{v}"' for v in verbs] for verbs in verbs.values()]:
+            s = f"    [ {', '.join(vstrs)} ],"
+            if not s in dedup:
+                print(s)
+                dedup.add(s) # silly dedup hack
+        print("] # verbs\n")
+
+        print("nouns = [")
+        dedup = set([])
+        for nstrs in [[f'"{n}"' for n in objs] for objs in objs.values()]:
+            s = f"    [ {', '.join(nstrs)} ],"
+            if not s in dedup:
+                print(s)
+                dedup.add(s) # silly dedup hack
+        print("] # nouns\n")
+
+        print("rooms = [")
+        for rstr in [f'"{room}"' for room in rooms]:
+            print(f"    {rstr},")
+        print("] # rooms\n")
     else:
         print("Please provide the filenames as arguments.")
 
