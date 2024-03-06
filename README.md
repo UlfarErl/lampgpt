@@ -74,6 +74,6 @@ As another example, below is a section from Starcross in the style of a high spa
  
  ## TODO
 - **Other LLMs**: Support local LLMs such as Ollama.
-- **Cheaper**: Make the prompts shorter and repeated far less. 
+- **Cheaper**: Limit the prompt to the last 20 to 30 game commands and responses.
 - **Input rewriting**: Make the LLMs understand the grammar and vocabulary of the game, and try to rewrite player inputs into commands in that language.
 - **Stateless exploration**: Use the save/restore or undo meta-command features of `bocfel` to try various commands and provide them and their output to the LLMs as extra context.
