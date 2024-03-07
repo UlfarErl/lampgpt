@@ -40,6 +40,14 @@ state = GlobalState()
 ########
 ## UTIL
 ########
+def format_with_linebreaks(text):
+    lines = []
+    for line in text.split('\n'):
+        if len(line) > 79:
+            line = textwrap.fill(line, width=80)
+        lines.append(line)
+    return '\n'.join(lines)
+
 def write_to_debug_log(output):
     global state
     if state.debug_log != None:
@@ -107,6 +115,14 @@ def get_file_text(filename, regexp):
 ##############
 ## GAME STUFF
 ##############
+def send_game_command(process, command):
+    global state
+    process.stdin.write(command)
+    process.stdin.flush()
+    time.sleep((1.0*state.args.delay)/1000.0)
+    response = non_blocking_read(process.stdout)
+    return response # return the original ZIL interpreter response
+
 def get_room_desc(text):
     global state
     text = text.lstrip()
@@ -140,7 +156,7 @@ def add_to_game_log(output, command=False):
 
 def get_rooms_and_gamelog():
     global state
-    gamelog_count = state.config['init']['gamelog_count']
+    gamelog_count = state.config['responses']['gamelog_count']
     if gamelog_count == 0:
         gamelog_count = len(state.game_chatlog)
     else:
@@ -167,7 +183,7 @@ def add_to_llm_prompt(prompt):
     state.llm_prompt = state.llm_prompt + prompt
     return
 
-def get_llm_response(message_type):
+def get_llm_response(message_type, command, response):
     global state
 
     prompt = {'role': message_type, 'content': state.llm_prompt}
@@ -194,10 +210,9 @@ def get_llm_response(message_type):
         response = response.text
     elif state.llm['config']['api'] == 'debug':
         print(state.llm_prompt)
-        response = ""
+        response = response
         tokens = 0
     write_to_debug_log(f"# DEBUG: Prompt token count is {tokens}\n")
-
 
     message = {'role': 'assistant', 'content': response}
     state.llm_chatlog.append(message)
@@ -238,7 +253,7 @@ def init_rewrites(game_init_text, style):
         game_init_text = game_init_text[:-1] 
         game_init_text = game_init_text.rstrip()
     add_to_llm_prompt(game_init_text)
-    return get_llm_response('system')
+    return get_llm_response('system', '', '')
 
 def rewrite_response(command, response, style):
     global state
@@ -257,13 +272,13 @@ def rewrite_response(command, response, style):
         add_to_llm_prompt(state.config['style']['length'])
         add_to_llm_prompt(state.config['style']['formatting'])
         add_to_llm_prompt(state.config['style']['caveat'])
-        add_to_llm_prompt(state.config['init']['gamelog_init'])
 
         [visited_rooms, gamelog] = get_rooms_and_gamelog()
-        template = state.config['init']['gamelog_init']
-        template = template.replace('{{{visited_rooms}}}',visited_rooms)
-        template = template.replace('{{{gamelog}}}',gamelog)
-        add_to_llm_prompt(template)
+        gamelog_text = state.config['responses']['gamelog'].replace('{{{gamelog}}}',gamelog)
+        add_to_llm_prompt(gamelog_text)
+        if not visited_rooms == '':
+            seenrooms = state.config['responses']['seenrooms'].replace('{{{visited_rooms}}}',visited_rooms)
+            add_to_llm_prompt(seenrooms)
     
     # detect and try to fix errors
     error = False
@@ -278,10 +293,10 @@ def rewrite_response(command, response, style):
     prompt = template.replace('{{{command}}}',command).replace('{{{response}}}',response)
     add_to_llm_prompt(prompt)
     add_to_llm_prompt(state.config['responses']['suffix'])
-    llm_response = get_llm_response('user')
+    llm_response = get_llm_response('user', command, response)
     llm_response = process_rewritten_response_of_room(response, llm_response)
 
-    write_to_transcript(textwrap.fill(llm_response, width=80, replace_whitespace=True, break_long_words=False))
+    write_to_transcript(format_with_linebreaks(llm_response))
     if input == True:
         write_to_transcript('\n\n>')
     return llm_response
@@ -379,12 +394,15 @@ def main():
     configure_non_blocking_reads(process.stdout)
 
     try:
-        time.sleep((10*args.delay)/1000.0)
+        time.sleep((1.0*args.delay)/1000.0)
         output = non_blocking_read(process.stdout)
         add_to_game_log(f"{output}\n", command=False)
         start = init_rewrites(output, args.style)
-        write_to_transcript(textwrap.fill(start, width=80, replace_whitespace=False, break_long_words=False, drop_whitespace=False))
+        write_to_transcript(format_with_linebreaks(start))
         write_to_transcript('\n\n>')
+
+        # send initialization commands to the game, and ignore output
+        send_game_command(process, state.config['init']['commands'] + '\n')
 
         while True:
             # get the user command
@@ -393,10 +411,7 @@ def main():
                 break
 
             # get the original ZIL interpreter response
-            process.stdin.write(command)
-            process.stdin.flush()
-            time.sleep((1.0*args.delay)/1000.0)
-            response = non_blocking_read(process.stdout)
+            response = send_game_command(process, command)
 
             # get the LLM version of the command and the LLM-modified response
             modified_command = command # TODO rewrite the command

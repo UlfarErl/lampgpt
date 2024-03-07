@@ -1,10 +1,9 @@
 # Config for ZORK 1, in an LLM style
 #
 # {{{background}}}
-# {{{room name}}}
-# {{{room desc}}}
+# {{{gamelog}}}
+# {{{visited_rooms}}}
 # {{{inventory}}}
-# {{{room objects}}}
 # {{{command}}}
 # {{{response}}}
 #
@@ -13,21 +12,12 @@
 ## INIT
 ########
 [init]
+commands = "verbose"
+
 llm_init = '''
 You are helping a person play a text adventure game (aka interactive fiction)
 by suggesting changes to the responses of the game engine,
 so that they become more detailed and interesting.
-'''
-
-# number of command and response pairs to give in each repeated prompt (0 for all)
-gamelog_count = 10
-
-gamelog_init = '''
-The recent game progression has been as follows:
-{{{gamelog}}}
-
-In addition the player has previously also visited the following rooms:
-{{{visited_rooms}}}
 '''
 
 background_init = '''
@@ -93,9 +83,7 @@ of the original response.
 '''
 
 formatting = '''
-Please output a newline character where appropriate, e.g., at the end of content such as
-headings, place names, or separate items in an enumerated list.  In general work 
-hard to keep the line breaks as they were in the original response.
+Please try to retain the formatting of the original response.
 '''
 
 
@@ -105,9 +93,21 @@ hard to keep the line breaks as they were in the original response.
 [responses]
 command_prefix = "PLAYER COMMAND: "
 
+# number of command and response pairs to give in each repeated prompt (0 for all)
+gamelog_count = 10
+
+gamelog = '''
+The recent game progression has been as follows:
+{{{gamelog}}}
+'''
+
+seenrooms = '''
+In addition the player has previously also visited the following rooms:
+{{{visited_rooms}}}
+'''
+
 suffix = '''
 Can you suggest a better response that is more helpful to the player?
-Please retain linebreaks and formatting.
 '''
 
 generic = '''

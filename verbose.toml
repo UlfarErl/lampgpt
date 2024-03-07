@@ -13,6 +13,8 @@
 ## INIT
 ########
 [init]
+commands = "verbose"
+
 llm_init = '''
 You are helping a person play a text adventure game (aka interactive fiction)
 by suggesting changes to the responses of the game engine,
@@ -24,17 +26,6 @@ the more detailed and vivid response "Looking closely at the lamp, you find it
 to be one of the common types that you pick up at any Omnimart.  Stamped on the 
 bottom of the lamp it says 'Quality Tested'."  While still conveying the 
 normality of the lamp, this response is more detailed and vivid.
-'''
-
-# number of command and response pairs to give in each repeated prompt (0 for all)
-gamelog_count = 10
-
-gamelog_init = '''
-The recent game progression has been as follows:
-{{{gamelog}}}
-
-In addition the player has previously also visited the following rooms:
-{{{visited_rooms}}}
 '''
 
 background_init = '''
@@ -95,12 +86,11 @@ Keep your suggested changed response brief, so it is no more than twice the leng
 of the original response. 
 '''
 
-formatting_old = '''
+formatting = '''
 Please output a newline character where appropriate, e.g., at the end of content such as
 headings, place names, or separate items in an enumerated list.  In general work 
 hard to keep the line breaks as they were in the original response.
 '''
-formatting = "Format the suggested response nicely.  Do not retain any delimiters."
 
 
 ############
@@ -108,6 +98,19 @@ formatting = "Format the suggested response nicely.  Do not retain any delimiter
 ############
 [responses]
 command_prefix = "PLAYER COMMAND: "
+
+# number of command and response pairs to give in each repeated prompt (0 for all)
+gamelog_count = 10
+
+gamelog = '''
+The recent game progression has been as follows:
+{{{gamelog}}}
+'''
+
+seenrooms = '''
+In addition the player has previously also visited the following rooms:
+{{{visited_rooms}}}
+'''
 
 suffix = '''
 Can you make a suggestion on how this game-engine response might be better 
