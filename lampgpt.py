@@ -56,20 +56,6 @@ def write_to_transcript(output, log_only=False):
         state.transcript.write(output)
         state.transcript.flush()
 
-def add_to_game_log(output, command=False):
-    global state
-    if state.debug_log != None and state.args.verbose:
-        write_to_transcript(f"# ORIGINAL GAME: {output}")
-    if command:
-        output = f"{state.config['responses']['command_prefix']} {output}"
-    else:
-        rooms = list(state.seenrooms)
-
-    if output.rstrip()[-1] == '>': # remove input prompt, if there
-        output = output.rstrip()[:-1] 
-        output = output.rstrip() + '\n'
-    state.game_chatlog.append(output)
-
 def configure_non_blocking_reads(stream):
     fd = stream.fileno()
     fl = fcntl.fcntl(fd, fcntl.F_GETFL)
@@ -117,6 +103,23 @@ def get_file_text(filename, regexp):
     else:
         print(f"WARNING: File {filename} not found as background info.")
     return ""
+
+##############
+## GAME STUFF
+##############
+def add_to_game_log(output, command=False):
+    global state
+    if state.debug_log != None and state.args.verbose:
+        write_to_transcript(f"# ORIGINAL GAME: {output}")
+    if command:
+        output = f"{state.config['responses']['command_prefix']} {output}"
+    else:
+        rooms = list(state.seenrooms)
+
+    if output.rstrip()[-1] == '>': # remove input prompt, if there
+        output = output.rstrip()[:-1] 
+        output = output.rstrip() + '\n'
+    state.game_chatlog.append(output)
 
 #############
 ## GPT STUFF

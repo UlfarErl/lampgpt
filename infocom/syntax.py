@@ -107,7 +107,7 @@ def find_syntax_rooms(filenames):
     obj_room_pattern = re.compile(r'^<ROOM ([^\s]+?)\s[^<>]+?\(DESC "([^<>"]+?)"\)[^<>]*?>', flags=re.DOTALL|re.MULTILINE)
     process_pattern(filenames, "obj_room", obj_room_pattern, room_objs, process_obj_room)
     # later games used (LOC ROOMS)
-    obj_room_pattern = re.compile(r'^<OBJECT ([^<>]+?)\s[^<>]+?\(LOC ROOMS\)[^<>]+?\(DESC "([^<>"]+?)"\)[^<>]*?>', flags=re.DOTALL|re.MULTILINE)
+    obj_room_pattern = re.compile(r'^<OBJECT ([^<>]+?)\s[^<>]+?\(LOC ROOMS\)[^<>]+?\(DESC "([^<>"]+?)"\)', flags=re.DOTALL|re.MULTILINE)
     process_pattern(filenames, "obj_room", obj_room_pattern, room_objs, process_obj_room)
 
     if debug:
