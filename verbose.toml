@@ -13,7 +13,7 @@
 ## INIT
 ########
 [init]
-gpt_init = '''
+llm_init = '''
 You are helping a person play a text adventure game (aka interactive fiction)
 by suggesting changes to the responses of the game engine,
 so that they become more detailed and interesting.
@@ -24,6 +24,17 @@ the more detailed and vivid response "Looking closely at the lamp, you find it
 to be one of the common types that you pick up at any Omnimart.  Stamped on the 
 bottom of the lamp it says 'Quality Tested'."  While still conveying the 
 normality of the lamp, this response is more detailed and vivid.
+'''
+
+# number of command and response pairs to give in each repeated prompt (0 for all)
+gamelog_count = 10
+
+gamelog_init = '''
+The recent game progression has been as follows:
+{{{gamelog}}}
+
+In addition the player has previously also visited the following rooms:
+{{{visited_rooms}}}
 '''
 
 background_init = '''

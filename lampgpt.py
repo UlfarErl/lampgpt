@@ -107,24 +107,58 @@ def get_file_text(filename, regexp):
 ##############
 ## GAME STUFF
 ##############
+def get_room_desc(text):
+    global state
+    text = text.lstrip()
+    for room in state.game['syntax']['rooms']:
+        if text.startswith(room):
+            return room
+    return None
+
+def process_rewritten_response_of_room(original, rewritten):
+    room = get_room_desc(original)
+    if room == None:
+        return rewritten
+    if room not in state.seenrooms: # update seenrooms
+        state.seenrooms.add(room)
+    text = rewritten.lstrip()
+    if text.lower().startswith(room.lower()):
+        text = text[len(room):].lstrip()
+    text = room + ':\n' + text
+    return text
+
 def add_to_game_log(output, command=False):
     global state
     if state.debug_log != None and state.args.verbose:
         write_to_transcript(f"# ORIGINAL GAME: {output}")
     if command:
         output = f"{state.config['responses']['command_prefix']} {output}"
-    else:
-        rooms = list(state.seenrooms)
-
     if output.rstrip()[-1] == '>': # remove input prompt, if there
         output = output.rstrip()[:-1] 
         output = output.rstrip() + '\n'
-    state.game_chatlog.append(output)
+    state.game_chatlog.append([command, output])
+
+def get_rooms_and_gamelog():
+    global state
+    gamelog_count = state.config['init']['gamelog_count']
+    if gamelog_count == 0:
+        gamelog_count = len(state.game_chatlog)
+    else:
+        gamelog_count = 2*gamelog_count
+    gamelog = state.game_chatlog[-gamelog_count:]
+    gamelog_text = '\n'.join([text for [b,text] in gamelog])
+
+    also_visited_rooms = state.seenrooms.copy()
+    for response in [text for [b,text] in gamelog if b == False]:
+        room = get_room_desc(response)
+        if not room == None and room in also_visited_rooms:
+            also_visited_rooms.remove(room)
+    rooms_text = ', '.join([f"'{room}'" for room in also_visited_rooms])
+    return [rooms_text,gamelog_text]
 
 #############
 ## GPT STUFF
 #############
-gpt_message = ""
 def add_to_llm_prompt(prompt):
     global state
     write_to_debug_log(prompt)
@@ -177,7 +211,7 @@ def get_llm_response(message_type):
 #################
 def init_rewrites(game_init_text, style):
     global state
-    add_to_llm_prompt(state.config['init']['gpt_init'])
+    add_to_llm_prompt(state.config['init']['llm_init'])
 
     if state.args.bginfo:
         background_init = state.config['init']['background_init']
@@ -218,13 +252,18 @@ def rewrite_response(command, response, style):
 
     # instructions
     if state.args.repeat:
-        add_to_llm_prompt(state.config['init']['gpt_init'])
+        add_to_llm_prompt(state.config['init']['llm_init'])
         add_to_llm_prompt(state.config['style']['tone_'+style])
         add_to_llm_prompt(state.config['style']['length'])
         add_to_llm_prompt(state.config['style']['formatting'])
         add_to_llm_prompt(state.config['style']['caveat'])
         add_to_llm_prompt(state.config['init']['gamelog_init'])
-        add_to_llm_prompt('\n'.join(state.game_chatlog))
+
+        [visited_rooms, gamelog] = get_rooms_and_gamelog()
+        template = state.config['init']['gamelog_init']
+        template = template.replace('{{{visited_rooms}}}',visited_rooms)
+        template = template.replace('{{{gamelog}}}',gamelog)
+        add_to_llm_prompt(template)
     
     # detect and try to fix errors
     error = False
@@ -239,12 +278,13 @@ def rewrite_response(command, response, style):
     prompt = template.replace('{{{command}}}',command).replace('{{{response}}}',response)
     add_to_llm_prompt(prompt)
     add_to_llm_prompt(state.config['responses']['suffix'])
-    gpt_response = get_llm_response('user')
-    
-    write_to_transcript(textwrap.fill(gpt_response, width=80, replace_whitespace=True, break_long_words=False))
+    llm_response = get_llm_response('user')
+    llm_response = process_rewritten_response_of_room(response, llm_response)
+
+    write_to_transcript(textwrap.fill(llm_response, width=80, replace_whitespace=True, break_long_words=False))
     if input == True:
         write_to_transcript('\n\n>')
-    return gpt_response
+    return llm_response
 
 ########
 ## MAIN

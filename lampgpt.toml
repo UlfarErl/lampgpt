@@ -13,15 +13,21 @@
 ## INIT
 ########
 [init]
-gpt_init = '''
+llm_init = '''
 You are helping a person play a text adventure game (aka interactive fiction)
 by suggesting changes to the responses of the game engine,
 so that they become more detailed and interesting.
 '''
 
-gamelog_init = '''
-The game progression so far has been as follows:
+# number of command and response pairs to give in each repeated prompt (0 for all)
+gamelog_count = 10
 
+gamelog_init = '''
+The recent game progression has been as follows:
+{{{gamelog}}}
+
+In addition the player has previously also visited the following rooms:
+{{{visited_rooms}}}
 '''
 
 background_init = '''
