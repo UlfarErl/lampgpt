@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/suspect/COMPILED/suspect.z3"
+path = "./infocom/suspect/COMPILED/dm3.z3"
 
 setup = '''
 suspect is a text-based adventure game from Infocom.

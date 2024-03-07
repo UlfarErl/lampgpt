@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/shogun/COMPILED/shogun.z3"
+path = "./infocom/shogun/COMPILED/a5.zip"
 
 setup = '''
 shogun is a text-based adventure game from Infocom.

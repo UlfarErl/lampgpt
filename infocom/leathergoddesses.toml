@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/leathergoddesses/COMPILED/leathergoddesses.z3"
+path = "./infocom/leathergoddesses/COMPILED/x1.z3"
 
 setup = '''
 leathergoddesses is a text-based adventure game from Infocom.

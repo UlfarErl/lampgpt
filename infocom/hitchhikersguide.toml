@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/hitchhikersguide/COMPILED/hitchhikersguide.z3"
+path = "./infocom/hitchhikersguide/COMPILED/s4.z3"
 
 setup = '''
 hitchhikersguide is a text-based adventure game from Infocom.

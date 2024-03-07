@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/plunderedhearts/COMPILED/plunderedhearts.z3"
+path = "./infocom/plunderedhearts/COMPILED/r1.z3"
 
 setup = '''
 plunderedhearts is a text-based adventure game from Infocom.

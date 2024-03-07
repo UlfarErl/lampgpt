@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/trinity/COMPILED/trinity.z3"
+path = "./infocom/trinity/COMPILED/tr.z4"
 
 setup = '''
 trinity is a text-based adventure game from Infocom.

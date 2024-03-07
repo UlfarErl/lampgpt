@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/ballyhoo/COMPILED/ballyhoo.z3"
+path = "./infocom/ballyhoo/COMPILED/m4.z3"
 
 setup = '''
 ballyhoo is a text-based adventure game from Infocom.

@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/spellbreaker/COMPILED/spellbreaker.z3"
+path = "./infocom/spellbreaker/COMPILED/z6.z3"
 
 setup = '''
 spellbreaker is a text-based adventure game from Infocom.

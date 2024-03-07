@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/wishbringer/COMPILED/wishbringer.z3"
+path = "./infocom/wishbringer/COMPILED/j2.z3"
 
 setup = '''
 wishbringer is a text-based adventure game from Infocom.

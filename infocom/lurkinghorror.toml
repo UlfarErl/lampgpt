@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/lurkinghorror/COMPILED/lurkinghorror.z3"
+path = "./infocom/lurkinghorror/COMPILED/h1.z3"
 
 setup = '''
 lurkinghorror is a text-based adventure game from Infocom.

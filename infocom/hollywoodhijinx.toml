@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/hollywoodhijinx/COMPILED/hollywoodhijinx.z3"
+path = "./infocom/hollywoodhijinx/COMPILED/anthill.z3"
 
 setup = '''
 hollywoodhijinx is a text-based adventure game from Infocom.

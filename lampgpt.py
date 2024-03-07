@@ -34,6 +34,7 @@ class GlobalState:
         self.llm_client = None  # the LLM client reference
         self.llm_chatlog = []   # the log of LLM inputs and outputs
         self.llm_prompt = ""    # the current LLM prompt being constructed
+        self.seenrooms = set([])# title descriptions of all rooms visited
 state = GlobalState()
 
 ########
@@ -61,6 +62,9 @@ def add_to_game_log(output, command=False):
         write_to_transcript(f"# ORIGINAL GAME: {output}")
     if command:
         output = f"{state.config['responses']['command_prefix']} {output}"
+    else:
+        rooms = list(state.seenrooms)
+
     if output.rstrip()[-1] == '>': # remove input prompt, if there
         output = output.rstrip()[:-1] 
         output = output.rstrip() + '\n'
@@ -327,7 +331,7 @@ def main():
         state.llm['config']['api'] = 'debug' # redundant; included for clarity
 
     # Launch the ZIL interpreter and manage its input/output
-    bocfel_launch = [args.bocfel] + args.bocfelargs.split() + [game['game']['path']]
+    bocfel_launch = [args.bocfel] + args.bocfelargs.split() + [game['game']['path'].replace(' ','\\ ')]
     process = subprocess.Popen(bocfel_launch, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, bufsize=1)
     configure_non_blocking_reads(process.stdout)
 

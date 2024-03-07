@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/borderzone/COMPILED/borderzone.z3"
+path = "./infocom/borderzone/COMPILED/spy.z5"
 
 setup = '''
 borderzone is a text-based adventure game from Infocom.

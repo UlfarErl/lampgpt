@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/moonmist/COMPILED/moonmist.z3"
+path = "./infocom/moonmist/COMPILED/m5.z3"
 
 setup = '''
 moonmist is a text-based adventure game from Infocom.

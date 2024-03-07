@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/nordandbert/COMPILED/nordandbert.z3"
+path = "./infocom/nordandbert/COMPILED/j3.z4"
 
 setup = '''
 nordandbert is a text-based adventure game from Infocom.

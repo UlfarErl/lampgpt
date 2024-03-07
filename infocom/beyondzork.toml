@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/beyondzork/COMPILED/beyondzork.z3"
+path = "./infocom/beyondzork/COMPILED/z.z5                                                            "
 
 setup = '''
 beyondzork is a text-based adventure game from Infocom.

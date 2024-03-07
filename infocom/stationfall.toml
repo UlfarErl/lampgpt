@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/stationfall/COMPILED/stationfall.z3"
+path = "./infocom/stationfall/COMPILED/s6.z3                                                            "
 
 setup = '''
 stationfall is a text-based adventure game from Infocom.

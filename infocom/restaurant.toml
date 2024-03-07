@@ -3,7 +3,7 @@
 #
 
 [game]
-path = "./infocom/restaurant/COMPILED/restaurant.z3"
+path = "./infocom/restaurant/COMPILED/h2.z6"
 
 setup = '''
 restaurant is a text-based adventure game from Infocom.
