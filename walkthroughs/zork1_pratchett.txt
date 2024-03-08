@@ -1,0 +1,2041 @@
+ZORK I: The Great Underground Empire - A Tale of Wit, Whimsy, and Woe
+Infocom interactive fiction - a fantasy story spun with the threads of dreams
+and the occasional nightmare.
+Copyright (c) 1981, 1982, 1983, 1984, 1985, 1986 Infocom, Inc. All rights
+reserved, including the right to perform a magic spell.
+ZORK is a registered trademark of Infocom, Inc., and a whispered word of power
+in certain shadowy circles.
+Release 119 / Serial number 880429 - A number that may or may not unlock the
+secrets of the universe.
+
+West of House, Where Adventure Beckons
+You find yourself standing in an open field west of a white house, which,
+despite its inviting color, has a front door that's as welcoming as a dragon's
+maw, thanks to the boards nailed across it. Nearby, a small mailbox stands
+sentinel, possibly harboring secrets or at least a few bills.
+
+>x house
+The house stands as a testament to colonial elegance, its white paint gleaming
+in the sunlight like a beacon of wealth and mystery. The architecture suggests
+that its owners, undoubtedly a lineage of considerable affluence, spared no
+expense in its design. However, the boarded front door whispers tales of long-
+gone glory, hinting at secrets lying dormant within its walls.
+
+>open mailbox
+With a creak that suggests it hasn't seen action since the days when knights
+were bold and dragons were, frankly, a nuisance, the small mailbox swings open
+to reveal a solitary leaflet, lying as if it's been waiting just for you to
+discover its secrets.
+
+>read leaflet
+(Taken)
+"Ah, you've discovered our humble welcome note! 'WELCOME TO ZORK!'
+
+This isn't just any ordinary adventure you've stumbled upon, oh no. It's a
+journey of wit, peril, and the kind of cunning that would make a fox say, 'Well,
+that's a bit much, isn't it?' Here, you'll traverse lands so breathtaking, even
+the most seasoned explorers would give their last compass to see them. Remember,
+every adventurer worth their salt keeps this leaflet close. It's not just a
+guide; it's a key to the wonders beneath your feet."
+
+>x forest
+The forest stretches out like a verdant sea, its canopy a patchwork quilt of
+greens and browns. Ancient trees stand as silent sentinels, their trunks gnarled
+and twisted by the passage of countless years. A chorus of unseen creatures
+serenades you from the underbrush, their songs weaving a tapestry of mystery and
+allure. Though it may seem at first glance to be just an ordinary forest, who
+knows what secrets lie hidden beneath its leafy boughs?
+
+>se
+South of House:
+As you venture to the south side of the white house, you find yourself gazing
+upon its neglected facade. No welcoming door invites you in here, and the
+windows, as if to guard the house's secrets, are all firmly boarded up. It seems
+the house whispers tales of days gone by, yet remains stubbornly silent on how
+one might gain entry.
+
+>e
+Behind House:
+You find yourself at the rear of the white house, where secrets and mysteries
+might just be a window away. A path, looking as inviting as a siren's call,
+snakes into the forest to the east, promising adventure or perhaps misadventure.
+In one corner, almost hidden as if by an afterthought, there's a small window,
+slightly ajar, whispering tales of the unknown. It seems to beckon you closer,
+suggesting that not all entrances need be doors.
+
+>x window
+The window teases you with its slightly ajar stance, a sliver of darkness
+beckoning from beyond. Alas, it's not open wide enough to permit your
+adventurous form to slip through. It whispers of mysteries just beyond reach, if
+only you could persuade it further.
+
+>open window
+Summoning the strength of a thousand ancestors and with a finesse that would
+make a cat burglar proud, you manage to pry the window open just wide enough to
+slip through. The world beyond beckons, shrouded in mystery and the faint scent
+of adventure.
+
+>nw
+North of House:
+You find yourself gazing upon the north side of the white house, where not a
+single door invites entry, and all the windows stand as stoic guardians, boarded
+up against the world. To the north, a narrow path meanders through the trees,
+whispering secrets of adventures yet to be discovered.
+
+>n
+Forest Path:
+You find yourself on a serpentine path that meanders through a forest shrouded
+in twilight mystery. The path stretches both to the north and south, as if
+inviting you to explore the secrets that lie in either direction. To the side, a
+majestic tree, its branches reaching out like the arms of an old friend, stands
+sentinel. Its low branches seem almost beckon you closer, whispering of hidden
+tales and adventures.
+
+>climb tree
+Up a Tree:
+Perched precariously about 10 feet above the ground, you find yourself nestled
+among the sturdy arms of large branches, which seem to cradle you like a mother
+does a child, albeit a slightly uncomfortable and wooden child. Just out of
+reach, the next branch taunts you with its aloofness. Beside you, a small bird's
+nest cradles a marvel that would make the most stoic of magpies green with envy.
+A large egg, not of any bird you know, but rather a treasure trove encrusted
+with precious jewels that shimmer in the dappled sunlight like stars in a velvet
+night sky. This egg, adorned with fine gold inlay and ornamented with lapis
+lazuli and mother-of-pearl, boasts a sophistication that suggests it might open,
+should one find the delicate clasp that holds its secrets. It whispers tales of
+ancient wealth and mystery, yet warns of its fragility with every glint. In the
+distance, the hopeful chirping of a songbird fills the air, perhaps the
+architect of this opulent anomaly or merely a curious observer like yourself.
+
+>open egg
+With a mix of trepidation and excitement, you attempt to open the egg. Alas,
+despite your enthusiasm, you find yourself ill-equipped for such a delicate
+task. It seems you're in need of something a bit more refined than brute
+strength or sheer will. Perhaps a tool designed for the finesse of a jeweler or
+the gentle touch of a locksmith might do the trick.
+
+>x egg
+The jewel-encrusted egg, a marvel of avian thievery and magpie-like ambition,
+remains tantalizingly closed. Its surface is a tapestry of lapis lazuli and
+mother-of-pearl, held together by fine gold inlay, suggesting that whatever
+secrets it holds are meant for more discerning hands or perhaps a specific key.
+The delicate clasp, a masterpiece of miniature engineering, hints at complexity
+beyond mere force.
+
+>d
+Forest Path:
+Descending from your lofty perch among the branches with the grace of a slightly
+disoriented squirrel, you find yourself back on the forest path. The dim light
+filters through the canopy, casting mysterious shadows that dance at the edge of
+your vision. The path, as if it were a loyal hound, continues to stretch both
+north and south from your current position. The large tree, now behind you,
+stands like a silent guardian at the edge of the path, its low branches a
+reminder of your recent aerial adventure.
+
+>n
+Clearing:
+You find yourself in a serene clearing, encircled by the whispering forest like
+a secret meeting place for woodland spirits. A path, like a ribbon of adventure,
+beckons you back to the south. On the ground, a suspiciously neat pile of leaves
+catches your eye, hinting at mysteries hidden beneath.
+
+>get leaves
+As you gallantly sweep aside the pile of leaves with a flourish worthy of a
+forest custodian, you uncover a grating cunningly hidden beneath. It's as if the
+leaves were merely a leafy toupee atop the forest floor's balding pate. With a
+sense of accomplishment that could only be rivaled by discovering hidden
+treasure or the last biscuit in the tin, you've taken the first step into
+unraveling the mysteries that lie beneath.
+Revealed and taken.
+
+>x leaves
+Upon closer inspection, the pile of leaves seems to be an artful arrangement by
+nature itself, a chaotic yet harmonious blend of autumn's finest colors.
+However, amidst this natural tapestry, something man-made lurks beneath, as if
+the earth itself is trying to keep a secret. The leaves rustle with a whisper of
+mystery, hinting at hidden depths below.
+
+>e
+Forest:
+You've wandered into a dimly lit forest, where the trees stand like silent
+sentinels in the twilight. Their towering forms create a canopy so dense, not
+even the cheekiest ray of sunlight dares to sneak through. The air is thick with
+the scent of moss and mystery, and the only sound is the distant call of an
+unseen bird. Paths meander in several directions, but without a compass or a
+friendly squirrel to guide you, it's anyone's guess which way leads to adventure
+and which way to certain doom.
+
+>e
+Forest:
+As the forest graciously steps aside, you find yourself facing the grandeur of
+nature's own barricade: impassable mountains stretching up to kiss the sky.
+Their peaks, shrouded in mystery and possibly dragons, loom over you, suggesting
+this is as far as you can go. The trees behind you whisper of other paths yet to
+be explored.
+
+>s
+Forest:
+You find yourself enveloped in the dim, dappled light of the forest once more,
+with ancient trees standing like silent sentinels all around. The air is thick
+with the scent of moss and mystery. From somewhere in the leafy canopy above,
+the melodious chirping of a songbird serenades you, a reminder of the forest's
+hidden treasures and unseen watchers.
+
+>s
+Clearing:
+You find yourself in a quaint clearing, a cozy nook in the heart of the forest
+where the path decides it's had enough of straight lines and opts for a scenic
+detour to the east and west. The trees around you seem to lean in, as if eager
+to overhear your next move, while the underbrush rustles with the secrets of the
+forest. The air here is filled with the scent of adventure and the faintest hint
+of mystery carried by the breeze.
+
+>e
+Canyon View:
+Perched atop the Great Canyon's western edge, you find yourself in the midst of
+a breathtaking panorama. The canyon stretches below, a testament to nature's
+artistry, with the Frigid River carving its way through the landscape upstream.
+The White Cliffs stand proudly across the expanse, their faces merging with the
+formidable Flathead Mountains to the east, a sight that could stir the heart of
+the most hardened adventurer. To the north, the Aragain Falls cascade with a
+majesty that paints a rainbow amidst the spray, a spectacle that poets and
+painters dream of capturing. Emerging from the shadows, the Frigid River bursts
+forth from a cavernous maw, hinting at untold mysteries and adventures. The view
+west and south reveals an endless sea of greenery, the forest sprawling into the
+horizon like a verdant carpet. A trail meanders northwest, whispering promises
+of further wonders, while the daring might find a way to descend directly into
+the canyon's embrace from here. The world is alive with possibilities, each
+direction a new chapter waiting to be written.
+
+>d
+Rocky Ledge:
+Perched precariously on a ledge about halfway up the grand wall of the river
+canyon, you find yourself in a rather tight spot. Below, the canyon bottom
+beckons, a siren's call to the adventurous and the foolhardy. Above, the cliff
+face stretches towards the sky, offering a challenge that seems almost
+climbable, if one possesses the courage and the nimbleness of a mountain goat.
+From your vantage point, you can spy the main flow from Aragain Falls, twisting
+and turning through a passage as elusive as a shadow in the night, clearly a
+path that you, with your current means, cannot hope to traverse.
+
+>d
+Canyon Bottom:
+Ah, you've descended to the very bosom of the canyon, where the walls loom like
+ancient guardians of yore, possibly climbable if one possesses the agility of a
+mountain goat or the determination of a particularly stubborn mule. The lesser
+offspring of the majestic Aragain Falls tumbles by, a silver thread in the
+tapestry of this rugged landscape. To the north, a narrow path whispers promises
+of mysteries yet to be uncovered.
+
+>n
+End of Rainbow:
+Ah, what a sight to behold! You find yourself on a quaint, rocky beach, a hidden
+gem where the Frigid River, having tumbled down the majestic Aragain Falls,
+continues its journey. The beach, though narrow, is hemmed in by the imposing
+White Cliffs, standing tall like ancient guardians of secrets untold. Here, the
+river canyon widens, welcoming beams of sunlight that dance upon the water's
+surface, creating a spectacle of light. A rainbow, in all its ephemeral glory,
+arches gracefully over the falls to the east, painting the scene with hues of
+promise and wonder. To the southwest, a narrow path snakes away, whispering of
+adventures yet to come.
+
+>examine the rainbow
+Ah, the rainbow, nature's very own palette in the sky, a bridge to the untold
+treasures of lore and legend. As you gaze upon its splendid arc, stretching from
+the misty embrace of the falls to the distant, unreachable horizon, you can't
+help but marvel at the vibrant hues dancing in the sunlight. Alas, despite its
+ethereal beauty and the tales of pots of gold that might lie at its end, this
+particular rainbow, though a feast for the eyes, holds no secrets to be
+uncovered nor paths to be traversed. It is, in its essence, a mere spectator in
+the grand theater of the natural world around you.
+
+>examine water
+Ah, the water! A shimmering, ever-flowing dance of H2O that has journeyed
+through the veins of the earth, cascading from the lofty Aragain Falls to grace
+this very spot. It's cool to the touch, a refreshing contrast to the air around,
+and clear enough to reveal the pebbled bed below. Yet, despite its inviting
+clarity, it holds no secrets nor treasures for the weary adventurer. It's just
+water, doing what water does best - flowing, falling, and filling the air with
+the melody of its movement.
+
+>sw
+Canyon Bottom:
+You find yourself once again at the base of the river canyon, where the walls
+loom like ancient guardians of forgotten secrets. The lesser part of Aragain
+Falls' runoff babbles past, whispering tales of the journey it has undertaken.
+Above, the canyon walls offer a challenge to those daring enough to climb,
+hinting at mysteries yet to be discovered. To the north, a narrow path snakes
+away, inviting the bold to explore what lies beyond. The air is filled with the
+scent of adventure, and the promise of discovery tickles your senses.
+
+>u
+Rocky Ledge:
+Perched precariously on a ledge about halfway up the formidable wall of the
+river canyon, you find yourself. From this vantage point, the main flow from
+Aragain Falls can be seen carving its way through the landscape, twisting and
+turning through a passage that, alas, remains a tantalizing mystery beyond your
+reach. Below, the canyon bottom beckons, a testament to the relentless forces of
+nature. Above, the cliff stretches towards the heavens, its rugged face hinting
+at the possibility of ascent. The question now, brave explorer, is whether to
+climb higher towards the unknown or descend back to the familiar embrace of the
+canyon's floor.
+
+>u
+Canyon View:
+Ah, you've ascended to the top of the Great Canyon, perched like an eagle on its
+west wall. Before you unfolds a tapestry of nature's finest work: the canyon's
+vast expanse, the serpentine Frigid River carving its way upstream, and the
+White Cliffs standing guard like ancient sentinels across the chasm. To the
+east, the Flathead Mountains loom, their peaks shrouded in mystery and the
+promise of untold adventures. Gaze northward to witness the majestic Aragain
+Falls, its waters dancing in the sunlight, creating a rainbow that bridges the
+realms of fantasy and reality. Below, the dark maw of a cavern yawns, from
+whence the mighty Frigid River emerges, as if birthed by the earth itself. To
+the west and south, an immense forest stretches into the horizon, a verdant sea
+of green mystery. A path beckons you northwest, whispering of journeys yet to
+come. And should the spirit of adventure stir your soul, the canyon calls to
+you, offering a path to climb down into its depths.
+
+>w
+Forest:
+You find yourself enveloped in the embrace of a dimly lit forest, where ancient
+trees stand like silent sentinels all around. Their thick canopies weave a
+tapestry of shadows on the forest floor, creating an atmosphere of mystery and
+quiet anticipation. The air is filled with the earthy scent of moss and the
+distant sound of rustling leaves, suggesting the presence of unseen creatures.
+Paths meander through the underbrush, inviting further exploration.
+
+>w
+Forest:
+You've wandered deeper into the heart of a whispering forest, where the trees
+stand tall and proud, their branches intertwining like dancers in the sky. In
+every direction, the forest stretches, a labyrinth of green. To the east, a hint
+of sunlight teases through the dense canopy, suggesting a way back to the open.
+The air is filled with the melodious chirping of a songbird, its tune a
+mysterious, yet comforting presence amidst the solitude.
+
+>w
+Venturing further west, you discover the underbrush grows thick and unyielding,
+as if nature herself has decided you shall not pass without the aid of a trusty
+machete. The dense foliage whispers secrets of the forest, but alas, they remain
+just out of reach. Meanwhile, the melodic chirping of a distant songbird offers
+a whimsical soundtrack to your moment of impasse.
+
+>s
+Forest:
+You find yourself in a shadowy enclave of the forest, where the trees stand like
+ancient guardians, their branches weaving a tapestry of darkness above. The air
+is thick with the scent of moss and mystery, and the ground beneath your feet is
+a carpet of fallen leaves and secrets untold. Large trees surround you, their
+trunks gnarled and twisted, as if they've witnessed the passage of countless
+ages. The dim light that filters through the canopy casts eerie shadows, making
+the forest seem alive with whispers of the past.
+
+>w
+Forest:
+Enchanted Forest
+You find yourself in an ancient forest, where the trees stand tall and proud,
+their branches weaving a dense tapestry above. The air is filled with the earthy
+scent of moss and the whispers of leaves. In every direction, the forest
+stretches, a labyrinth of green. To the east, a soft glow suggests the promise
+of sunlight piercing the canopy.
+
+>w
+Venturing further west, alas, is a task for the bold and the equipped, for the
+underbrush grows thick and unyielding, as if guarding ancient secrets or perhaps
+just being difficult. A machete would be your key to this leafy labyrinth.
+Meanwhile, the melodic chirping of a distant songbird provides a whimsical
+soundtrack to your forest escapade, hinting at mysteries untold or simply
+enjoying its own existence.
+
+>s
+Forest:
+Enchanted Forest
+You find yourself in a shadowy enclave of the forest, where the light dares only
+to whisper amongst the ancient, towering trees. Their branches weave a tapestry
+above, casting intricate shadows that dance upon the ground with every gentle
+breeze. The air is thick with the scent of moss and mystery, hinting at secrets
+hidden in the heart of the woods.
+
+>w
+Forest:
+Enchanted Forest
+You've wandered into an enchanted part of the forest, where the trees seem to
+whisper secrets of old and the sunlight plays hide and seek through the dense
+canopy. In every direction, ancient trees stand like silent guardians of
+nature's mysteries. To the east, a teasing glimmer of sunlight suggests a way
+out of this natural labyrinth.
+
+>e
+Forest Path:
+You find yourself on a serpentine path that meanders through a forest shrouded
+in twilight mystery. The path stretches from the north to the south, as if
+undecided in its direction, much like a lost traveler. To the side, a grand old
+tree stands sentinel, its low branches reaching out as if inviting you to climb.
+The air is filled with the whispers of leaves, telling tales of ancient secrets
+and adventures yet to be discovered.
+
+>s
+North of House:
+Here you stand, gazing upon the north side of an enigmatic white house, its
+walls as silent as the secrets it keeps. No welcoming door graces this side, and
+the windows, once perhaps full of life and light, are now boarded up, as if to
+keep prying eyes and adventurous spirits at bay. To the north, a narrow path
+snakes its way through the trees, whispering promises of mysteries yet to be
+uncovered. The air is thick with the scent of adventure, and the quiet seems to
+hum with untold stories.
+
+>se
+Behind House:
+You find yourself at the rear of the white house, where secrets and shadows
+mingle. A path, like a whisper, invites you eastward into the embrace of the
+forest. Tucked away in a cozy corner of the house, a small window stands ajar,
+as if left open by a forgetful ghost or perhaps an invitation from the unknown.
+
+>enter the house
+Kitchen:
+of Whimsy and Peril
+Ah, you've boldly ventured into the kitchen of the white house, where culinary
+adventures once frolicked and danced! The table, a sturdy oak affair, bears the
+marks of recent food preparation - perhaps a ghostly chef's midnight snack? To
+the west, a passage whispers secrets of rooms beyond, while a dark staircase to
+the north beckons you into the shadows with the promise of mystery. A dark
+chimney, looking like the maw of some slumbering beast, leads down into the
+unknown. To the east, a small window stands open, as if inviting the breeze (or
+perhaps more adventurous souls) to enter.
+
+Perched upon the table, as if awaiting your arrival, is a glass bottle, its
+sides glistening with the promise of refreshment. It cradles a quantity of water
+within, a liquid treasure for the parched adventurer. Beside it, an elongated
+brown sack exudes the tantalizing aroma of hot peppers, hinting at culinary
+delights or fiery traps for the unwary.
+
+>i
+In the grand tradition of adventurers and explorers before you, your inventory
+currently boasts the following treasures:
+  - A pile of leaves, which, while not gold or jewels, could be considered a
+treasure by a particularly imaginative or desperate individual.
+  - A leaflet, possibly the most mysterious and intriguing item in your
+possession. Who knows what secrets or mundane information it might hold?
+
+>get all
+With a flourish worthy of a seasoned adventurer, you deftly scoop up the
+treasures before you. The glass bottle, its contents sloshing with the promise
+of hydration or perhaps a makeshift lantern, is now securely in your grasp. The
+elongated brown sack, exuding an aroma that could either lure a dragon or repel
+it, depending on the dragon's culinary preferences, is also taken. Your
+inventory grows richer, as does the tapestry of your journey.
+
+>d
+Ah, it seems you've mistaken yourself for a jolly fellow in a red suit.
+Chimneys, while tempting, are not the preferred method of descent for
+adventurers without a sleigh. Perhaps another path beckons?
+
+>w
+Living Room:
+Ah, the grand living room, a place of mystery and dust bunnies! To the east, a
+doorway beckons like a siren's call, while to the west, a wooden door adorned
+with strange gothic lettering stands, its nails proclaiming "No Entry" with the
+subtlety of a dragon's roar. A trophy case, a testament to adventures past or
+perhaps just good interior decorating, occupies pride of place. Dominating the
+room, however, is a large oriental rug that seems to whisper tales of the exotic
+and the unknown. Suspended in a place of honor above the trophy case is an
+elvish sword, its blade shimmering with a history of valor and great antiquity.
+Perched atop the trophy case, like a beacon in the dark, is a battery-powered
+brass lantern, its glow promising illumination and perhaps, just perhaps, a hint
+of safety.
+
+>get all
+sword: With a flourish worthy of the finest elvish warrior, you now possess the
+ancient sword.
+brass lantern: Alas, the weight of your current possessions anchors you firmly
+to the ground, preventing the addition of the brass lantern to your inventory.
+carpet: Despite your most Herculean efforts, the rug remains as immovable as the
+mountains, refusing to be carried.
+trophy case: The trophy case, a steadfast guardian of its contents, is securely
+anchored to the wall, defying your attempts to take it.
+
+>drop leaves
+With a flourish worthy of a leaf on the wind, you release the pile of leaves,
+which flutters to the ground in a display of autumnal grace. Dropped.
+
+>get lamp
+With a flourish worthy of a stage magician, you deftly add the brass lantern to
+your collection of treasures. Its weight feels reassuring in your hands, a
+beacon of hope and illumination in the shadowy corners of this adventure.
+
+>e
+Kitchen:
+Ah, the heart of any home, even a mysterious white house! You find yourself back
+in the kitchen, where culinary adventures once simmered and bubbled. A table,
+looking like it hosted a feast or a solitary dinner not too long ago, stands
+proudly in the center. To the west, a passage whispers secrets of rooms beyond.
+Above, a dark staircase invites you to explore mysteries that lurk upstairs,
+while a dark chimney yawns below, hinting at sooty descents not recommended for
+the faint of heart. To the east, a small window is open, offering a breath of
+fresh air and a sliver of the world outside.
+
+>u
+You have ascended the creaky staircase into an abyss of darkness, a realm where
+the sun dares not venture. It is so pitch black, you might as well be in the
+belly of a whale at midnight. Beware, for this is the favored haunt of the grue,
+a creature that thrives in the shadows, licking its lips in anticipation of its
+next meal. Might I suggest a source of light, lest you become an unwitting
+snack?
+
+>turn on lamp
+With a click, the brass lantern bathes the room in a warm, golden glow.
+
+Attic
+You've illuminated the attic, revealing its secrets. The only escape from this
+dusty memory trove is a stairway spiraling down into the shadows. In the corner,
+a large coil of rope seems to whisper tales of adventure and escape. On a table,
+there lies a knife with a gleam in its eye, as if it's seen more than its fair
+share of action. It's not just any knife, but one that looks like it could tell
+a thousand stories, if only it could talk.
+
+>get all
+rope: With a heave and a ho, you've now got a coil of rope, ready for whatever
+escapades or daring rescues might come your way. Taken.
+nasty knife: The knife, which looks like it's seen more than its fair share of
+questionable dinners and possibly a duel or two, now belongs to you. Handle with
+care, for it whispers tales of mischief and adventure. Taken.
+
+>d
+Kitchen:
+Ah, the kitchen of the white house, where culinary disasters and minor miracles
+have equal chances of occurring. A table, bearing the scars of recent food
+preparation battles, stands proudly in the center. To the west, a passage
+whispers secrets of rooms beyond, while a dark staircase to the north beckons
+you upward with the promise of mystery. A gloomy chimney yawns downwards,
+hinting at sooty adventures, and to the east, a small window is flung open,
+offering a breath of fresh air and a sliver of the world outside.
+
+>w
+Living Room:
+- A Cozy Conundrum
+Ah, back in the living room, where adventurers can take a brief respite from
+their daring escapades. To the east, a doorway beckons with the promise of
+culinary discoveries. To the west, a wooden door, its surface etched with gothic
+lettering that whispers of ancient secrets, remains steadfastly nailed shut - a
+challenge or a warning? The room is adorned with a trophy case, a testament to
+achievements past and perhaps a nudge to strive for more. Dominating the scene
+is a large oriental rug, lying in the center like a slumbering beast from tales
+of yore.
+Scattered on the ground, as if left by a mischievous spirit, is a pile of
+leaves, perhaps a reminder of the world outside or a clue to a puzzle yet
+unsolved.
+
+>move rug
+Summoning every ounce of your strength and perhaps channeling the spirit of a
+dozen swashbuckling heroes, you manage to heave the rug aside. Lo and behold,
+beneath the intricate patterns and dust of ages, you uncover the secretive
+outline of a trap door, its existence previously whispered only in the legends
+of the living room.
+
+>open trap door
+With a creak that would make a ghost jealous, the trap door begrudgingly swings
+open, unveiling a staircase that looks about as stable as a house of cards in a
+breeze. It spirals down into an abyss that even the bravest of adventurers might
+think twice about. The darkness below seems to swallow light whole.
+
+>x wooden door
+Upon closer inspection, the gothic lettering on the wooden door seems to be an
+ancient joke among carpenters, translating to "Beware, for beyond this barrier
+lies naught but the void itself. Also known as 'This space intentionally left
+blank.'" It appears the door might just be a decorative piece, or perhaps it's
+guarding secrets only the bravest dare to uncover.
+
+>d
+With a resounding thud that echoes through the musty air, the trap door slams
+shut above you, and the sound of heavy objects being piled atop it suggests you
+won't be taking the express elevator back up. Welcome to the cellar, a place
+where the air is as damp as a swamp and just as welcoming. To the north, a
+narrow passageway stretches into the gloom, whispering secrets of the unknown.
+To the south, a crawlway beckons like a siren's call, promising adventure or
+perhaps a tight squeeze. On the west, the bottom of a steep metal ramp mocks you
+with its slick, unclimbable surface. And in this eerie ambiance, your sword
+decides to put on a light show, glowing with a faint but unmistakable blue glow,
+hinting at unseen dangers or perhaps just trying to be helpful in its own
+mystical way.
+
+>s
+East of Chasm:
+Perched precariously on the east edge of a chasm, you find yourself peering into
+an abyss so deep, the bottom bids farewell to the light. To the north, a narrow
+passage whispers secrets of ancient travels, while the path to the east promises
+further adventures in the unknown. Your trusty sword, sensing the absence of
+immediate danger, has ceased its ethereal glow.
+
+>e
+Gallery:
+You've stumbled into what can only be described as an art gallery, though it
+seems the local vandals beat you to it, pilfering the place with a discerning
+eye for beauty. The exits lie to the north and west, marked by the delicate
+footprints of the art-loving thieves. Yet, all hope is not lost for your inner
+vandal; a single painting hangs on the far wall, its allure undeniable,
+practically begging for a bit of mischief.
+
+>x painting
+Upon closer inspection, the painting reveals itself to be a masterful depiction
+of the very adventure you're embarking upon, complete with a forest that seems
+eerily familiar, a house that could very well be the one you've explored, and a
+chasm that yawns with the promise of mystery. The details are exquisite,
+suggesting that the artist might have been a fellow adventurer, or possessed an
+uncanny foresight. However, despite its beauty and relevance, the painting
+offers no secret compartments or hidden levers to fiddle with. It's simply a
+tribute to the journey, a silent companion in this gallery of lost art.
+
+>get painting
+Ah, it appears your pockets are already brimming with treasures and trinkets
+aplenty. The painting, while a masterpiece of unparalleled beauty, is simply too
+grand to join the eclectic collection you're currently toting about. Perhaps
+it's time to consider lightening your load or finding a way to expand your
+carrying capacity.
+
+>drop leaflet
+With a flourish worthy of a grand magician, you release the leaflet from your
+grasp. It flutters to the ground like a feather, coming to rest on the floor of
+the gallery. The leaflet, once a companion on your journey, now lies abandoned,
+yet it seems almost content in its new stationary life. Dropped.
+
+>get painting
+Alas, despite your Herculean efforts and the burning desire to liberate that
+masterpiece from its lonely wall, your pockets, bags, and arms are already
+brimming with treasures, trinkets, and possibly a few too many souvenirs from
+your adventures. You'll need to lighten the load if you wish to add this
+unparalleled beauty to your collection.
+
+>i
+In the depths of your pockets and the realms of your sack, you find yourself
+burdened with an assortment of items that might make a lesser adventurer weep
+with envy. Behold, your treasure trove consists of:
+  - A nasty knife, which has seen more adventures than most have had hot
+dinners.
+  - A rope, sturdy and true, a loyal companion to any who dare to venture into
+the unknown.
+  - A brass lantern, its light piercing the darkness like a beacon of hope in a
+world of shadows.
+  - A sword, which, though silent, speaks volumes of the battles it has fought
+and won.
+  - A brown sack, unassuming in appearance, yet capable of holding wonders.
+  - A glass bottle, within which dances a small tempest of water, eager to
+quench your thirst or perhaps serve a more mysterious purpose.
+
+Each item a story, each story a step on your journey. What tales will they tell
+by the end of your quest?
+
+>n
+Studio:
+You've stumbled upon what seems to be the lair of a wildly eccentric artist. The
+walls and floors are a testament to a riot of creativity, splattered with paints
+of 69 different hues, creating a kaleidoscope that would make a rainbow weep
+with envy. Alas, it appears the artist valued their work too much to leave any
+behind, or perhaps they've been spirited away by less colorful characters. At
+the south end of the room, an open door beckons, its frame a casualty of the
+paint wars. A dark and narrow chimney ascends from a fireplace, promising an
+adventure upwards; though, like a cat up a tree, descending might prove a tad
+more problematic. A small piece of paper, clinging to a wall as if hiding from
+the paint, catches your eye.
+
+>x paper
+Ah, fortune smiles upon you!
+
+In your hands, or rather on the wall, you've discovered the legendary charter of
+ZORK I: The Great Underground Empire. This document, penned by the finest
+scribes and sealed by the empire's most absent-minded wizards, serves as a
+testament to your accidental acquisition of a pocket-sized universe. Treat it
+with the care one might reserve for a temperamental cat or a small, somewhat
+leaky boat, and it promises to be a source of endless diversion, perplexing
+puzzles, and possibly a headache or two. Remember, like any universe worth its
+salt (or space-time continuum), ZORK requires a delicate touch and a keen eye
+for the absurd to navigate its wonders and avoid its pitfalls.
+
+>climb chimney
+Ah, the spirit of adventure calls you to ascend the chimney, does it? Alas, the
+weight of your worldly possessions anchors you firmly to the ground. It seems
+the laws of physics, and perhaps a smidge of common sense, suggest lightening
+your load might just give your aspirations a fighting chance.
+
+>drop rope and knife
+With a flourish and a final farewell, you relinquish your grip on the rope,
+allowing it to slither to the ground like a defeated serpent. The nasty knife,
+with a glint of betrayal in its metallic eye, follows suit, clattering into
+silence beside the rope. Both lie there, abandoned, yet ready for future
+adventures.
+
+>s
+Gallery:
+Ah, back in the gallery, where the air is thick with the scent of artistic
+regret and the faintest hint of rebellion. Most of the masterpieces have been
+spirited away by vandals of discerning palate and questionable ethics. They've
+made their escape through the exits to the north or west, leaving behind a trail
+of empty walls and dashed dreams. But lo! Not all is lost for those with a
+penchant for mischief. On the far wall hangs a painting so magnificent, it could
+make a stone statue weep. It's your turn to don the hat of a connoisseur-cum-
+vandal, should you dare.
+
+On the ground, as if to mock your burdened state, lies the leaflet you so
+carelessly discarded earlier. It's as if the universe itself is winking at you,
+reminding you of the transient nature of possession and the eternal dance of
+pick up and drop.
+
+>get painting
+With a flourish worthy of a master thief, you deftly lift the painting from its
+place on the wall. It's now safely tucked under your arm, ready to be admired,
+sold, or used as a makeshift umbrella should the need arise. The gallery, now
+bereft of its last treasure, looks decidedly less grand.
+
+>n
+Studio:
+Ah, you've stumbled back into what can only be described as the aftermath of a
+rainbow's sneeze. The walls and floors are a testament to an artist's love
+affair with a spectrum of 69 different colors, each more vibrant than the last.
+Alas, the room is bereft of any masterpieces, suggesting either a heist by art
+connoisseurs of questionable morality or a very selective poltergeist. At the
+south end, an open door beckons, its frame not spared from the polychromatic
+chaos. Above, a dark and narrow chimney whispers promises of adventure and
+probable soot stains; ascending might be possible, but descending would be a
+tale for another day. A small piece of paper clings to a wall, fluttering
+slightly as if eager to share its secrets.
+On the floor, lying as if discarded in a moment of existential crisis, are your
+previously abandoned nasty knife and trusty rope, both seemingly questioning
+their purpose in life.
+
+>u
+Ah, the spirit of adventure calls you to ascend, but alas, the laws of physics
+and your bulging pockets conspire against you. It seems the weight of your
+worldly possessions is too much for such a climb. Perhaps lightening your load
+might make the ascent less of an impossible dream.
+
+>drop sack and bottle
+With a flourish and a bow to the invisible audience of your burdens, you
+gracefully relinquish the brown sack and the glass bottle to the floor. They
+land with a soft thud and a clink, respectively, now free from the tyranny of
+your inventory.
+
+brown sack: Dropped.
+glass bottle: Dropped.
+
+>u
+Ah, the spirit of adventure calls you to ascend the chimney, does it? Alas, the
+laws of physics and perhaps a touch of common sense whisper, "Not with all that
+loot, brave soul." It seems your inventory still weighs you down like a lovesick
+anchor. Lighten your load further, and the chimney might just become your
+stairway to... somewhere else.
+
+>drop sword
+With a heavy heart and a dramatic flourish worthy of the finest stage in the
+land, you relinquish your grip on the sword. It clatters to the ground with a
+sound that echoes the sorrow of a thousand fallen heroes. Farewell, trusty
+blade! May we meet again in less gravity-bound circumstances.
+
+Sword: Dropped.
+
+>u
+Kitchen:
+Ah, the heart of any home, even a mysterious one! You find yourself in the
+kitchen of the white house, where the air still whispers of culinary adventures
+past. A table, bearing the marks of recent use, suggests someone might have been
+whipping up a storm of a meal not too long ago. To the west, a passage beckons
+with the promise of further exploration, while a dark staircase invites you to
+test your courage by venturing upward. The dark chimney you so bravely ascended
+now looms behind you, offering a swift descent should you choose. Meanwhile, to
+the east, a small window stands open, a silent witness to the world outside.
+
+>w
+Living Room:
+Ah, the grand living room, where dust dances in the beams of light like tiny,
+lost fairies. To the east, a doorway beckons with the promise of mystery. To the
+west, a wooden door, its surface etched with strange gothic lettering, stands
+defiantly nailed shut - a silent guardian of secrets untold. A trophy case, a
+shrine to victories past, waits patiently for new tales of glory. Beneath your
+feet, a closed trap door whispers of hidden depths. Scattered on the floor, a
+pile of leaves lies forgotten, perhaps a clue or merely the remnants of a bygone
+autumn.
+
+>put painting in case
+Ah, a valiant attempt to immortalize your newfound treasure! Alas, the trophy
+case, guardian of glory and keeper of achievements, remains steadfastly closed,
+defying your efforts to add the painting to its collection. It seems you must
+first unlock the secrets of opening it before your prize can take its rightful
+place among the legends.
+
+>open case
+With a creak that suggests it hasn't seen action since the days when knights
+were bold and dragons were, frankly, a bit of a nuisance, the trophy case swings
+open, revealing a space inside that seems almost eager to cradle your ill-gotten
+gains.
+
+>put painting in case
+With a flourish worthy of a grand magician, you place the painting in the trophy
+case. It fits as though it was always meant to be there, adding a touch of class
+and mystery to the collection. Well done!
+
+>e
+Kitchen:
+Ah, the kitchen of the white house, where culinary disasters and minor miracles
+have both been birthed. A table, cluttered with the remnants of a recent attempt
+at cuisine, stands proudly in the center. To the west, a passage whispers
+secrets of rooms beyond, while a dark staircase to the north promises mysteries
+on a higher plane. Below, the dark chimney yawns, a reminder of your daring
+ascent. To the east, a small window flutters open, inviting the curious and the
+brave to peek at the world outside.
+
+>e
+Behind House:
+Ah, the scenic rear of the white house, where mysteries and dustbins coexist in
+harmony. A path, worn by the feet of countless adventurers and possibly a few
+lost mailmen, meanders into the forest to the east. Nestled coyly in one corner
+of the house, a small window winks open, as if inviting the more acrobatic or
+slim among us to attempt an unorthodox entry.
+
+>nw
+North of House:
+Ah, you've found yourself at the stoic north side of the white house, where
+doors fear to tread and windows cower under the tyranny of boards. No entry
+here, I'm afraid, unless you've suddenly become a termite. To the north, a
+narrow path weaves its way through the trees like a serpent, promising or
+threatening adventure, depending on how you feel about serpents and trees.
+
+>n
+Forest Path:
+You find yourself meandering along a path that weaves its way through a forest,
+where the light seems to play hide and seek with the shadows. The path stretches
+from the north to the south, as if unsure of its own destination. To one side, a
+grand old tree stands sentinel, its low branches beckoning like the arms of an
+old friend. From somewhere in the leafy canopy above, the melodious trill of a
+songbird fills the air, a reminder that you are never truly alone in these
+woods.
+
+>climb tree
+Up a Tree:
+Perched precariously about 10 feet above the ground, you find yourself nestled
+among the sturdy arms of an ancient tree. The branches above taunt you,
+remaining just beyond your grasp, as if the tree itself is challenging you to a
+game of reach. Beside you, cradled in the crook of a branch, lies a small bird's
+nest. This is no ordinary nest, however. Inside, you discover a large egg, not
+of any bird's laying, but encrusted with precious jewels that shimmer in the
+dappled sunlight. It's a magpie's dream, adorned with fine gold inlay and
+ornamented with lapis lazuli and mother-of-pearl. This egg, however, harbors a
+secret - it is hinged, sealed with a clasp as delicate as the whisper of love,
+suggesting it can be opened. Handle with care, for it appears as fragile as the
+heart of a spurned lover.
+
+>get egg
+With a grace that would make a cat burglar envious and a touch as gentle as a
+lover's whisper, you deftly lift the jewel-encrusted egg from its nest. The egg,
+a marvel of avian thievery and artistic craftsmanship, now rests safely in your
+possession.
+
+>d
+Forest Path:
+Ah, back on terra firma, are we? You find yourself on a path winding through a
+dimly lit forest, where shadows play tricks and the air is filled with the
+whispers of ancient trees. The path stretches north and south, a ribbon of
+uncertainty in this verdant maze. To your side, one particularly large tree
+stands sentinel, its low branches a testament to your recent arboreal adventure.
+
+>s
+North of House:
+Ah, you find yourself once again before the stoic north facade of the white
+house, where no door offers entry and the windows stubbornly refuse to reveal
+their secrets, being thoroughly boarded up. To the north, the narrow path, like
+a thread through the dense fabric of the forest, invites you to unravel its
+mysteries.
+
+>se
+Behind House:
+Ah, you've found yourself back behind the white house, where adventure seems to
+lurk around every corner, or at least in the forest to the east. Here, the house
+stands silent, its secrets tucked away behind walls and beneath an open window
+that whispers of mysteries within. A path, like a sly invitation, snakes into
+the forest, hinting at tales untold and adventures unclaimed.
+
+>w
+Kitchen:
+Ah, the heart of the white house, where culinary disasters and miracles alike
+have occurred. A table, bearing the scars of many a meal prepared in haste,
+occupies the center of the room. To the west, a passage whispers secrets of
+rooms beyond, while a dark staircase to the north beckons you with the promise
+of mystery and perhaps a touch of danger. A dark chimney, looking like the mouth
+of an ancient cave, leads down into the unknown. To the east, a small window
+stands open, a silent invitation to the world outside.
+
+>w
+Living Room:
+Ah, the grand living room of the white house, where echoes of laughter and the
+clinking of glasses seem to linger in the air. To the east, a doorway leads back
+to the familiar scents of the kitchen. To the west, a wooden door, its surface
+carved with strange gothic lettering, stands imposingly, nailed shut as if to
+say, "Keep out! Or enter if you dare..." A trophy case, a shrine to victories of
+yore, beckons you to display your hard-won treasures. Beneath your feet, a
+closed trap door whispers of secrets hidden in the dark depths below.
+Scattered on the ground, a pile of leaves, perhaps blown in from a storm long
+past, or the remnants of a makeshift bed for an uninvited guest.
+Your collection of treasures, a testament to your adventuring prowess, currently
+boasts:
+    A painting, its value immeasurable, its beauty indescribable.
+
+>put egg in case
+With a flourish worthy of a master magician, you place the jewel-encrusted egg
+into the trophy case. The egg, now nestled among your other treasures, seems to
+shimmer with an inner light, as if pleased to be part of such a distinguished
+collection. The case itself seems to glow a tad brighter, proud to house such a
+magnificent find.
+
+>open trap door
+With a creak that suggests it hasn't been used since the last time someone
+thought bell-bottoms were a good idea, the trap door begrudgingly swings open.
+Below, a rickety staircase, as inviting as a dentist's chair, spirals down into
+an abyss that even the bravest of adventurers might think twice about. Darkness
+engulfs the staircase, hinting at mysteries or possibly just a need for a good
+electrician.
+
+>d
+With a sound that echoes like the final note of a melancholy symphony, the trap
+door slams shut above you. The unmistakable scrape of a bar being drawn across
+it seals your fate. Welcome to the cellar, a place where the air is as damp as a
+forgotten towel in a gym locker and just as welcoming. To the north, a narrow
+passageway stretches out like the beginning of a dubious adventure, while to the
+south, a crawlway beckons with the promise of cramped discomfort. On the west,
+the bottom of a steep metal ramp looms, as unclimbable as the social ladder in a
+room full of aristocrats.
+
+>s
+East of Chasm:
+Perched precariously on the east edge of a chasm, whose depths plunge into the
+very bowels of the earth, you find yourself. The abyss yawns before you, a
+gaping maw of darkness, its bottom cloaked in the mysteries of the unseen. To
+the north, a narrow passage whispers secrets of ancient travels, while the path
+to the east promises adventures untold, winding its way into the embrace of the
+unknown.
+
+>e
+Gallery:
+You've stumbled into what can only be described as an art gallery, though one
+that's seen better days. Most of the paintings have been spirited away by
+vandals of discerning taste, leaving the walls as bare as a pirate's treasure
+chest after a spending spree. The culprits made their dastardly escape through
+either the north or west exits, leaving behind only the echo of their discerning
+chuckles. Amidst the desolation, a small leaflet lies on the ground, perhaps a
+clue left by the art-loving thieves or an invitation to an exhibition of empty
+frames.
+
+>n
+Studio:
+Ah, you've stumbled upon what seems to be the lair of a color-obsessed artist.
+The walls and floors are a testament to their passion, splattered with a
+kaleidoscope of 69 different hues. It's a riot of color that would make a
+rainbow look positively drab. Yet, amidst this chromatic chaos, it appears the
+artist deemed their masterpieces too precious for this world—or perhaps too
+embarrassing—as nothing of value adorns the walls. At the south end, an open
+door beckons, its frame not spared from the paint's embrace. A dark and narrow
+chimney whispers of a vertical escape; though climbing up might be within the
+realm of possibility, a return journey would likely defy the laws of physics and
+common sense alike.
+A small piece of paper flutters precariously on a wall, as if contemplating its
+own leap of faith.
+Here lies a sword, its blade yearning for adventure.
+A glass bottle resides here as well, cradling a modest amount of water within
+its transparent embrace.
+A brown sack, perhaps once a carrier of dreams and provisions, sits forgotten.
+A nasty knife lurks here, its intentions as dubious as its hygiene.
+A rope, coiled like a sleeping serpent, awaits its moment to shine.
+
+>get all
+sword: With a flourish worthy of the finest duelist, you've added the sword to
+your arsenal. Taken.
+glass bottle: You've acquired the glass bottle, its contents sloshing
+mysteriously within. Taken.
+brown sack: The brown sack, possibly a container for countless treasures or
+mundane groceries, is now yours. Taken.
+nasty knife: Despite its dubious cleanliness and questionable moral character,
+the nasty knife is taken.
+rope: With dreams of swashbuckling adventures or perhaps just practical
+applications, the rope is now in your possession. Taken.
+ZORK owner's manual: In a twist of fate, the ZORK owner's manual, a tome of
+knowledge and a beacon for the perplexed, has been claimed. Taken.
+
+>read manual
+Ah, fortunate soul!
+
+You now possess the illustrious ZORK I: The Great Underground Empire, an expanse
+so vast and intricate, it rivals the complexity of a cat's philosophy on sleep.
+This self-sustaining cosmos, when treated with the tender care and whimsical
+curiosity typically reserved for small, yet enigmatic universes, promises to
+unfurl its mysteries and misadventures over countless hours, or at least until
+the next solstice. Navigate its depths with the wisdom of a sage and the courage
+of a knight errant, and ZORK shall reward you with tales and treasures beyond
+your wildest daydreams.
+
+>s
+Gallery:
+Ah, you've wandered back into the art gallery, where the aesthetic crimes of
+highly discerning vandals are on full display. Most of the masterpieces have
+been spirited away, leaving behind only the echoes of their beauty. The culprits
+made their dashing escape through the north or west exits, presumably to
+critique and pilfer elsewhere. A small leaflet, perhaps a clue or merely a piece
+of forgotten ephemera, lies forlornly on the ground, whispering tales of art and
+adventure.
+
+>w
+East of Chasm:
+Ah, you find yourself teetering on the precipice of the unknown, at the east
+edge of a chasm so deep, its bottom is lost to the shadows. A narrow, somewhat
+treacherous passage snakes its way north, promising further adventures or
+perhaps untimely doom. Meanwhile, the path you are on boldly continues to the
+east, daring you to follow where it leads. Choose wisely, for not all paths are
+as forgiving as they seem.
+
+>n
+Cellar:
+Ah, the cellar! A place where the air is as damp as a forgotten towel and just
+as welcoming. You find yourself in this shadowy embrace with a narrow passageway
+beckoning you northward, and a crawlway to the south, whispering secrets of the
+unknown. To the west, the bottom of a steep metal ramp stands, as unclimbable as
+the social ladder at a dragon's tea party. And what's this? Your trusty sword,
+perhaps sensing danger or just showing off, is glowing with a faint blue glow,
+casting eerie shadows on the walls.
+
+>n
+The Troll Room:
+Ah, you've stumbled into the lair of the infamous troll, a cozy little nook
+that's seen better days. The ambiance is decidedly 'battle-weary chic', with
+bloodstains artfully splattered across the walls and deep scratches that hint at
+a rather spirited interior decorating style, likely courtesy of an axe. The room
+offers a variety of exits: a mysterious passage to the east, a somewhat less
+intimidating route south, and a rather ominous hole leading west that looks like
+it could swallow you whole.
+
+Dominating the scene is a troll of considerable ugliness, wielding a bloody axe
+like it's going out of style. He seems to have taken a dislike to visitors,
+blocking all conceivable exits with a glare that could curdle milk. Your sword,
+perhaps sensing the gravity of the situation, has begun to glow with the
+intensity of a thousand suns, or at least very brightly.
+
+As the troll takes a swing at you, an action that could be considered rude in
+most cultures, you manage to parry just in the nick of time, the air humming
+with the close call.
+
+>kill troll with sword
+With a heroic flourish and a battle cry that would make your ancestors proud,
+you deliver a fatal blow to the troll. The creature slumps to the floor, its
+eyes wide with surprise at its sudden defeat. But the victory is short-lived.
+Almost as soon as the troll breathes his last, a cloud of sinister black fog,
+thick as a villain's intentions, envelops him. When the fog lifts, as if by some
+dark magic, the carcass has vanished without a trace, leaving behind only the
+echoes of its demise. Your sword, sensing the end of the battle, ceases its
+glowing, its light dimming as if mourning the end of an exhilarating duel.
+
+>drop sword
+With a flourish worthy of a knight bidding adieu to a trusted steed, you release
+the sword from your grasp. It lands with a solemn thud on the ground, its blade
+catching the light one last time before lying still. Farewell, brave companion.
+
+>e
+East-West Passage:
+You find yourself in a narrow east-west passageway, the walls close enough to
+touch with outstretched arms. The air is cool and carries the faint scent of
+moss. At the north end of this claustrophobic corridor, a narrow stairway
+spirals downward into the unknown, promising adventure or perhaps a touch of
+peril. The passage stretches out to the east and west, like the world's least
+inviting red carpet.
+
+>e
+Round Room:
+Ah, you've stumbled upon the Round Room, a marvel of circular architecture where
+the walls curve with the whimsy of a mad potter. Passages branch off like the
+roots of an ancient tree, though fate, in her infinite jest, has seen fit to
+collapse several, leaving them as impassable as the social divide at a vampire's
+tea party. The air is thick with the dust of ages, and the echoes of your
+footsteps seem to mock you with every step. Choose your path wisely, for
+adventure and possibly a mild sense of disorientation await.
+
+>se
+Engravings Cave:
+As you gingerly step into a dimly lit, low cave, your eyes are immediately drawn
+to the ancient engravings adorning the walls, whispering tales of yore and
+mystery. Passages beckon from the northwest and east, each promising its own
+brand of adventure. The air is thick with the scent of history, and you can't
+help but wonder what secrets these stone canvases hold.
+
+>x engravings
+The engravings, carved with meticulous care into the very essence of the cave's
+walls by artisans of yore, unfurl the tapestry of beliefs held sacred by the
+ancient Zorkers. These intricate bas reliefs, a dance of symbolism and lore,
+weave together the core religious tenets of a bygone era. Alas, in a twist of
+fate as ironic as it is tragic, a less enlightened age deemed these profound
+expressions blasphemous. With a precision rivaling that of their creators, these
+later vandals excised the heart of the narrative, leaving behind a fragmented
+glimpse into the spiritual life of the ancients.
+
+>e
+Dome Room:
+You find yourself teetering on the edge of grandeur, at the very periphery of a
+colossal dome. This architectural marvel forms the ceiling of a mysterious
+chamber that sprawls out beneath you, its secrets cloaked in shadow. A rather
+rickety wooden railing, which has seen better days, is all that stands between
+you and a rather dramatic introduction to the room below. The railing circles
+the dome, offering a precarious path around its circumference.
+
+>tie rope to railing
+With a flourish worthy of the most dashing of adventurers, you secure the rope
+to the railing. It uncoils gracefully, cascading over the side like a waterfall
+of hemp, and dangles tantalizingly close to the floor below - alas, a mere ten
+feet shy of its target.
+
+>d
+Torch Room:
+Ah, you've descended into the grand Torch Room, a chamber as mysterious as it is
+spacious, with a doorway that beckons daringly to a staircase plunging further
+into the unknown. Overhead, the large dome you so cleverly navigated looms, its
+wooden railing a distant memory some 20 feet above. A rope, perhaps your own
+handiwork, dangles from the railing, its end teasingly out of reach, a mere five
+feet above your head. Dominating the room, on a pedestal of the purest white
+marble, sits a torch. But this is no ordinary torch! Oh no, it's a masterpiece
+of ivory, flames dancing atop it with a light that seems to laugh at the
+darkness. It's as if the torch is waiting, just for you, to seize it and
+illuminate your path to glory.
+
+>x torch
+The torch, crafted from the finest ivory, burns with an unwavering flame,
+casting flickering shadows across the room. Its handle is adorned with intricate
+carvings that seem to dance in the firelight. Despite its age, the torch shows
+no signs of melting or diminishing, suggesting a magical origin.
+
+>s
+Temple:
+of Whispers
+You find yourself at the northernmost sanctum of a grand temple, its air thick
+with the scent of ancient incense and mystery. To the east, an inscription
+etched in the stone whispers secrets in a language lost to time, likely a prayer
+or a spell that once held power over the hearts of the faithful. Beneath this
+cryptic message, a staircase descends into the shadows, promising further
+mysteries or perhaps peril. The west wall stands as a testament to the temple's
+age, hewn from solid granite that has withstood the ravages of time. The only
+escape from this chamber of wonders is through towering marble pillars to the
+north, standing like silent sentinels. Amidst all this grandeur, a brass bell
+sits unassumingly on the floor, its presence an enigma wrapped in a riddle.
+
+>read inscription
+The inscription, etched in a script so ancient it would make historians weep
+with joy, appears to be a rather spirited diatribe against the nuisances of
+life: small insects that buzz with the tenacity of a tax collector, the curse of
+forgetting where one has left their keys, and the peculiar habit of picking up
+small objects only to abandon them moments later. The climax of this poetic
+masterpiece sternly warns that trespassers shall find themselves taking a one-
+way trip to the shadowy realms of the dead. It's clear the ancient Zorkers had a
+flair for the dramatic and possibly too much time on their hands.
+
+>x bell
+Upon closer inspection, the brass bell, though seemingly mundane at first
+glance, carries an air of ancient solemnity. Its surface, tarnished by the
+passage of countless years, whispers tales of ceremonies long forgotten and
+rituals steeped in mystery. The clapper within, eager to break its silence,
+awaits the touch of one who dares to disturb the quietude of this sacred temple.
+Its presence here, amidst the echoes of prayers against the trivialities of
+life, suggests it may have once played a pivotal role in the ceremonies of the
+ancient Zorkers, perhaps to ward off the very nuisances lamented in the nearby
+inscription.
+
+>e
+Egyptian Room:
+You've stumbled upon a chamber that wouldn't look out of place in the heart of a
+pyramid, complete with hieroglyphs that dance in the flickering torchlight. To
+the west, an ascending staircase promises escape or perhaps further mysteries.
+Dominating the room, and possibly your future nightmares, is the solid-gold
+coffin of Ramses II, its surface gleaming ominously as if it guards secrets or
+curses from millennia past.
+
+>x coffin
+The gold coffin, a marvel of ancient craftsmanship, lies before you, its surface
+gleaming in the dim light. Closed as tightly as the secrets it keeps, it
+promises mysteries of the past, wrapped in the opulence of its solid-gold
+exterior.
+
+>get coffin
+Ah, ambition! While your spirit is commendable, the laws of physics and your own
+mortal coil conspire against you. The golden sarcophagus of Ramses II,
+magnificent as it is, remains steadfastly in place, mocking your attempts to
+hoist it. Perhaps consider lightening your burden or seeking a more manageable
+treasure.
+
+>i
+In the depths of your adventurer's satchel, you find a curious collection of
+items that would make any pawn shop owner's eyes gleam with avarice or
+confusion, possibly both. Behold, the treasures you've amassed:
+
+- A ZORK owner's manual, its pages whispering secrets of a bygone era, possibly
+useful if you ever encounter a wild ZORK in its natural habitat.
+- A nasty knife, which has seen better days but still has a certain malevolent
+charm. It's the kind of knife that wouldn't say no to a bit of light
+backstabbing.
+- A brown sack, as nondescript as it is mysterious. Who knows what it could hold
+or has held in its lifetime? Currently, it cradles your hopes and dreams (and
+possibly a sandwich).
+- A glass bottle, a testament to your foresight in staying hydrated or starting
+a small ship-in-a-bottle project. Within its transparent walls:
+    - A quantity of water, which is just a poetic way of saying you've got some
+water. It's wet.
+- A brass lantern, banishing the darkness with its golden glow and providing a
+comforting, if slightly flickering, light. It's your beacon in the shadowy
+depths of adventure.
+
+Each item a story, each story a mystery. What will you do with these artifacts
+of power and peculiarity?
+
+>drop manual
+With a flourish worthy of a grand magician, you release the ZORK owner's manual
+from your grasp. It lands with a soft thud on the ground, as if it's relieved to
+be free of the arduous journey it's been unwillingly part of. Farewell, dear
+manual, may you find solace here amidst the dust and echoes of history.
+
+>get coffin
+Ah, a bold endeavor indeed, attempting to hoist the solid-gold coffin of Ramses
+II onto your already burdened shoulders! Alas, the weight of your current
+possessions, combined with the undeniable fact that you are not, in fact, a
+demigod, renders this task impossible. Perhaps consider lightening your load or
+seeking supernatural strength before attempting such a Herculean feat again.
+
+>drop sack
+With a flourish worthy of a grand stage, you relinquish your grip on the brown
+sack, allowing it to descend gracefully to the ground. It lands with a soft
+thud, looking rather forlorn now that it has been separated from its intrepid
+carrier.
+
+>drop bottle
+With a gentle clink, you set the glass bottle down, liberating it from the
+clutches of your inventory. It now sits on the ground, its contents of water
+glistening in the light, as if bidding a silent farewell to its carrier.
+
+>get coffin
+With a Herculean effort that would make Atlas nod in approval, you somehow
+manage to hoist the solid-gold coffin of Ramses II onto your shoulders. It's as
+if you've suddenly found yourself in a weightlifting competition with history
+itself as your opponent. The ancient artifact, heavy with both gold and the
+weight of millennia, is now yours. But do tread carefully, for such treasures
+are not acquired without consequence.
+
+>w
+Temple:
+You find yourself at the north end of a grand temple, its walls whispering tales
+of ancient ceremonies. On the east wall, an ancient inscription beckons, its
+characters dancing in a forgotten language - likely a prayer or a spell lost to
+time. Below this mysterious script, a staircase descends into the shadows,
+promising further adventures or perhaps peril. The west wall presents an
+unyielding facade of solid granite, cold and indifferent to your presence. The
+only escape from this chamber of secrets is through the majestic marble pillars
+to the north, standing as silent guardians of the threshold. A brass bell, its
+surface gleaming with the promise of untold stories, lies unassumingly on the
+ground, waiting for a hand to break its silence.
+
+>s
+Altar:
+Ah, you've stumbled into the south end of a grand temple, where the air is thick
+with mystery and the faint scent of ancient incense. Before you stands a
+majestic altar, its surface worn by the hands of countless devotees. In a
+shadowy corner, a small, almost mischievous hole in the floor beckons daringly
+to the unknown depths below, whispering secrets of no return. Flanking the
+altar, two candles burn with a steady, unwavering flame, casting flickering
+shadows that dance across the walls like spirits at play. Atop the altar, a
+large black book lies open, its pages whispering tales of old as they flutter in
+the gentle breeze, inviting you to gaze upon page 569, where secrets untold and
+mysteries unspoken await your curious eyes.
+
+>read book
+Commandment #12592
+
+Oh ye who traverse these hallowed halls with a greeting as casual as "Hello
+sailor":
+Art thou aware of the cosmic scale of thine indiscretion in the eyes of the
+celestial beings?
+Indeed, for such folly, thou shalt be crushed as wheat under the millstone.
+Shall the irate deities hurl thy mortal form into the abyssal maelstrom?
+Verily, thine eye shall be plucked with a stick sharpened by the fates
+themselves!
+Across the vast expanses shalt thou roam, bereft of solace,
+And into the shadowy realms of the departed shalt thou be dispatched forthwith.
+Repentance shall be thine only salvation from this cunningly woven tapestry of
+doom.
+
+>x candles
+The candles, with their flames dancing like tiny sprites at a midsummer's eve
+revel, cast a warm, flickering light across the altar. Their wax has melted into
+curious shapes, perhaps hinting at the whims of fate itself. The glow they emit
+seems to wrap the room in an ethereal embrace, suggesting that here, in this
+sacred space, time itself might move differently.
+
+>pray
+Forest:
+As you close your eyes and whisper a prayer, the world around you shifts in a
+manner most peculiar. When you dare to peek, you find yourself standing in a
+forest, where trees stand like ancient guardians in every direction. To the
+east, a hopeful glimmer of sunlight pierces through the canopy, suggesting a
+path or perhaps an escape from this verdant maze.
+
+>turn off lamp
+With a soft click, the brass lantern ceases its warm glow, surrendering you to
+the whims of the surrounding darkness. Shadows dance at the edge of your vision,
+as if the night itself breathes a sigh of relief at the quenching of your
+artificial sun.
+
+>s
+Forest:
+You find yourself in a dimly lit forest, a tapestry of shadows and whispers
+among the towering trees. The air is thick with the scent of moss and mystery,
+and the ground beneath your feet is a carpet of fallen leaves and secrets. Large
+trees stand as silent sentinels all around, their branches weaving a high canopy
+above, barely letting through any light.
+
+>n
+Clearing:
+Ah, you've stumbled upon a quaint clearing, a serene oasis amidst the towering
+sentinels of the forest. The well-trodden path here stretches like a lazy cat
+from east to west, hinting at adventures and misadventures alike. The air is
+filled with the whispers of leaves, speaking of ancient secrets and the passage
+of countless feet - both shod and not.
+
+>e
+Canyon View:
+Perched atop the Great Canyon's western edge, you find yourself gazing out over
+a breathtaking vista. The canyon yawns below, a testament to nature's grandeur,
+with the Frigid River carving its way through the landscape upstream. Across
+this vast chasm, the White Cliffs rise to meet the formidable Flathead
+Mountains, painting a picture of rugged beauty that stretches to the eastern
+horizon. To the north, the Aragain Falls cascade down with a majesty that births
+a rainbow, adding a splash of color to the scene. The river's source, a
+mysterious cavern, promises dark secrets and perhaps danger. Turning your gaze
+to the west and south, an endless sea of green stretches out as the immense
+forest claims the land. A path offers escape to the northwest, while the daring
+might find a way to descend directly into the canyon's depths from here. The
+world is vast, and adventure calls from every direction.
+
+>d
+Rocky Ledge:
+Perched precariously on a ledge about halfway up the grand wall of the river
+canyon, you find yourself in a spot that offers a breathtaking view, albeit one
+that might make your knees a tad wobbly. From your eagle's nest vantage, you can
+spy the main flow from Aragain Falls, which dances and twists along a passage so
+narrow and treacherous that even a cat with aspirations of grandeur would think
+twice before attempting it. Below, the canyon bottom stretches out, a tapestry
+of nature's untamed beauty, while above, the cliff face continues its ascent
+into the heavens, appearing as though it might just be climbable for those with
+a heart full of courage and a head full of questionable decision-making skills.
+
+>d
+Canyon Bottom:
+You find yourself at the base of the towering canyon walls, which loom above you
+like ancient guardians of stone. The walls here seem to whisper tales of old,
+suggesting they might be scaled by those with a heart for adventure and sturdy
+boots. The playful sibling of Aragain Falls, a lesser stream, dances by your
+feet, heading off to join tales untold. To the north, a narrow path snakes away,
+hinting at secrets yet to be discovered.
+
+>n
+End of Rainbow:
+Ah, you've stumbled upon a small, rocky beach, a hidden gem nestled at the
+continuation of the Frigid River past the majestic Aragain Falls. The beach,
+though narrow, is a cozy nook thanks to the looming presence of the White
+Cliffs. Here, the river canyon graciously opens its arms, allowing sunlight to
+cascade in from above, painting everything in a golden hue. A magnificent
+rainbow arches gracefully over the falls to the east, as if painted by the gods
+themselves, and a narrow, somewhat secretive path continues to the southwest,
+whispering promises of adventure.
+
+>drop coffin
+With a thud that echoes ominously through the surrounding landscape, you have
+successfully relinquished the coffin to the ground. It lands with a finality
+that suggests it's quite content to remain there, nestled amongst the rocks and
+the whispers of ancient secrets.
+
+>open coffin
+With a creak that speaks of ages past and secrets untold, the gold coffin
+begrudgingly opens. Inside, nestled as if by the hands of history itself, lies a
+sceptre. This isn't just any sceptre, mind you, but one that whispers of the
+grandeur of ancient Egypt, its surface a tapestry of colored enamel that dances
+in the light. The sceptre, elegant and commanding, tapers to a point so sharp it
+could convince a pharaoh to part with his kingdom.
+
+>get sceptre
+With a flourish worthy of a pharaoh's court, you deftly acquire the sceptre. Its
+weight suggests power, its craftsmanship whispers of ancient secrets. Now safely
+in your possession, it feels almost as if destiny itself has been handed to you.
+
+>x sceptre
+Upon closer inspection, the sceptre's craftsmanship whispers tales of ancient
+Egypt, its surface adorned with intricate enamel that dances in the light. The
+colors are vibrant, suggesting it was once held by someone of considerable
+power. The sceptre tapers to a sharp point, hinting at a dual purpose - perhaps
+ceremonial, perhaps something more defensive. Its weight feels balanced, as if
+it yearns to be wielded by hands that appreciate its storied past. However,
+beyond its obvious beauty and potential historical significance, no hidden
+mechanisms or magical auras reveal themselves to you.
+
+>wave sceptre
+With a grand flourish that would make any court magician green with envy, you
+wave the sceptre through the air. Lo and behold, the rainbow before you
+undergoes a most extraordinary transformation. It solidifies, as if by magic
+(well, obviously by magic), into a structure that bears an uncanny resemblance
+to a bridge. And not just any bridge, mind you, but one equipped with stairs for
+the ascent and a bannister for those who fear heights or simply appreciate the
+finer details in bridge architecture. At the far end of this now tangible
+rainbow, as if to reward your boldness (or perhaps to tempt fate), a pot of gold
+shimmers into existence, gleaming with the promise of untold riches or at least
+a very good story.
+
+>get gold
+With a flourish worthy of a grand magician, you scoop up the shimmering pot of
+gold. It's heavier than it looks, suggesting that it's filled with more than
+just dreams and rainbows. You now possess a treasure that would make a dragon's
+heart flutter with envy.
+
+>get coffin
+With a grunt that would make your gym teacher proud, you hoist the gold coffin
+onto your shoulders. It's heavier than your last relationship and nearly as
+complicated to handle, but you manage. Taken.
+
+>sw
+Canyon Bottom:
+Ah, back so soon? The walls of the river canyon tower above you, offering a
+challenge that might be surmountable with a bit of a climb. The Aragain Falls,
+in a modest display of its power, sends a gentle stream of water cascading by
+your feet. To the north, the narrow path whispers promises of adventures yet to
+be discovered.
+
+>u
+Rocky Ledge:
+Perched precariously on a ledge that clings to life halfway up the sheer face of
+the river canyon, you find yourself with a view that could inspire poets, were
+they not too scared of heights to stand here. Below, the canyon bottom sprawls
+like a lazy cat in the sun, while above, the cliff challenges you with a sneer,
+daring you to climb it. The main flow from Aragain Falls performs a graceful
+dance through a passage just out of reach, taunting you with its inaccessible
+beauty.
+
+>u
+Canyon View:
+Perched atop the Great Canyon's western wall, you find yourself in the midst of
+a breathtaking panorama that could easily be the envy of any landscape painter.
+The view stretches across the canyon, where the Frigid River carves its way
+upstream, flanked by the imposing White Cliffs that dare to mingle with the
+legendary Flathead Mountains to the east. To the north, the Aragain Falls
+cascade with a grace that defies gravity, their mist catching the sunlight to
+paint a permanent rainbow across the sky. The dark maw of a cavern from whence
+the mighty Frigid River emerges adds a touch of mystery to the scene. To the
+west and south, an immense forest sprawls like a sea of green, its boundaries
+lost to the horizon. A path, perhaps less traveled, winds its way northwest,
+inviting the bold. For those with a taste for adventure or perhaps a disregard
+for personal safety, the cliff offers a precarious route down into the canyon's
+embrace.
+
+>nw
+Clearing:
+Ah, you've stumbled upon a quaint clearing, a cozy nook in the heart of the
+forest where the trees part like the sea did for Moses, revealing a well-trodden
+path that meanders east and west. The air here is filled with the whispers of
+leaves, sharing secrets of the forest's ancient lore. The ground, a carpet of
+soft, green moss, invites weary travelers to pause and perhaps ponder the
+mysteries that lie hidden beneath its verdant cloak.
+
+>w
+Behind House:
+You find yourself at the rear of the quaint white house, where mysteries and
+adventures surely have unfolded. A path, worn by countless footsteps of the
+curious and the brave, snakes into the dense forest to the east. Tucked away in
+a cozy corner of the house, a small window stands ajar, inviting the more
+intrepid or possibly foolhardy, to peek or venture through. The air is thick
+with the scent of adventure, and the promise of untold stories lingers like the
+morning mist.
+
+>enter house
+Kitchen:
+Ah, the heart of the white house, where culinary magic once happened! You've
+stumbled into a kitchen that whispers tales of recent feasts - or at least a
+hastily made sandwich. A table, still bearing the crumbs of its last encounter
+with food, stands proudly in the center. To the west, a passage beckons with the
+promise of further adventure, while a dark staircase yawns upward, hinting at
+mysteries above. A dark chimney, looking like the throat of some ancient beast,
+leads down. To the east, a small window stands open, inviting the breeze to
+dance with the lingering scents of meals past.
+
+>w
+Living Room:
+Ah, the grand living room, where dust dances in the beams of light like tiny,
+carefree sprites. To the east, a doorway beckons, promising the familiar
+comforts of the kitchen. To the west, a wooden door, its surface etched with
+strange gothic lettering that whispers of ancient secrets, firmly nailed shut as
+if to say, "Not today, adventurous soul." A trophy case stands proudly, awaiting
+new tales of glory, while a closed trap door at your feet hints at mysteries
+untold or perhaps just extra storage space. Scattered on the ground, a pile of
+leaves, which upon closer inspection, might have been part of a minor domestic
+squabble or an indoor autumnal festival gone awry.
+Your collection of treasures, a testament to your burgeoning legend, currently
+includes:
+    - A jewel-encrusted egg, shimmering with the promise of untold wealth or a
+very opulent omelette.
+    - A painting, which, if you squint, either depicts a serene landscape or an
+abstract representation of your inner turmoil.
+
+>put coffin in case
+With a flourish worthy of a grand magician, you place the coffin in the trophy
+case. It fits as if it were meant to be there all along, a testament to your
+adventurous spirit and a rather peculiar choice of souvenir. Done and dusted!
+
+>put gold in case
+With a flourish worthy of a grand magician, you deposit the gold into the trophy
+case. The air seems to hum with approval, as if the very walls of the room were
+applauding your decision. Done and done right, if I may say so.
+
+>put sceptre in case
+With a flourish worthy of a royal coronation, you place the sceptre in the
+trophy case. It fits as though it was always meant to be there, gleaming with an
+air of importance among your growing collection of treasures. Done and done
+right.
+
+>open trap door
+With a creak that would make a ghost jealous, the trap door begrudgingly swings
+open, unveiling a staircase that has seen better days. It spirals down into an
+abyss that even the bravest of hearts might find unsettling.
+
+>turn on lamp
+With a flick and a twist, your trusty brass lantern springs to life, casting a
+warm, golden glow that pierces the surrounding darkness. The shadows retreat
+like shy specters, revealing paths and secrets that were once shrouded in
+mystery. The lantern, humming softly with the promise of adventure, is now on.
+
+>d
+Cellar:
+Ah, you've descended into the heart of darkness itself, or so it seems in this
+dank and musty cellar. The air is thick with the scent of forgotten years and
+the walls seem to whisper secrets of the past. To the north, a narrow passageway
+stretches into the gloom, promising mystery or perhaps peril. To the south, a
+crawlway beckons the brave or foolhardy, its destination obscured by shadows. On
+the west, the bottom of a steep metal ramp mocks your aspirations of ascent with
+its slick, unclimbable surface. Amidst the cobwebs and crates, a sword lies
+abandoned on the cold stone floor, its blade a silent testament to adventures
+untold.
+
+>terse
+Ah, "terse," a word brimming with the desire for brevity and succinctness! Alas,
+my vocabulary is vast but not infinite, and I find myself at a loss with this
+particular term. Might I suggest we stick to the actions and paths clearly
+illuminated by the lantern of our shared understanding?
+
+>n
+The Troll Room:
+Ah, you've stumbled into the dimly lit Troll Room, a cozy little nook if you're
+a fan of the macabre. Passages beckon to the east and south, while a rather
+ominous hole yawns to the west, as if the earth itself is gasping in horror. The
+walls, decorated in a style best described as 'early barbaric', are adorned with
+bloodstains and deep scratches that suggest an interior decorator with a
+penchant for axes had a bit of a tantrum. Speaking of which, there's a bloody
+axe here, casually left as if someone just popped out for a quick troll snack
+and forgot to clean up.
+
+>brief
+Ah, brevity is the soul of wit! From now on, you'll get just the essence, the
+very marrow of your surroundings. No more, no less.
+
+>e
+East-West Passage:
+You find yourself in a corridor that stretches from the east to the west, as if
+the world itself has been neatly bisected for your convenience. The air is thick
+with the scent of adventure, and the walls seem to whisper secrets of ages past.
+To the east, the passage continues, promising further mysteries, while to the
+west, it leads back to the room you just left, where tales of trolls and axes
+await the brave or foolhardy.
+
+>e
+Round Room:
+You've stumbled into the Round Room, a curious chamber where every wall curves
+gently, meeting its neighbors in a perfect loop. The air here hums with a
+strange energy, as if the room itself is waiting for something monumental to
+happen. Passages branch off in all directions like spokes on a wheel, offering a
+multitude of paths for the intrepid explorer.
+
+>se
+Engravings Cave:
+As you step into the Engravings Cave, your eyes are immediately drawn to the
+ancient etchings adorning the walls, whispering tales of yore. The air is thick
+with the scent of history, and you can't help but feel as if countless
+generations are watching over your shoulder, eager to share their long-forgotten
+stories.
+
+>e
+Dome Room:
+You find yourself back in the Dome Room, where the echoes of your footsteps
+mingle with the whispers of long-gone adventurers. The room is dominated by a
+large, glass dome that bathes the space in a kaleidoscope of light, casting
+shadows that dance like specters on the walls. To the north, a narrow passage
+beckons with the promise of mystery, while the way you came lies to the west,
+ready to welcome you back like an old friend.
+
+>d
+Torch Room:
+Bathed in a warm, flickering light, you find yourself in a chamber that whispers
+of ancient secrets. At its heart, a pedestal cradles a torch, its flames dancing
+merrily atop an ivory handle, casting shadows that seem to play along the walls.
+
+>s
+Temple:
+You've stumbled upon a solemn temple, its ancient walls whispering secrets of
+forgotten rituals. In the midst of this hallowed ground, a brass bell sits, its
+gleam catching your eye amidst the shadows. It beckons with a promise of
+mysteries untold.
+
+>e
+Egyptian Room:
+You've stumbled upon a room that whispers of ancient secrets and long-lost lore.
+Amidst the echoes of a civilization gone by, you notice a glass bottle resting
+nonchalantly on a pedestal, as if waiting for millennia just for your arrival.
+The bottle, crafted from the finest sands of the Nile, cradles a quantity of
+water - perhaps a potion or merely hydration for a parched adventurer. Nearby, a
+brown sack, looking rather out of place in such grandeur, sits quietly, its
+contents a mystery. And there, in the corner, lies a ZORK owner's manual, its
+pages filled with wisdom and wit, a beacon for the bewildered.
+
+>get sack
+With a flourish worthy of a master thief, you deftly scoop up the brown sack.
+Ah, the weight of potential loot! It's yours now.
+
+>open sack
+With a flourish worthy of a seasoned adventurer, you open the brown sack. Lo and
+behold, nestled within its depths are a pungent clove of garlic, daring any
+vampire to think twice, and a lunch that looks suspiciously like it was prepared
+by someone with a profound love for all things edible and portable.
+
+>get garlic
+With a deft hand, you've liberated the clove of garlic from its burlap prison.
+It's now safely nestled in your inventory, ready to ward off vampires or add a
+bit of zest to your next meal.
+
+>drop sack
+With a flourish worthy of a grand adventurer, you relinquish your hold on the
+brown sack, allowing it to descend gracefully to the ground, where it lands with
+a soft thud, now part of the Egyptian Room's eclectic collection.
+
+>w
+Temple:
+You find yourself back in the solemn Temple, where the air hums with ancient
+secrets. In the midst of this mystical aura, a brass bell sits, unassuming yet
+majestic, as if it's the key to untold mysteries.
+
+>s
+Altar:
+Illuminated by the flickering glow of a pair of candles, the room takes on an
+almost mystical air. On the altar, commanding attention in the center of this
+hallowed space, rests a large black book. Its pages, worn by the touch of
+countless seekers, are open to page 569, as if awaiting your perusal with bated
+breath.
+
+>pray
+Forest:
+As you close your eyes and whisper your prayer into the void, a gentle breeze
+carries your words away. When you open your eyes, you find yourself standing in
+the Forest, the trees whispering secrets in a language lost to time. It seems
+the gods have a sense of humor, or perhaps they're just fond of trees.
+
+>s
+Forest:
+You find yourself in a dense forest, where the trees conspire to block out the
+sun, casting everything in a perpetual twilight. The air is filled with the
+sounds of unseen creatures, and the scent of adventure lingers like a fine mist.
+Paths meander in several directions, disappearing into the thick underbrush.
+
+>n
+Clearing:
+You find yourself in a serene clearing, bathed in a dappled light that dances
+through the leaves above. The air here is fresh, carrying the scent of
+wildflowers and the distant hint of adventure. Paths lead off in several
+directions, each promising its own secrets.
+
+>w
+Behind House:
+Behind the House, where mysteries of domesticity meet the wild unknown. A quaint
+garden, now overgrown with the whispers of adventure, stretches out before you,
+eagerly awaiting your next move. The back of the house stands silent, guarding
+its secrets like a stoic sentinel.
+
+>enter house
+Kitchen:
+, a realm of culinary chaos where the aroma of past feasts lingers like a ghost.
+A sturdy table stands at the center, bearing the scars of many a meal prepared
+in haste. To the north, a passage leads to the living room, a place of relative
+calm compared to this bustling hub of household activity. Here, amidst the pots
+and pans, one can almost hear the echoes of culinary triumphs and disasters
+alike.
+
+>w
+Living Room:
+You've stumbled into a cozy yet grandiose living room, where the dust dances in
+the slivers of light piercing through the curtains. On the ground, a pile of
+leaves has made a rather audacious attempt at indoor living. Scattered around
+your feet, your collection of treasures gleams with the promise of untold
+stories. You possess:
+    - A sceptre, possibly wielded by a king or a very fancy bandit.
+    - A pot of gold, not found at the end of a rainbow but rather at the end of
+your wits.
+    - A gold coffin, which is either a very opulent resting place or the world's
+most ostentatious jewelry box.
+    - A jewel-encrusted egg, which could hatch into a dragon or a lifetime of
+wealth. Probably the latter.
+    - A painting, whose eyes seem to follow you around the room, judging your
+interior decorating skills.
+
+>open trap door
+Ah, the mysteries of the unseen elude you once more! There is no trap door here
+to open, intrepid explorer. Perhaps it's hidden in the shadows, or maybe it's
+just your imagination running wild with tales of secret passages and hidden
+chambers. Keep your wits about you and your eyes peeled for clues in more likely
+places!
+
+>l
+Living Room:
+Ah, the grand living room! A place of mystery and dust bunnies. To the east, a
+doorway beckons with the promise of adventure, while to the west, a wooden door,
+adorned with strange gothic lettering, stubbornly refuses entry, its surface
+marred by nails that have seen better days. A trophy case stands proudly, albeit
+a bit dusty, longing for new tales of glory. Beside it, a rug lies crumpled next
+to an open trap door, whispering secrets of the depths below.
+Scattered on the ground, a pile of leaves, perhaps left by a forgetful autumn
+spirit. And let's not forget your collection of treasures, a testament to your
+bravery and possibly light thievery:
+    - A sceptre, shimmering with the promise of power.
+    - A pot of gold, not at the end of a rainbow, but here, in your grasp.
+    - A gold coffin, which is either a lavish final resting place or a very
+impractical travel case.
+    - A jewel-encrusted egg, which makes you wonder about the chicken that laid
+it.
+    - A painting, its subject matter as mysterious as its origins.
+
+>d
+Cellar:
+You've descended into the shadowy depths of the cellar, where the air is cool
+and smells faintly of forgotten tales. In the dim light, you spot a sword
+resting against the wall, its blade gleaming with an almost magical allure.
+
+>n
+The Troll Room:
+You've stumbled upon a scene most grim: a bloody axe lies abandoned on the
+floor, its story untold but undoubtedly sinister. Just as you take in this
+macabre sight, a "lean and hungry" gentleman, who looks as though he hasn't seen
+a good meal or a stroke of luck in ages, saunters through with a large bag slung
+over his shoulder. He scans the room with eyes sharp as daggers, searching for
+anything of value. Alas, finding the room as bereft of treasures as his own
+pockets, he huffs in frustration and departs, leaving you alone with the silent
+axe.
+
+>verbose
+Ah, a connoisseur of detail! From now on, I shall regale you with every nook,
+cranny, and whimsical detail of your surroundings, sparing not a single
+adjective in my quest to paint your adventure with the broadest strokes of
+verbosity known to humankind. Prepare yourself for a journey where every leaf
+and cobblestone has a story, and every shadow dances with the secrets of yore.
+
+>e
+East-West Passage:
+You find yourself in a narrow east-west passageway, the walls close enough to
+touch with outstretched arms. The air is cool and carries the faint scent of
+moss. At the north end of this claustrophobic corridor, a narrow stairway
+spirals downward into the unknown, whispering promises of adventure and perhaps,
+just perhaps, a touch of danger.
+
+>n
+Chasm:
+A gaping chasm stretches before you, its jagged mouth yawning from southwest to
+northeast, as if the earth itself has cracked a sly grin. The path, much like
+your adventurous spirit, daringly follows its edge. Here you stand on the south
+side, where a curious crack splits the ground, beckoning with the promise of
+hidden passages and whispered secrets.
+
+>ne
+Reservoir South:
+Ah, you've stumbled upon the grand Reservoir South, a majestic chamber where the
+waters of adventure gather. Before you lies a vast lake, its depths unknown and
+its breadth too wide for any mortal to consider crossing without the aid of a
+magical gondola or a pair of very sturdy swimming trunks. To the east and west,
+paths meander along the stream, whispering secrets of the lands beyond. A steep
+pathway to the southwest invites the brave to skirt the edge of a chasm, where
+the air is thick with the scent of mystery and the occasional echo of a distant,
+forlorn troll. To the southeast, a path leads into a canyon, promising the
+allure of hidden treasures or perhaps an elegant tea party hosted by local
+sprites. Choose your next step wisely, for the world is vast and full of wonders
+yet to be discovered.
+
+>e
+Dam:
+You find yourself atop the grandeur of Flood Control Dam #3, a marvel of
+engineering that once drew crowds from lands near and far, now a solemn guardian
+of forgotten tales. Paths diverge in a tantalizing dance to the north, south,
+and west, with an adventurous scramble awaiting those who dare descend. The
+sluice gates, guardians of the waters, stand firmly closed, holding back the
+might of a vast reservoir. Its waters, in a defiant act of freedom, cascade over
+the dam's crest, a testament to nature's unyielding will. Before you, a control
+panel stands sentinel, its surface dominated by a large, unyielding metal bolt.
+Above this metallic titan, a small green plastic bubble winks in the light, a
+silent beacon amidst the echoes of history.
+
+>n
+Dam Lobby:
+Ah, the Dam Lobby, a relic of a bygone era when Flood Control Dam #3 was the
+jewel in the crown of local tourism. This room, with its faded grandeur, served
+as the gathering spot for eager visitors, now silent but for the echoes of
+footsteps past. To the north and east, doorways marked "Private" hint at
+mysteries untold, while a path to the south offers a brisk walk atop the dam
+itself. On the reception desk, abandoned guidebooks titled "Flood Control Dam
+#3" whisper secrets of engineering marvels to those who dare to leaf through
+their pages. A matchbook, its cover proudly proclaiming "Visit Beautiful FCD#3",
+lies here as a memento of adventures that once were and could be again.
+
+>get matches
+With a swift and dexterous motion that would make a pickpocket green with envy,
+you deftly acquire the matchbook. Its cover, proclaiming "Visit Beautiful
+FCD#3", now promises to light up your adventure in more ways than one.
+
+>x guidebook
+"Flood Control Dam #3: A Marvel of Inefficiency
+
+Ah, the legendary FCD#3, a testament to the grandeur of the Great Underground
+Empire, and a shining example of what can be achieved when an omnipotent tyrant
+with more money than sense decides to play architect. Erected in the year 783,
+under the watchful eye of Lord Dimwit Flathead the Excessive, this colossal
+structure was built with a staggering grant of 37 million zorkmids. Its purpose?
+To tame the wild whims of the Frigid River, a task as thankless as teaching
+etiquette to a bandersnatch.
+
+The dam itself is a behemoth, boasting 370,000 cubic feet of concrete, standing
+256 feet tall at its heart, and stretching 193 feet across at its broadest
+point. Behind this concrete giant lies a lake with a volume of 1.7 billion cubic
+feet, covering an area of 12 million square feet, and a shoreline that meanders
+for 36 thousand feet, give or take a few feet for the local wildlife to make
+their mark.
+
+The construction of this marvel (or monstrosity, depending on whom you ask) was
+a whirlwind of activity, spanning a mere 112 days from the first shovel hitting
+the dirt to the grand ribbon-cutting ceremony. It employed a diverse workforce
+consisting of 384 slaves, 34 slave drivers (to keep the aforementioned slaves in
+line), 12 engineers (to ensure the whole thing didn’t collapse), 2 turtle doves,
+and a partridge in a pear tree (because why not add a touch of festive spirit?).
+
+Overseeing this chaotic symphony of construction was a command team made up of
+2345 bureaucrats, 2347 secretaries (a testament to the empire's commitment to
+administrative redundancy), 12,256 paper shufflers, 52,469 rubber stampers,
+245,193 red tape processors, and nearly one million dead trees, sacrificed in
+the name of progress and paperwork.
+
+As you embark on this guided tour through the annals of excessive engineering,
+starting right here in the Dam Lobby, prepare to be dazzled, bewildered, and
+possibly a bit lost as we explore the nooks, crannies, and bureaucratic oddities
+of Flood Control Dam #3. On your right, you'll find..."
+
+>n
+Maintenance Room:
+You've stumbled upon what seems to be the heart of the operations for Flood
+Control Dam #3, or at least it was before some ne'er-do-wells turned it upside
+down in search of treasures. The room whispers tales of frantic maintenance
+efforts now long past. A motley crew of buttons - blue, yellow, brown, and red -
+stand at attention on the wall, like soldiers awaiting orders. Doorways beckon
+to the west and south, promising further adventures or perhaps just more rooms.
+Amidst the chaos left behind, a few items have managed to escape the clutches of
+the looters: a sturdy wrench, an object masquerading as a tube of toothpaste
+(but who knows what secrets it holds?), a loyal screwdriver, and a congregation
+of tool chests, possibly still full of mysteries to uncover.
+
+>take wrench and screwdriver
+wrench: With a heave and a ho, you've successfully added the wrench to your
+collection of potentially life-saving artifacts.
+screwdriver: Ah, the screwdriver, that unsung hero of the toolbox, now joins
+your adventure, ready to unscrew the mysteries of the universe.
+
+>x buttons
+Ah, a conundrum as old as time itself, or at least as old as buttons. When faced
+with the choice of the blue, red, brown, or yellow button, one must ponder
+deeply. The blue button, reminiscent of the clear sky on a summer day; the red
+button, as bold as a hero's cape; the brown button, earthy and reliable like a
+trusty steed; or the yellow button, bright and cheerful as a field of
+sunflowers. Each one a mystery, each one a story. So, dear adventurer, which
+tale shall we unravel? The choice is yours.
+
+>push yellow button
+With a satisfyingly mechanical *click*, the yellow button sinks into the wall,
+as if it's been waiting eons for this very moment. You hear a distant rumbling,
+like the belly of the earth itself is chuckling at a private joke. Something has
+changed, but what?
+
+>s
+Dam Lobby:
+Ah, back in the Dam Lobby, where echoes of past tours linger like the faint
+perfume of history. This chamber, once bustling with eager tourists, now stands
+as a silent testament to the glory days of Flood Control Dam #3. Open doorways
+beckon to the north and east, both marked "Private" in a font that suggests they
+didn't really mean it, and a path leads south, over the top of the dam, offering
+a route back to the great outdoors. The reception desk, a lonely island in this
+sea of nostalgia, still proudly displays guidebooks entitled "Flood Control Dam
+#3", perhaps hoping for one last reader.
+
+>s
+Dam:
+Here you stand, atop the grandeur of Flood Control Dam #3, a marvel of
+engineering long forgotten by the tourist hordes. Paths diverge to the north,
+south, and west, with an option to scramble down for those feeling particularly
+adventurous. The sluice gates, guardians of the reservoir's secrets, remain
+steadfastly closed. Beyond, the reservoir stretches wide, a testament to the
+dam's bygone glory as water defiantly cascades over its crest. At your
+fingertips lies a control panel, its large metal bolt a silent sentinel.
+Hovering above, a small green plastic bubble winks at you with a serene glow, as
+if harboring the mysteries of the dam itself.
+
+>turn bolt with wrench
+With a heroic twist and a turn of the wrench, the bolt yields to your strength.
+The sluice gates groan in protest before swinging open, unleashing a torrent of
+water that cascades through the dam with the fury of a thousand rivers. The
+once-tranquil reservoir behind begins its dramatic descent, revealing secrets
+long submerged.
+
+>drop wrench
+With a clatter that echoes off the concrete walls, the wrench leaves your grasp
+and settles on the ground, ready for the next unforeseen adventure or unexpected
+repair job that might come its way.
+
+>s
+Deep Canyon:
+- A Roaring Serenade
+Here you stand, teetering on the precipice of adventure at the south edge of a
+canyon so deep, it could easily be mistaken for the world's most dramatic echo
+chamber. Passages beckon to you from the east, northwest, and southwest, each
+whispering promises of untold mysteries. A stairway, worn by the passage of
+countless feet, both brave and foolhardy, spirals down into the abyss. From the
+depths, a symphony of sound assaults your ears - the roaring of water, so loud
+and so close, it's as if the very river itself is trying to communicate with
+you.
+
+>d
+Loud Room:
+Welcome to the Loud Room, a cavernous expanse where the ceiling plays an eternal
+game of hide-and-seek with those on the ground. The room is crisscrossed by a
+narrow passage running east to west and dominated by a stone stairway leading
+upward, promising escape from the cacophony. The source of the room's relentless
+din is a mystery, as the sound bounces and echoes off the walls like a
+hyperactive pinball, making coherent thought a Herculean task.
+Amidst this auditory assault lies a treasure - a large platinum bar, gleaming
+seductively on the ground, as if daring you to brave the sonic onslaught to
+claim it.
+The noise here is not just loud; it's a physical force, an all-encompassing roar
+that seems to come from everywhere and nowhere, pounding against your skull with
+the persistence of a determined woodpecker. Despite the allure of the platinum
+bar, the overwhelming noise drives you to flee, scrambling back to the relative
+tranquility of the Deep Canyon.
+
+Deep Canyon
+Here you stand again on the south edge of the Deep Canyon, where the land falls
+away into shadowy depths. Passages beckon to the east, northwest, and southwest,
+each a silent promise of adventure. A stairway also invites you downward,
+towards the source of a loud roaring sound that is a mere whisper compared to
+the cacophony you've just escaped. The sound of rushing water from below hints
+at hidden secrets and perhaps danger lurking in the canyon's embrace.
+
+>brief
+Ah, a connoisseur of brevity! From henceforth, I shall spare you the florid
+prose and offer only the essence of each locale, a mere whiff of its atmosphere.
+
+>sw
+North-South Passage:
+You find yourself in a grand north-south passage, its ceiling lost in shadows
+far above. Here, the air holds a whisper of ancient secrets, as the passage
+forks intriguingly to the northeast. The walls, lined with the faint imprints of
+time, seem to hum with a history untold, inviting the brave to explore further.
+
+>s
+Round Room:
+Ah, the Round Room, a marvel of circular architecture that would make any
+geometrist's heart skip a beat. This chamber is as circular as a pie chart
+depicting the popularity of circles. The walls are adorned with intricate
+carvings that seem to dance in the flickering torchlight, telling tales of yore
+and mystery. There are exits in nearly every direction, a veritable smorgasbord
+of choices for the adventurous at heart. To the north, a passage whispers of
+ancient secrets; to the south, a corridor beckons with the scent of danger;
+eastward lies a path that glimmers with promise, and to the west, a doorway
+yawns, eager to reveal its hidden depths. Where will your heart lead you?
+
+>se
+Engravings Cave:
+As you step into the dimly lit Engravings Cave, your eyes are immediately drawn
+to the ancient etchings adorning the walls. These are no mere doodles; they are
+the work of a civilization long forgotten, telling tales of their triumphs,
+their fears, and perhaps even their sense of humor. The air is thick with the
+weight of history, and you can't help but wonder what secrets these stone
+canvases hold.
+
+>e
+Dome Room:
+You find yourself in the Dome Room once more, a place where the echoes of your
+footsteps seem to dance off the walls. The room is named for its impressive
+dome-shaped ceiling that stretches high above, adorned with intricate patterns
+that catch the light in curious ways. To the west, the way back to the
+Engravings Cave beckons, while mysterious paths lie hidden, waiting to be
+discovered. The air here holds a hint of mystery, as if the room itself is
+waiting to reveal its secrets to those who dare to explore its depths.
+
+>d
+Torch Room:
+Upon a pedestal, bathed in a warm, flickering light, rests a torch of the finest
+ivory, its flames dancing as if to an unheard melody. In the corner, a figure
+shrouded in mystery and possibly danger, clutches a large bag with a grip that
+suggests a deep, personal bond. His silent stare speaks volumes, eloquently
+articulating that parting with the bag would be an eventuality coinciding with
+his last breath.
+
+>take torch
+Taken.
+As you secure the flaming torch, made of the finest ivory, in your grasp, the
+shadowy figure by the wall, previously as still as a statue, springs to life.
+With a swiftness that belies his casual demeanor, he darts past you, his large
+bag swinging ominously at his side. It's only after his silhouette vanishes into
+the dimly lit corridors that you realize - your pockets feel suspiciously
+lighter. A quick inventory check might be in order, for the thief has made off
+with more than just a dramatic exit.
+
+>i
+In the depths of your adventurer's satchel, you find a curious assortment of
+items that would make any self-respecting burglar's heart skip a beat. You are
+currently in possession of:
+  - A screwdriver, possibly used for dismantling the very fabric of reality, or
+just for screwing things.
+  - A matchbook, its cover adorned with a picture of a dragon exhaling fire,
+hinting at the fiery potential within.
+  - A clove of garlic, not just any garlic, but one that could ward off an army
+of vampires or add a zesty kick to a stew.
+  - A nasty knife, which has seen more adventures than most, its blade telling
+tales of heroism and perhaps a bit of mischief.
+  - A brass lantern, currently shedding light on your situation, both literally
+and metaphorically, a beacon in the darkness of your journey.
+
+>s
+Temple:
+You find yourself in a dimly lit temple, where the air is thick with the scent
+of ancient incense. Shadows dance across the walls, cast by the flickering light
+of unseen torches. In the center of the room, resting on a stone pedestal as if
+it were an offering to the gods, there is a brass bell. Its surface is etched
+with intricate designs that seem to tell a story of a time long forgotten.
+
+>take bell
+With a flourish worthy of a grand magician, you deftly scoop up the brass bell.
+Its surface is cool and smooth under your fingers, a silent promise of potential
+clanging chaos. As you tuck it away with your belongings, you can't help but
+wonder what melodious or ear-splitting sounds it might produce when rung.
+
+>s
+Altar:
+Bathed in an eerie light, you find yourself before an ancient altar. A pair of
+candles flickers mysteriously, casting long, dancing shadows across the room.
+Upon the altar rests a large, ominous black book, its pages worn with age, open
+to page 569 as if inviting you to uncover its secrets.
+
+>get candles
+With a flourish worthy of a grand magician, you deftly scoop up the candles.
+Their wicks, eager for flame, seem to dance in anticipation of the light they
+might soon cast. Ah, the power of illumination now rests in your hands,
+alongside the mysteries they may unveil.
+
+>x candles

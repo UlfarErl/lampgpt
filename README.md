@@ -45,10 +45,15 @@ echo 'ANTHROPIC_API_KEY=PUT_YOUR_API_KEY_HERE' > .env
 
 ## Example Transcripts
 There are some transcripts of examples of gameplay in the playlogs directory.
-My favorite rewrite, so far, is from Zork1 when playing in a Terry Pratchett style:  
+Here are a couple of good examples from Zork1 when playing in a Terry Pratchett style:  
 > |> **move rug**  
 > Summoning every ounce of your strength and channeling the spirit of a thousand
 > interior decorators, you heave the rug aside.
+and
+> |> **get coffin**
+> With a grunt that would make your gym teacher proud, you hoist the gold coffin
+> onto your shoulders. It's heavier than your last relationship and nearly as
+> complicated to handle, but you manage.
 
 As another example, below is a section from Starcross in the style of a high space opera.  
 > |> **starboard**  
