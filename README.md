@@ -44,13 +44,13 @@ echo 'ANTHROPIC_API_KEY=PUT_YOUR_API_KEY_HERE' > .env
 ```
 
 ## Example Transcripts
-There are some transcripts of examples of gameplay in the playlogs directory.
+There are some transcripts of examples of gameplay in the `playlogs` and `walkthroughs` directories.
 Here are a couple of good examples from Zork1 when playing in a Terry Pratchett style:  
 > |> **move rug**  
 > Summoning every ounce of your strength and channeling the spirit of a thousand
-> interior decorators, you heave the rug aside.
-and
-> |> **get coffin**
+> interior decorators, you heave the rug aside.  
+  
+> |> **get coffin**  
 > With a grunt that would make your gym teacher proud, you hoist the gold coffin
 > onto your shoulders. It's heavier than your last relationship and nearly as
 > complicated to handle, but you manage.
@@ -79,9 +79,9 @@ As another example, below is a section from Starcross in the style of a high spa
  
  ## TODO
 - **Other LLMs**: Support local LLMs such as Ollama.
-- **Input rewriting**: Make the LLMs understand the grammar and vocabulary of the game, and try to rewrite player inputs into commands in that language.
 - **Stateless exploration**: Use the save/restore or undo meta-command features of `bocfel` to try various commands and provide them and their output to the LLMs as extra context.
 
 ## DONE
 - **Other LLMs**: Support Gemini and Claude.
-- **Cheaper**: Make the prompts shorter and repeated far less. Limit the prompt to the last 20 to 30 game commands and responses.
+- **Cheaper**: Make the prompts shorter and repeated far less. Limit the prompt to the last 10 to 20 game commands and responses.
+- **Input rewriting**: Make the LLMs understand the grammar and vocabulary of the game, and try to rewrite player inputs into commands in that language.

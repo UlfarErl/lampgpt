@@ -1,4 +1,4 @@
-# Config for ZORK 1, in an LLM style
+# Config for Infocom games in an LLM style
 #
 # {{{background}}}
 # {{{gamelog}}}
@@ -6,6 +6,9 @@
 # {{{inventory}}}
 # {{{command}}}
 # {{{response}}}
+# {{{verbs}}}
+# {{{nouns}}}
+# {{{alternative_commands}}}
 #
 
 ########
@@ -116,17 +119,54 @@ The player has just entered the following command, delimited by triple plusses,
 {{{command}}} 
 +++
 
-The game engine has reponded with the following:
+The game engine has responded with the following:
 {{{response}}}
 '''
 
 [errors]
+retries = 3 # try up to three times to fix parser errors
+
 prefixes = [
     "I don't know the word",
-    "There's nothing special about"
+    "There's nothing special about",
+    "That sentence isn't one I recognize",
+    "You used the word",
+    "There was no verb in that sentence",
+    "There were too many nouns"
 ]
 
 generic = '''
 This response is due to a limitation of the game engine and its text parser.  
-Can you come up with a response that better helps the player?
+Can you come up with a response that keeps the player engaged?  In particular,
+come up with something interesting that doesn't have an effect on the game,
+such as, for the command "capture the air", you might say "You jump about
+trying to contain the atmosphere within your grasp, but find that it slips
+through your fingers, leaving you the same as before (albeit a bit more tired
+and feeling rather foolish)."
+'''
+
+parser_preamble = '''
+This response is due to a limitation of the game engine and its text parser.  
+
+The game understands the following verbs and prepositions, where all words on the same line are synonyms.
+{{{verbs}}}
+
+The game understands the following noun phrases, where all noun phrases on the same line are synonyms.
+{{{nouns}}}
+
+[NOTE: In the above, sometimes only the initial six-character word prefix is used.]
+'''
+
+parser_rewrite_tries = '''
+The following alternative commands (one per line) are NOT accepted by the game:
+{{{alternative_commands}}}
+'''
+
+parser_suffix = '''
+Can you rewrite the players command into one that the game accepts?
+When making your suggestion, try to align as closely as possible with the
+players intent.
+
+Please enclose your suggested new command in triple plusses, as follows:
++++SUGGESTION+++
 '''

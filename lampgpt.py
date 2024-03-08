@@ -117,6 +117,8 @@ def get_file_text(filename, regexp):
 ##############
 def send_game_command(process, command):
     global state
+    if not command[-1] == '\n':
+        command = command + '\n'
     process.stdin.write(command)
     process.stdin.flush()
     time.sleep((1.0*state.args.delay)/1000.0)
@@ -183,11 +185,12 @@ def add_to_llm_prompt(prompt):
     state.llm_prompt = state.llm_prompt + prompt
     return
 
-def get_llm_response(message_type, command, response):
+def get_llm_response(message_type, response, trial=False):
     global state
 
     prompt = {'role': message_type, 'content': state.llm_prompt}
-    state.llm_chatlog.append(prompt)
+    if not trial:
+        state.llm_chatlog.append(prompt)
 
     # make a request with the prompt
     if state.llm['config']['api'] == 'openai':
@@ -215,11 +218,65 @@ def get_llm_response(message_type, command, response):
     write_to_debug_log(f"# DEBUG: Prompt token count is {tokens}\n")
 
     message = {'role': 'assistant', 'content': response}
-    state.llm_chatlog.append(message)
+    if not trial:
+        state.llm_chatlog.append(message)
 
     # reset the prompt
     state.llm_prompt = ""
     return response
+
+
+################
+## PARSER STUFF
+################
+def get_verb_and_noun_lists(state):
+    verbs = state.game['syntax']['verbs']
+    verbs = '\n'.join([' '.join([f'"{verb}"' for verb in syns]) for syns in verbs])
+    nouns = state.game['syntax']['nouns']
+    nouns = '\n'.join([' '.join([f'"{noun}"' for noun in syns]) for syns in nouns])
+    return [verbs,nouns]
+
+def parser_error(response):
+    global state
+    for prefix in state.config['errors']['prefixes']:
+        if response.startswith(prefix):
+            return True
+    return False
+
+def try_to_fix_parser_error(process, command, response):
+    global state
+    send_game_command(process, '/ps')
+    [verbs,nouns] = get_verb_and_noun_lists(state)
+    preamble = state.config['errors']['parser_preamble'].replace('{{{verbs}}}',verbs)
+    preamble = preamble.replace('{{{nouns}}}',nouns)
+    error_response = state.config['responses']['generic'].replace('{{{command}}}',command)
+    error_response = error_response.replace('{{{response}}}',response)
+    tries = []
+    new_command = command
+    for i in range(state.config['errors']['retries']):
+        if state.args.repeat:
+            add_to_llm_prompt(state.config['init']['llm_init'])
+        add_to_llm_prompt(error_response)
+        add_to_llm_prompt(preamble)
+        if len(tries) > 0:
+            x = "\n".join(tries)
+            x = state.config['errors']['parser_rewrite_tries'].replace('{{{alternative_commands}}}',x)
+            add_to_llm_prompt(x)
+        add_to_llm_prompt(state.config['errors']['parser_suffix'])
+        llm_response = get_llm_response('user', response, trial=True)
+        new_command = re.match('\\+\\+\\+(.*?)\\+\\+\\+', llm_response)
+        if new_command == None or new_command.group(1) == None:
+            break
+        new_command = new_command.group(1)
+        write_to_debug_log(f"LLM COMMAND REWRITING SUGGESTION {new_command}")
+        response = send_game_command(process, new_command)
+        write_to_debug_log(f"LLM COMMAND REWRITING RESPONSE {response}")
+        if not parser_error(response):
+            break
+        tries.append(new_command)
+    send_game_command(process, '/pop')
+    return [command, response]
+
 
 #################
 ## REWRITE LOGIC
@@ -253,7 +310,7 @@ def init_rewrites(game_init_text, style):
         game_init_text = game_init_text[:-1] 
         game_init_text = game_init_text.rstrip()
     add_to_llm_prompt(game_init_text)
-    return get_llm_response('system', '', '')
+    return get_llm_response('system', '')
 
 def rewrite_response(command, response, style):
     global state
@@ -280,12 +337,8 @@ def rewrite_response(command, response, style):
             seenrooms = state.config['responses']['seenrooms'].replace('{{{visited_rooms}}}',visited_rooms)
             add_to_llm_prompt(seenrooms)
     
-    # detect and try to fix errors
-    error = False
-    for prefix in state.config['errors']['prefixes']:
-        if response.startswith(prefix):
-            error = True
-    if error:
+    # if we're at an unfixable error, just make stuff up
+    if parser_error(response):
         add_to_llm_prompt(state.config['errors']['generic'])
 
     # rewrite
@@ -293,7 +346,7 @@ def rewrite_response(command, response, style):
     prompt = template.replace('{{{command}}}',command).replace('{{{response}}}',response)
     add_to_llm_prompt(prompt)
     add_to_llm_prompt(state.config['responses']['suffix'])
-    llm_response = get_llm_response('user', command, response)
+    llm_response = get_llm_response('user', response)
     llm_response = process_rewritten_response_of_room(response, llm_response)
 
     write_to_transcript(format_with_linebreaks(llm_response))
@@ -396,13 +449,13 @@ def main():
     try:
         time.sleep((1.0*args.delay)/1000.0)
         output = non_blocking_read(process.stdout)
-        add_to_game_log(f"{output}\n", command=False)
+        add_to_game_log(output, command=False)
         start = init_rewrites(output, args.style)
         write_to_transcript(format_with_linebreaks(start))
-        write_to_transcript('\n\n>')
+        write_to_transcript('\n>')
 
         # send initialization commands to the game, and ignore output
-        send_game_command(process, state.config['init']['commands'] + '\n')
+        send_game_command(process, state.config['init']['commands'])
 
         while True:
             # get the user command
@@ -413,9 +466,13 @@ def main():
             # get the original ZIL interpreter response
             response = send_game_command(process, command)
 
+            # fix any parser errors
+            if parser_error(response):
+                write_to_transcript("INVALID COMMAND: " + command, log_only=True)
+                [command, response] = try_to_fix_parser_error(process, command, response)
+
             # get the LLM version of the command and the LLM-modified response
-            modified_command = command # TODO rewrite the command
-            write_to_transcript(modified_command, log_only=True)
+            write_to_transcript(command, log_only=True)
             rewrite_response(command, response, args.style)
 
             add_to_game_log(command, command=True)
