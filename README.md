@@ -13,12 +13,10 @@ spirit, style, and storyline of the game.
 In particular, LLMs should allow much richer input capabilities, with pretty much any text input
 being recognized and either (1) turned into an input that the parser accepts, or (2) have the
 LLM itself respond with something better than _'There's nothing special about...'_.
-**STATUS: Input rewriting is unimplemented, but invalid inputs such as _'Chew your nails'_ get good responses.**
 
 Also, the LLMs should be able to augment the details of the players surroundings, objects,
 and NPCs, in ways that make even description-barren games like **Starcross** have rich
 textual atmosphere of **Wishbringer** and other later games.
-**STATUS: This works pretty well already.**
 
 ## Setup
 ```
