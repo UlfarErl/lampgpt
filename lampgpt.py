@@ -115,13 +115,16 @@ def get_file_text(filename, regexp):
 ##############
 ## GAME STUFF
 ##############
-def send_game_command(process, command):
+def send_game_command(process, command, delay=None):
     global state
     if not command[-1] == '\n':
         command = command + '\n'
     process.stdin.write(command)
     process.stdin.flush()
-    time.sleep((1.0*state.args.delay)/1000.0)
+    if delay == None:
+        time.sleep((1.0*state.args.delay)/1000.0)
+    else:
+        time.sleep((1.0*delay)/1000.0)
     response = non_blocking_read(process.stdout)
     return response # return the original ZIL interpreter response
 
@@ -229,13 +232,6 @@ def get_llm_response(message_type, response, trial=False):
 ################
 ## PARSER STUFF
 ################
-def get_verb_and_noun_lists(state):
-    verbs = state.game['syntax']['verbs']
-    verbs = '\n'.join([' '.join([f'"{verb}"' for verb in syns]) for syns in verbs])
-    nouns = state.game['syntax']['nouns']
-    nouns = '\n'.join([' '.join([f'"{noun}"' for noun in syns]) for syns in nouns])
-    return [verbs,nouns]
-
 def parser_error(response):
     global state
     for prefix in state.config['errors']['prefixes']:
@@ -243,19 +239,57 @@ def parser_error(response):
             return True
     return False
 
-def try_to_fix_parser_error(process, command, response):
+def get_accessible_nouns(process):
     global state
     send_game_command(process, '/ps')
-    [verbs,nouns] = get_verb_and_noun_lists(state)
+    nouns = state.game['syntax']['nouns']
+    command = '\n'.join([f'x {syns[0]}' for syns in nouns])
+    response = send_game_command(process, command, delay=100)
+    possible_nouns = nouns.copy()
+    for index, syns in enumerate(possible_nouns):
+        noun = syns[0]
+        for prefix in state.config['errors']['parser_noun_not_present_prefix']:
+            not_present = prefix + noun
+            if not_present in response:
+                possible_nouns[index] = None
+    possible_nouns = [syns for syns in possible_nouns if not syns is None]
+    for syns in possible_nouns:
+        write_to_debug_log(f"Found noun {syns} in room")
+    send_game_command(process, '/pop', delay=100)
+    return possible_nouns
+
+def add_recent_gamelog_and_visited_rooms_to_llm_prompt(norooms = False):
+    global state
+    [visited_rooms, gamelog] = get_rooms_and_gamelog()
+    gamelog_text = state.config['responses']['gamelog'].replace('{{{gamelog}}}',gamelog)
+    add_to_llm_prompt(gamelog_text)
+    if not norooms and not visited_rooms == '':
+        seenrooms = state.config['responses']['seenrooms'].replace('{{{visited_rooms}}}',visited_rooms)
+        add_to_llm_prompt(seenrooms)
+
+def try_to_fix_parser_error(process, command, response):
+    global state
+    send_game_command(process, '/ps') # everything below has no effect on the game
+
+    # get all the verbs for the game, and all the nouns accessible in the current room
+    verbs = state.game['syntax']['verbs']
+    verbs = '\n'.join([' '.join([f'"{verb}"' for verb in syns]) for syns in verbs])
+    nouns = get_accessible_nouns(process)
+    nouns = '\n'.join([' '.join([f'"{noun}"' for noun in syns]) for syns in nouns])
+
+    # try several times to get the LLM to make a command that doesn't result in an parser error
     preamble = state.config['errors']['parser_preamble'].replace('{{{verbs}}}',verbs)
     preamble = preamble.replace('{{{nouns}}}',nouns)
     error_response = state.config['responses']['generic'].replace('{{{command}}}',command)
     error_response = error_response.replace('{{{response}}}',response)
     tries = []
     new_command = command
+
+    # try a few alternative commands
     for i in range(state.config['errors']['retries']):
         if state.args.repeat:
             add_to_llm_prompt(state.config['init']['llm_init'])
+        add_recent_gamelog_and_visited_rooms_to_llm_prompt(norooms = True)
         add_to_llm_prompt(error_response)
         add_to_llm_prompt(preamble)
         if len(tries) > 0:
@@ -268,10 +302,11 @@ def try_to_fix_parser_error(process, command, response):
         if new_command == None or new_command.group(1) == None:
             break
         new_command = new_command.group(1)
-        write_to_debug_log(f"LLM COMMAND REWRITING SUGGESTION {new_command}")
+        write_to_debug_log(f"LLM COMMAND REWRITING SUGGESTION {new_command}\n")
         response = send_game_command(process, new_command)
-        write_to_debug_log(f"LLM COMMAND REWRITING RESPONSE {response}")
+        write_to_debug_log(f"LLM COMMAND REWRITING RESPONSE {response}\n")
         if not parser_error(response):
+            command = new_command
             break
         tries.append(new_command)
     send_game_command(process, '/pop')
@@ -329,13 +364,7 @@ def rewrite_response(command, response, style):
         add_to_llm_prompt(state.config['style']['length'])
         add_to_llm_prompt(state.config['style']['formatting'])
         add_to_llm_prompt(state.config['style']['caveat'])
-
-        [visited_rooms, gamelog] = get_rooms_and_gamelog()
-        gamelog_text = state.config['responses']['gamelog'].replace('{{{gamelog}}}',gamelog)
-        add_to_llm_prompt(gamelog_text)
-        if not visited_rooms == '':
-            seenrooms = state.config['responses']['seenrooms'].replace('{{{visited_rooms}}}',visited_rooms)
-            add_to_llm_prompt(seenrooms)
+        add_recent_gamelog_and_visited_rooms_to_llm_prompt()
     
     # if we're at an unfixable error, just make stuff up
     if parser_error(response):
@@ -349,9 +378,9 @@ def rewrite_response(command, response, style):
     llm_response = get_llm_response('user', response)
     llm_response = process_rewritten_response_of_room(response, llm_response)
 
-    write_to_transcript(format_with_linebreaks(llm_response))
+    llm_response = format_with_linebreaks(llm_response)
     if input == True:
-        write_to_transcript('\n\n>')
+        llm_response = llm_response + '\n\n>'
     return llm_response
 
 ########
@@ -366,7 +395,7 @@ def main():
     parser.add_argument('--transcript', '-t', type=str, help='Name of transcript output file')
     parser.add_argument('--verbose', '-v', action='store_true', help='Output original ZIL interpreter input/output')
     parser.add_argument('--debug', '-d', action='store_true', help='Output all LLM inputs and outputs')
-    parser.add_argument('--delay', '-s', type=int, default=5, help='Wait (in milliseconds) for interpreter output in each turn')
+    parser.add_argument('--delay', '-s', type=int, default=10, help='Wait (in milliseconds) for interpreter output in each turn')
     parser.add_argument('--bocfel', '-x', type=str, default='./bocfel-2.1.2/bocfel', help='File name of bocfel ZIL interpreter')
     parser.add_argument('--bocfelargs', '-z', type=str, default='', help='Optional arguments for bocfel ZIL interpreter')
     parser.add_argument('--llm_temp', '-T', type=int, help='Temperature of LLM model (integer percent; default 5%%)')
@@ -375,6 +404,7 @@ def main():
     parser.add_argument('--style', '-S', type=str, default='original', help='Style: pratchett, gumshoe, ...')
     parser.add_argument('--bginfo', '-B', action='store_true', help='Add extra background info to the LLM prompts')
     parser.add_argument('--repeat', '-R', action='store_true', help='Repeat instructions at each prompt')
+    parser.add_argument('--original', '-O', action='store_true', help='Play the original game; do not rewrite responses with the LLM')
     parser.add_argument('GAMENAME')
     args = parser.parse_args()
 
@@ -447,11 +477,12 @@ def main():
     configure_non_blocking_reads(process.stdout)
 
     try:
-        time.sleep((1.0*args.delay)/1000.0)
-        output = non_blocking_read(process.stdout)
-        add_to_game_log(output, command=False)
-        start = init_rewrites(output, args.style)
-        write_to_transcript(format_with_linebreaks(start))
+        time.sleep((20.0*args.delay)/1000.0) # wait particularly long after sending first command
+        response = non_blocking_read(process.stdout)
+        add_to_game_log(response, command=False)
+        if not args.original:
+            response = init_rewrites(response, args.style)
+        write_to_transcript(format_with_linebreaks(response))
         write_to_transcript('\n>')
 
         # send initialization commands to the game, and ignore output
@@ -469,11 +500,17 @@ def main():
             # fix any parser errors
             if parser_error(response):
                 write_to_transcript("INVALID COMMAND: " + command, log_only=True)
-                [command, response] = try_to_fix_parser_error(process, command, response)
+                [fixed_command, response] = try_to_fix_parser_error(process, command, response)
+                if not command.startswith(fixed_command):
+                    if args.original:
+                        print(f"[{fixed_command}]")
+                    response = send_game_command(process, fixed_command)
 
             # get the LLM version of the command and the LLM-modified response
             write_to_transcript(command, log_only=True)
-            rewrite_response(command, response, args.style)
+            if not args.original:
+                response = rewrite_response(command, response, args.style)
+            write_to_transcript(response)
 
             add_to_game_log(command, command=True)
             add_to_game_log(response, command=False)

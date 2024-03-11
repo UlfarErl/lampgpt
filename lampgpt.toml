@@ -124,15 +124,24 @@ The game engine has responded with the following:
 '''
 
 [errors]
-retries = 3 # try up to three times to fix parser errors
+retries = 5 # try up to five times to fix parser errors
 
 prefixes = [
+    #zork1
     "I don't know the word",
-    "There's nothing special about",
     "That sentence isn't one I recognize",
     "You used the word",
     "There was no verb in that sentence",
-    "There were too many nouns"
+    "There were too many nouns",
+    #wishbringer
+    "(Sorry, but the word",
+    "(Sorry, but this story doesn't recognize the word",
+    "(This story doesn't know the word",
+    "(You don't need to use the word",
+    "(You don't need to refer to",
+    "(That sentence didn't make sense.",
+    #starcross
+    "I can't find a verb in that sentence"
 ]
 
 generic = '''
@@ -145,6 +154,11 @@ through your fingers, leaving you the same as before (albeit a bit more tired
 and feeling rather foolish)."
 '''
 
+parser_noun_not_present_prefix = [
+    "You can't see any ",
+    "I don't know the word \"",
+]
+
 parser_preamble = '''
 This response is due to a limitation of the game engine and its text parser.  
 
@@ -155,17 +169,18 @@ The game understands the following noun phrases, where all noun phrases on the s
 {{{nouns}}}
 
 [NOTE: In the above, sometimes only the initial six-character word prefix is used.]
+
 '''
 
 parser_rewrite_tries = '''
 The following alternative commands (one per line) are NOT accepted by the game:
 {{{alternative_commands}}}
+
 '''
 
 parser_suffix = '''
-Can you rewrite the players command into one that the game accepts?
-When making your suggestion, try to align as closely as possible with the
-players intent.
+Can you rewrite the player's command into one that the game accepts?
+When making your suggestion, try to align as closely as possible with the player's intent.
 
 Please enclose your suggested new command in triple plusses, as follows:
 +++SUGGESTION+++
