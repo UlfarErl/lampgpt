@@ -214,6 +214,14 @@ def get_llm_response(message_type, response, trial=False):
         response = state.llm_client.send_message(state.llm_prompt)
         tokens = response.to_dict()['usage_metadata']['prompt_token_count']
         response = response.text
+    elif state.llm['config']['api'] == 'ollama':
+        ollama = subprocess.Popen(state.llm_client.split(), stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
+        ollama.stdin.write(state.llm_prompt)
+        ollama.stdin.flush()
+        ollama.stdin.close()
+        response = ollama.stdout.read()
+        tokens = 0 # TODO get tokens
+        ollama.wait()
     elif state.llm['config']['api'] == 'debug':
         print(state.llm_prompt)
         response = response
@@ -254,7 +262,7 @@ def get_accessible_nouns(process):
                 possible_nouns[index] = None
     possible_nouns = [syns for syns in possible_nouns if not syns is None]
     for syns in possible_nouns:
-        write_to_debug_log(f"Found noun {syns} in room")
+        write_to_debug_log(f"Found noun {syns} in room\n")
     send_game_command(process, '/pop', delay=100)
     return possible_nouns
 
@@ -468,6 +476,10 @@ def main():
         vertexai.init(project=state.llm['config']['project'], location=state.llm['config']['location'])
         model = GenerativeModel(state.llm['config']['name'])
         state.llm_client = model.start_chat(response_validation=False)
+    elif state.llm['config']['api'] == 'ollama':
+        state.args.repeat = False
+        model = state.llm['config']['name']
+        state.llm_client = f'ollama run {model}'
     else:
         state.llm['config']['api'] = 'debug' # redundant; included for clarity
 

@@ -1,0 +1,10 @@
+# Config for a local ollama installation
+#
+
+[config]
+# API type ('openai', 'google', ...)
+api = 'ollama'
+
+# Name of the model to use ('gemini', ...)
+name = "gemma:2b"
+
