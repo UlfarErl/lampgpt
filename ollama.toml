@@ -8,3 +8,5 @@ api = 'ollama'
 # Name of the model to use ('gemini', ...)
 name = "gemma:2b"
 
+# command-line prefix for launching process
+cmd_prefix = "ollama run "

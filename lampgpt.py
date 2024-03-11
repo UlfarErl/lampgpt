@@ -479,7 +479,7 @@ def main():
     elif state.llm['config']['api'] == 'ollama':
         state.args.repeat = False
         model = state.llm['config']['name']
-        state.llm_client = f'ollama run {model}'
+        state.llm_client = state.llm['config']['cmd_prefix'] + ' ' + model
     else:
         state.llm['config']['api'] = 'debug' # redundant; included for clarity
 
