@@ -38,8 +38,41 @@ cd ..
 echo 'OPENAI_API_KEY=PUT_YOUR_API_KEY_HERE' > .env
 echo 'ANTHROPIC_API_KEY=PUT_YOUR_API_KEY_HERE' > .env
 ./lampgpt.py -t zork1.log -S hardyboys zork1
-./lampgpt.py -t starcross.log starcross
+./lampgpt.py -t starcross.log -original starcross
 ```
+
+## Playing with an "Ultimate Parser"
+To play the Infocom games in their original form, and just make use of LLMs to "fix" any limitations
+in the parser, you can use `./lampgpt.py -O gamename` where `-O` is short for original. 
+This style of playing works very well with ChatGPT4 and is also very fast and cheap
+(albeit not out of control) because the LLM is only consulted upon parser errors.  Below is
+an example of the LLM fixing an absurdly convoluted command from the start of Zork1.
+(This LLM response isn't shown to the player—only the fixed command in triple plusses is used.)
+
+> **West of House**  
+> You are standing in an open field west of a white house, with a boarded front door.  
+> There is a small mailbox here.  
+> 
+> |> **summon all of your strength and tear up the infernal receptacle of blasphemous communications**  
+> The player's original command was a vivid and imaginative attempt to interact with 
+> the game environment in a specific and dramatic way. The command aimed to 
+> forcefully destroy the mailbox. However, 
+> due to the game's limitations in understanding complex and thematic language, we 
+> need to simplify the command while retaining the essence of the action desired.
+> 
+> 1. "attack" or "smash" - These verbs are understood by the game and convey the 
+> intent of using force to destroy or damage an object. "Smash" is particularly fitting as 
+> it suggests a strong, destructive action, closely matching the player's original intent.
+> 
+> 2. "small mailbox" or "mailbox" - This is the object the player intends to interact with.
+> The game recognizes "small mailbox" or "mailbox" as valid noun phrases for this object.
+> 
+> By using these words, we can formulate a command that the game engine 
+> is capable of understanding, while still attempting to fulfill the player's original 
+> intention as closely as possible. Here's a suggested new command that aligns
+> with the game's vocabulary and the player's intent:
+> 
+> +++**smash mailbox**+++
 
 ## Example Transcripts
 There are some transcripts of examples of gameplay in the `playlogs` and `walkthroughs` directories.
@@ -77,11 +110,11 @@ As another example, below is a section from Starcross in the style of a high spa
  
  ## TODO
 - **Stateless exploration**: Use the save/restore or undo meta-command features of `bocfel` to try various commands and provide them and their output to the LLMs as extra context.
-- **Side-by-side mode**: Use `curses` or something similar for side-by-side playing of true/modified game.
+- **Side-by-side mode**: Use `curses` or something similar for side-by-side playing of the original and LLM-rewritten game.
 
 ## DONE
 - **Other LLMs**: Support Gemini and Claude.
-- **Other LLMs**: Support local LLMs such as Ollama. (Alas, they aren't really good enough...)
+- **Other LLMs**: Support local LLMs via Ollama. (Alas, they aren't really good enough...)
 - **Cheaper**: Make the prompts shorter and repeated far less. Limit the prompt to the last 10 to 20 game commands and responses.
 - **Input rewriting**: Make the LLMs understand the grammar and vocabulary of the game, and try to rewrite player inputs into commands in that language.
 - **Parser rewriting only**: The `-original` mode allows existing games to be played unmodified, just with a better parser.
