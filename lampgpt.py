@@ -3,6 +3,8 @@
 from anthropic import Anthropic
 import argparse
 from bs4 import BeautifulSoup
+import curses
+from curses import textpad
 from dotenv import load_dotenv
 import fcntl
 import google.generativeai as genai
@@ -419,6 +421,7 @@ def main():
     parser.add_argument('--bginfo', '-B', action='store_true', help='Add extra background info to the LLM prompts')
     parser.add_argument('--repeat', '-R', action='store_true', help='Repeat instructions at each prompt')
     parser.add_argument('--original', '-O', action='store_true', help='Play the original game; do not rewrite responses with the LLM')
+    parser.add_argument('--splitscreen', '-X', action='store_true', help='Play side-by-side with original game')
     parser.add_argument('GAMENAME')
     args = parser.parse_args()
 
@@ -552,4 +555,8 @@ def main():
             print(f"\nError running ZIL interpreter: {errors}", file=sys.stderr)
 
 if __name__ == "__main__":
-    main()
+    ss = [opt for opt in sys.argv if opt == '--splitscreen' or opt == '-X']
+    if len(ss) > 0:
+        curses.wrapper(main)
+    else:
+        main()
