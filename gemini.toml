@@ -1,11 +1,11 @@
-# Config for OpenAI's ChatGPT
+# Config for Google Vertex AI's Gemini
 #
 
 [config]
 # API type ('openai', 'google', ...)
-api = 'google'
+api = 'vertex'
 
-# Name of the model to use ('openai', 'google', ...)
+# Name of the model to use ('chatgpt', 'gemini', ...)
 name = "gemini-1.0-pro"
 
 # API KEY or other authentication token

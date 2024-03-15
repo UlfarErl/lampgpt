@@ -5,7 +5,7 @@
 # API type ('openai', 'google', ...)
 api = 'openai'
 
-# Name of the model to use ('openai', 'google', ...)
+# Name of the model to use ('chatgpt', ...)
 name = "gpt-4-turbo-preview"
 
 # API KEY or other authentication token

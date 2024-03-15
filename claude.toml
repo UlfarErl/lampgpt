@@ -5,7 +5,7 @@
 # API type ('openai', 'google', ...)
 api = 'anthropic'
 
-# Name of the model to use ('gemini', ...)
+# Name of the model to use ('claude', 'gemini', ...)
 name = "claude-3-opus-20240229"
 
 # API KEY or other authentication token

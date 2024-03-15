@@ -5,8 +5,8 @@
 # API type ('openai', 'google', ...)
 api = 'ollama'
 
-# Name of the model to use ('gemini', ...)
-name = "gemma:2b"
+# Name of the model to use ('llama2', 'gemma:2b', ...)
+name = "llama2"
 
 # command-line prefix for launching process
 cmd_prefix = "ollama run "

@@ -179,9 +179,10 @@ The following alternative commands (one per line) are NOT accepted by the game:
 '''
 
 parser_suffix = '''
-Can you rewrite the player's command into one that the game accepts?
-When making your suggestion, try to align as closely as possible with the player's intent.
+Can you rewrite the player's command into one that the game accepts and aligns as closely as possible with the player's intent.
 
-Please enclose your suggested new command in triple plusses, as follows:
+First, explain why each word of your rewritten command is a good choice.
+
+Then enclose your suggested new command in triple plusses, as follows:
 +++SUGGESTION+++
 '''

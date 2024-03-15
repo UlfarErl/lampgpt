@@ -5,6 +5,7 @@ import argparse
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 import fcntl
+import google.generativeai as genai
 import hashlib
 from openai import OpenAI
 import os
@@ -210,9 +211,13 @@ def get_llm_response(message_type, response, trial=False):
                                                 temperature=state.llm['config']['temp'])
         tokens = resp.usage.input_tokens
         response = resp.content[0].text
-    elif state.llm['config']['api'] == 'google':
-        response = state.llm_client.send_message(state.llm_prompt)
+    elif state.llm['config']['api'] == 'vertex':
+        response = state.llm_client.generate_content(state.llm_prompt)
         tokens = response.to_dict()['usage_metadata']['prompt_token_count']
+        response = response.text
+    elif state.llm['config']['api'] == 'google':
+        response = state.llm_client.generate_content(state.llm_prompt)
+        tokens = 0
         response = response.text
     elif state.llm['config']['api'] == 'ollama':
         ollama = subprocess.Popen(state.llm_client.split(), stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
@@ -227,6 +232,7 @@ def get_llm_response(message_type, response, trial=False):
         response = response
         tokens = 0
     write_to_debug_log(f"# DEBUG: Prompt token count is {tokens}\n")
+    write_to_debug_log(response)
 
     message = {'role': 'assistant', 'content': response}
     if not trial:
@@ -306,10 +312,10 @@ def try_to_fix_parser_error(process, command, response):
             add_to_llm_prompt(x)
         add_to_llm_prompt(state.config['errors']['parser_suffix'])
         llm_response = get_llm_response('user', response, trial=True)
-        new_command = re.match('\\+\\+\\+(.*?)\\+\\+\\+', llm_response)
-        if new_command == None or new_command.group(1) == None:
+        new_command = re.findall('\\+\\+\\+(.*?)\\+\\+\\+', llm_response)
+        if new_command == []:
             break
-        new_command = new_command.group(1)
+        new_command = new_command[0]
         write_to_debug_log(f"LLM COMMAND REWRITING SUGGESTION {new_command}\n")
         response = send_game_command(process, new_command)
         write_to_debug_log(f"LLM COMMAND REWRITING RESPONSE {response}\n")
@@ -471,11 +477,16 @@ def main():
         if state.llm['config'].get('auth') == None: # allow command line to override env var
             state.llm['config']['auth'] = os.environ.get("ANTHROPIC_API_KEY", "***MISSING API KEY***")
         state.llm_client = Anthropic(api_key=state.llm['config']['auth'])
-    elif state.llm['config']['api'] == 'google':
+    elif state.llm['config']['api'] == 'vertex':
         state.args.repeat = False
         vertexai.init(project=state.llm['config']['project'], location=state.llm['config']['location'])
         model = GenerativeModel(state.llm['config']['name'])
         state.llm_client = model.start_chat(response_validation=False)
+    elif state.llm['config']['api'] == 'google':
+        state.llm_client = genai.GenerativeModel(
+            model_name = state.llm['config']['name'],
+            generation_config = genai.GenerationConfig(candidate_count = 1,
+                                                       temperature = state.llm['config']['temp'])).generate_content(model_name)
     elif state.llm['config']['api'] == 'ollama':
         state.args.repeat = False
         model = state.llm['config']['name']
