@@ -110,7 +110,6 @@ As another example, below is a section from Starcross in the style of a high spa
  
  ## TODO
 - **Stateless exploration**: Use the save/restore or undo meta-command features of `bocfel` to try various commands and provide them and their output to the LLMs as extra context.
-- **Side-by-side mode**: Use `curses` or something similar for side-by-side playing of the original and LLM-rewritten game.
 
 ## DONE
 - **Other LLMs**: Support Gemini and Claude.
@@ -118,3 +117,4 @@ As another example, below is a section from Starcross in the style of a high spa
 - **Cheaper**: Make the prompts shorter and repeated far less. Limit the prompt to the last 10 to 20 game commands and responses.
 - **Input rewriting**: Make the LLMs understand the grammar and vocabulary of the game, and try to rewrite player inputs into commands in that language.
 - **Parser rewriting only**: The `-original` mode allows existing games to be played unmodified, just with a better parser.
+- **Side-by-side mode**: Use `curses` for side-by-side playing of the original and LLM-rewritten game.
