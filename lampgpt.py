@@ -14,6 +14,7 @@ import os
 import os.path
 import re
 import requests
+from splitscreen import SplitScreen
 import subprocess
 import sys
 import textwrap
@@ -38,16 +39,17 @@ class GlobalState:
         self.llm_chatlog = []   # the log of LLM inputs and outputs
         self.llm_prompt = ""    # the current LLM prompt being constructed
         self.seenrooms = set([])# title descriptions of all rooms visited
+        self.splitscreen = None # the splitscreen terminal object
 state = GlobalState()
 
 ########
 ## UTIL
 ########
-def format_with_linebreaks(text):
+def format_with_linebreaks(text, width):
     lines = []
     for line in text.split('\n'):
-        if len(line) > 79:
-            line = textwrap.fill(line, width=80)
+        if len(line) > width-1:
+            line = textwrap.fill(line, width=width)
         lines.append(line)
     return '\n'.join(lines)
 
@@ -57,12 +59,9 @@ def write_to_debug_log(output):
         state.debug_log.write(output)
         state.debug_log.flush()
 
-def write_to_transcript(output, log_only=False):
+def write_to_transcript(output):
     global state
     write_to_debug_log(output)
-    if not log_only:
-        sys.stdout.write(output)
-        sys.stdout.flush()
     if state.transcript:
         state.transcript.write(output)
         state.transcript.flush()
@@ -115,6 +114,32 @@ def get_file_text(filename, regexp):
         print(f"WARNING: File {filename} not found as background info.")
     return ""
 
+def show_output_to_user_etc(input_command, game_command, game_response, llm_response):
+    global state
+    columns = 79
+    if state.splitscreen:
+        columns = state.splitscreen.col_width
+    if input_command:
+        input_command = format_with_linebreaks(input_command, columns)
+        write_to_transcript(input_command)
+    if game_command:
+        game_command = format_with_linebreaks(game_command, columns)
+    else: 
+        game_command = ""
+    game_response = format_with_linebreaks(game_response, columns)
+    llm_response = format_with_linebreaks(llm_response, columns)
+
+    write_to_transcript(llm_response)
+    add_to_game_log(game_command, command=True)
+    add_to_game_log(game_response, command=False)
+    if state.splitscreen:
+        if game_command:
+            state.splitscreen.output_text("> " + game_command, "> " + input_command)
+        state.splitscreen.output_text(game_response, llm_response)
+    else:
+        sys.stdout.write("\n" + llm_response)
+        sys.stdout.flush()
+
 ##############
 ## GAME STUFF
 ##############
@@ -146,11 +171,12 @@ def process_rewritten_response_of_room(original, rewritten):
     if room not in state.seenrooms: # update seenrooms
         state.seenrooms.add(room)
     text = rewritten.lstrip()
-    if text.lower().startswith(room.lower()):
-        text = text[len(room):].lstrip()
-    text = room + ':\n' + text
+    #if text.lower().startswith(room.lower()):
+    #    text = text[len(room):].lstrip()
+    #text = room + ':\n' + text
     return text
 
+# maintain a playlog of the original game, as it is played
 def add_to_game_log(output, command=False):
     global state
     if state.debug_log != None and state.args.verbose:
@@ -162,6 +188,8 @@ def add_to_game_log(output, command=False):
         output = output.rstrip() + '\n'
     state.game_chatlog.append([command, output])
 
+# get the most recent part of the game playlog as well as all rooms visited 
+# in the entire playlog so far
 def get_rooms_and_gamelog():
     global state
     gamelog_count = state.config['responses']['gamelog_count']
@@ -269,8 +297,6 @@ def get_accessible_nouns(process):
             if not_present in response:
                 possible_nouns[index] = None
     possible_nouns = [syns for syns in possible_nouns if not syns is None]
-    for syns in possible_nouns:
-        write_to_debug_log(f"Found noun {syns} in room\n")
     send_game_command(process, '/pop', delay=100)
     return possible_nouns
 
@@ -394,7 +420,6 @@ def rewrite_response(command, response, style):
     llm_response = get_llm_response('user', response)
     llm_response = process_rewritten_response_of_room(response, llm_response)
 
-    llm_response = format_with_linebreaks(llm_response)
     if input == True:
         llm_response = llm_response + '\n\n>'
     return llm_response
@@ -402,7 +427,7 @@ def rewrite_response(command, response, style):
 ########
 ## MAIN
 ########
-def main(): 
+def main(stdscr): 
     global state
     parser = argparse.ArgumentParser(description='Script for an LLM-enhanced Infocom experience.')
     
@@ -428,6 +453,8 @@ def main():
     # Process arguments and config
     load_dotenv()
     state.args = args
+    if args.splitscreen:
+        state.splitscreen = SplitScreen(stdscr)
     if args.debug:
         state.debug_log = open('./debug.log', 'w')
     if args.transcript:
@@ -504,42 +531,50 @@ def main():
 
     try:
         time.sleep((20.0*args.delay)/1000.0) # wait particularly long after sending first command
-        response = non_blocking_read(process.stdout)
-        add_to_game_log(response, command=False)
-        if not args.original:
-            response = init_rewrites(response, args.style)
-        write_to_transcript(format_with_linebreaks(response))
-        write_to_transcript('\n>')
+        game_response = non_blocking_read(process.stdout)
+        add_to_game_log(game_response, command=False)
+        if args.original:
+            llm_response = game_response
+        else:
+            llm_response = init_rewrites(game_response, args.style)
+        # output to transcripts, screen, debug logs, etc.
+        show_output_to_user_etc(None, None, game_response, llm_response)
 
         # send initialization commands to the game, and ignore output
         send_game_command(process, state.config['init']['commands'])
 
         while True:
             # get the user command
-            command = sys.stdin.readline()
-            if not command:  # If EOF, break the loop
+            if state.splitscreen:
+                input_command = state.splitscreen.get_command()
+            else:
+                input_command = sys.stdin.readline()
+            if not input_command:  # If EOF, break the loop
                 break
 
             # get the original ZIL interpreter response
-            response = send_game_command(process, command)
+            game_response = send_game_command(process, input_command)
 
             # fix any parser errors
-            if parser_error(response):
-                write_to_transcript("INVALID COMMAND: " + command, log_only=True)
-                [fixed_command, response] = try_to_fix_parser_error(process, command, response)
-                if not command.startswith(fixed_command):
+            game_command = input_command
+            if parser_error(game_response):
+                write_to_debug_log("INVALID COMMAND: " + input_command)
+                [game_command, game_response] = try_to_fix_parser_error(process, input_command, game_response)
+                if not input_command.startswith(game_command):
                     if args.original:
-                        print(f"[{fixed_command}]")
-                    response = send_game_command(process, fixed_command)
+                        print(f"[{game_command}]")
+                    game_response = send_game_command(process, game_command)
 
-            # get the LLM version of the command and the LLM-modified response
-            write_to_transcript(command, log_only=True)
-            if not args.original:
-                response = rewrite_response(command, response, args.style)
-            write_to_transcript(response)
+            # get the LLM-modified response
+            if args.original:
+                llm_response = game_response
+            else:
+                llm_response = rewrite_response(input_command, game_response, args.style)
 
-            add_to_game_log(command, command=True)
-            add_to_game_log(response, command=False)
+            # output to transcripts, screen, debug logs, etc.
+            show_output_to_user_etc(input_command, game_command, game_response, llm_response)
+            
+
 
     except KeyboardInterrupt:
         print("\nScript interrupted by user. Exiting.")
@@ -559,4 +594,4 @@ if __name__ == "__main__":
     if len(ss) > 0:
         curses.wrapper(main)
     else:
-        main()
+        main(None)
