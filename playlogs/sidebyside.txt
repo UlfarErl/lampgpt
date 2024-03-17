@@ -1,0 +1,62 @@
+> eat leaflet                                                            │> eat leaflet
+(Taken)                                                                  │(Taken)
+I don't think that the leaflet would agree with you.                     │The leaflet's not for eating, kid. It's a guide, not a snack. Try reading,
+                                                                         │not chewing.
+                                                                         │
+> dig                                                                    │> dig with the leaflet
+What do you want to dig in?                                              │The ground's hard, the air's thick with anticipation. "Dig where?" the
+                                                                         │shadows seem to whisper, waiting for your next move.
+                                                                         │
+> dig in the ground with the leaflet                                     │> dig in the ground with the leaflet
+The ground is too hard for digging here.                                 │The ground here is as unyielding as a miser's fist, too stubborn for the
+                                                                         │likes of a leaflet's edge.
+                                                                         │
+> get the ground                                                         │> get the ground
+A valiant attempt.                                                       │You can't take the ground. It's not going anywhere, pal.
+                                                                         │
+> get the air                                                            │> get the air
+An interesting idea...                                                   │You reach out, trying to grasp the air. It slips through your fingers like
+                                                                         │the truth in a city full of lies.
+                                                                         │
+> wear leaflet                                                           │> put the leaflet on my head
+You can't wear the leaflet.                                              │You try to balance the leaflet on your head, but it's clear it wasn't made
+                                                                         │for wearing.
+                                                                         │
+> insert leaflet into mouth                                              │> stuff the leaflet into my nose
+You can't do that.                                                       │You try, but the leaflet's not keen on exploring your nostrils.
+                                                                         │
+> hold leaflet                                                           │> hold the leaflet with my eyelid
+You already have that!                                                   │Trying to hold something with your eyelid is a tough job for anyone, even
+                                                                         │in this twisted world. You've got it in your grasp already, no need for
+                                                                         │eye gymnastics.
+                                                                         │
+> make leaflet                                                           │> make the leaflet into a paper airplane
+You can't do that.                                                       │Crafting a paper airplane from the leaflet, while a creative endeavor,
+                                                                         │isn't going to fly here.
+                                                                         │
+> hold leaflet                                                           │> hold the leaflet under one arm while rubbing your tummy
+You already have that!                                                   │You're already gripping that leaflet like a lifeline, but this ain't the
+                                                                         │circus, and you're no clown. Try something else.
+                                                                         │
+> roll on the ground and sing a happy tune                               │> roll on the ground and sing a happy tune
+That sentence isn't one I recognize.                                     │You throw yourself onto the ground, rolling around like a kid with the
+                                                                         │summer sun high. Your tune, a happy little ditty, echoes off the walls,
+                                                                         │filling the air with a sense of whimsy. But the ground remains just as
+                                                                         │hard, and the tune fades into the silence, leaving you with nothing but a
+                                                                         │moment's distraction and a few curious looks from unseen eyes.
+                                                                         │
+> throw the leaflet into the forest                                      │> throw the leaflet into the forest
+You can't do that.                                                       │The leaflet stays in your grip, the forest too indifferent to take it from
+                                                                         │you.
+                                                                         │
+> put leaflet under door                                                 │> slip the leaflet under the door
+You can't do that.                                                       │The door's sealed tighter than a drum; no slipping anything through there,
+                                                                         │pal.
+                                                                         │
+> rub hand                                                               │> scratch yourself
+Fiddling with the pair of hands has no effect.                           │Scratching won't solve the itch of curiosity, but it does nothing else
+                                                                         │either.
+                                                                         │
+> wait                                                                   │> mull things over
+Time passes...                                                           │As you mull things over, the world doesn't wait. Shadows lengthen, and the
+                                                                         │air grows cooler. But no epiphanies strike.

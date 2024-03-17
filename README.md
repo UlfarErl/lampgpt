@@ -43,7 +43,7 @@ echo 'ANTHROPIC_API_KEY=PUT_YOUR_API_KEY_HERE' > .env
 
 ## Playing with an "Ultimate Parser"
 To play the Infocom games in their original form, and just make use of LLMs to "fix" any limitations
-in the parser, you can use `./lampgpt.py -O gamename` where `-O` is short for original. 
+in the parser, you can use `./lampgpt.py -O gamename` where `-O` is short for `--original`. 
 This style of playing works very well with ChatGPT4 and is also very fast and cheap
 (albeit not out of control) because the LLM is only consulted upon parser errors.  Below is
 an example of the LLM fixing an absurdly convoluted command from the start of Zork1.

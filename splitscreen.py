@@ -2,6 +2,16 @@ import curses
 from curses import textpad
 import sys
 
+# special case to trim '>' from the output
+def remove_prompts_from_tail(lines):
+    for i in reversed(range(len(lines))):
+        str = lines[i].strip()
+        if str == '':
+            continue
+        elif str == '>':
+            lines[i] = ''
+            return
+
 class SplitScreen:
     def __init__(self, stdscr):
         # Initialize curses
@@ -69,6 +79,15 @@ class SplitScreen:
             win.addstr(i, 0, lines[i])
         win.refresh()
 
+    def trim_space_from_tails(self):
+        if len(self.left_lines) >= 2 and len(self.right_lines) >= 2:
+            if '' == self.left_lines[-1].strip() and \
+               '' == self.left_lines[-2].strip() and \
+               '' == self.right_lines[-1].strip() and \
+               '' == self.right_lines[-2].strip():
+                self.left_lines.pop()
+                self.right_lines.pop()
+
     def output_text(self, left_msg, right_msg):
         left_rets = left_msg.count('\n')
         right_rets = right_msg.count('\n')
@@ -78,6 +97,12 @@ class SplitScreen:
         else:
             right_msg = right_msg + added_rets
 
+        # massive special case to avoid proliferation of > prompts
+        if left_rets <= 1 and right_rets <= 1 and \
+           left_msg.startswith("> ") and right_msg.startswith("> "):
+            remove_prompts_from_tail(self.left_lines)
+            remove_prompts_from_tail(self.right_lines)
+            self.trim_space_from_tails()
         self.left_lines = self.left_lines + left_msg.split('\n')
         self.right_lines = self.right_lines + right_msg.split('\n')
 

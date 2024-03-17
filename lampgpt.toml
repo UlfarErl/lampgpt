@@ -186,3 +186,17 @@ First, explain why each word of your rewritten command is a good choice.
 Then enclose your suggested new command in triple plusses, as follows:
 +++SUGGESTION+++
 '''
+
+cant_do_it = [
+    "^You must tell me how to do that.*$",
+    "^There's nothing special about.*$",
+    "^.*as you attempt this feat.$",
+    "^I don't think that the.*would agree with you.$",
+    "^You can't do that.$",
+    "^Are you enjoying yourself?$",
+    "^Suicide is not the answer.$",
+    "^The concept of using.*is certainly original.$",
+    "^You can't be serious.$",
+    "^.* isn't notably helpful.$",
+    "^Trying to .* is futile.$",
+]
