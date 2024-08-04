@@ -6,7 +6,7 @@
 api = 'ollama'
 
 # Name of the model to use ('llama2', 'gemma:2b', ...)
-name = "llama2"
+name = "gemma2:2b"
 
 # command-line prefix for launching process
 cmd_prefix = "ollama run "

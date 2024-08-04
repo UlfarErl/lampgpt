@@ -511,7 +511,7 @@ def main(stdscr):
         state.args.repeat = False
         vertexai.init(project=state.llm['config']['project'], location=state.llm['config']['location'])
         model = GenerativeModel(state.llm['config']['name'])
-        state.llm_client = model.start_chat(response_validation=False)
+        state.llm_client = model #.start_chat(response_validation=False)
     elif state.llm['config']['api'] == 'google':
         state.llm_client = genai.GenerativeModel(
             model_name = state.llm['config']['name'],

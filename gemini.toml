@@ -6,7 +6,7 @@
 api = 'vertex'
 
 # Name of the model to use ('chatgpt', 'gemini', ...)
-name = "gemini-1.0-pro"
+name = "gemini-1.5-flash-001"
 
 # API KEY or other authentication token
 # NOTE: Can be set here for convenience, but should ideally be given
