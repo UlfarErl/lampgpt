@@ -188,15 +188,23 @@ Then enclose your suggested new command in triple plusses, as follows:
 '''
 
 cant_do_it = [
-    "^You must tell me how to do that.*$",
-    "^There's nothing special about.*$",
+    "^You must tell me how to do that to.*$",
+    "^There's nothing special.*$",
+    "^There is nothing special.*$",
     "^.*as you attempt this feat.$",
-    "^I don't think that the.*would agree with you.$",
+    "^I don't think that.*$",
     "^You can't do that.$",
     "^Are you enjoying yourself?$",
     "^Suicide is not the answer.$",
     "^The concept of using.*is certainly original.$",
     "^You can't be serious.$",
+    "^A valiant attempt.$",
+    "^An interesting idea...$",
+    "^What a concept!$",
     "^.* isn't notably helpful.$",
     "^Trying to .* is futile.$",
+    "^What a bizarre concept!$",
+    "^How peculiar!$",
+    "^You have lost your mind.$",
+    "^Preposterous!$"
 ]
