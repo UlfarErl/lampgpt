@@ -7,7 +7,7 @@ import curses
 from curses import textpad
 from dotenv import load_dotenv
 import fcntl
-import google.generativeai as genai
+import google.genai as genai
 import hashlib
 from openai import OpenAI
 import os
@@ -241,12 +241,8 @@ def get_llm_response(message_type, response, trial=False):
                                                 temperature=state.llm['config']['temp'])
         tokens = resp.usage.input_tokens
         response = resp.content[0].text
-    elif state.llm['config']['api'] == 'vertex':
-        response = state.llm_client.generate_content(state.llm_prompt)
-        tokens = response.to_dict()['usage_metadata']['prompt_token_count']
-        response = response.text
     elif state.llm['config']['api'] == 'google':
-        response = state.llm_client.generate_content(state.llm_prompt)
+        response = state.llm_client.models.generate_content(model=state.llm['config']['name'], contents=state.llm_prompt)
         tokens = 0
         response = response.text
     elif state.llm['config']['api'] == 'ollama':
@@ -441,7 +437,7 @@ def main(stdscr):
     parser.add_argument('--bocfelargs', '-z', type=str, default='', help='Optional arguments for bocfel ZIL interpreter')
     parser.add_argument('--llm_temp', '-T', type=int, help='Temperature of LLM model (integer percent; default 5%%)')
     parser.add_argument('--llm_auth', '-A', type=str, help='Authorization token for LLM')
-    parser.add_argument('--llm', '-L', type=str, default='chatgpt4', help='LLM to use (debug, gemini, chatgpt4, claude)')
+    parser.add_argument('--llm', '-L', type=str, default='gemini', help='LLM to use (debug, gemini, chatgpt4, claude)')
     parser.add_argument('--style', '-S', type=str, default='original', help='Style: pratchett, gumshoe, ...')
     parser.add_argument('--bginfo', '-B', action='store_true', help='Add extra background info to the LLM prompts')
     parser.add_argument('--repeat', '-R', action='store_true', help='Repeat instructions at each prompt')
@@ -507,16 +503,9 @@ def main(stdscr):
         if state.llm['config'].get('auth') == None: # allow command line to override env var
             state.llm['config']['auth'] = os.environ.get("ANTHROPIC_API_KEY", "***MISSING API KEY***")
         state.llm_client = Anthropic(api_key=state.llm['config']['auth'])
-    elif state.llm['config']['api'] == 'vertex':
-        state.args.repeat = False
-        vertexai.init(project=state.llm['config']['project'], location=state.llm['config']['location'])
-        model = GenerativeModel(state.llm['config']['name'])
-        state.llm_client = model #.start_chat(response_validation=False)
     elif state.llm['config']['api'] == 'google':
-        state.llm_client = genai.GenerativeModel(
-            model_name = state.llm['config']['name'],
-            generation_config = genai.GenerationConfig(candidate_count = 1,
-                                                       temperature = state.llm['config']['temp'])).generate_content(model_name)
+        state.args.repeat = True
+        state.llm_client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY", "***MISSING API KEY***"))
     elif state.llm['config']['api'] == 'ollama':
         state.args.repeat = False
         model = state.llm['config']['name']

@@ -3,10 +3,10 @@
 
 [config]
 # API type ('openai', 'google', ...)
-api = 'vertex'
+api = 'google'
 
 # Name of the model to use ('chatgpt', 'gemini', ...)
-name = "gemini-1.5-flash-001"
+name = "gemini-2.5-flash-preview-04-17"
 
 # API KEY or other authentication token
 # NOTE: Can be set here for convenience, but should ideally be given

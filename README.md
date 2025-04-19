@@ -37,6 +37,7 @@ cd ..
 
 echo 'OPENAI_API_KEY=PUT_YOUR_API_KEY_HERE' > .env
 echo 'ANTHROPIC_API_KEY=PUT_YOUR_API_KEY_HERE' > .env
+echo 'GOOGLE_API_KEY=PUT_YOUR_API_KEY_HERE' > .env
 ./lampgpt.py -t zork1.log -S hardyboys zork1
 ./lampgpt.py -t starcross.log -original starcross
 ```
