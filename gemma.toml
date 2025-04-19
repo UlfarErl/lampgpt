@@ -1,0 +1,23 @@
+# Config for Google Vertex AI's Gemini
+#
+
+[config]
+# API type ('openai', 'google', ...)
+api = 'google'
+
+# Name of the model to use ('chatgpt', 'gemini', ...)
+name = "models/gemma-3-4b-it"
+
+# API KEY or other authentication token
+# NOTE: Can be set here for convenience, but should ideally be given
+#       on the command line or in the execution environment
+# auth = 
+
+# google cloud project name
+project = "lampgpt-runner"
+
+# datacenter location
+location = "us-west1"
+
+# Non-zero temperature for a little bit of variability
+temp = 0.05
